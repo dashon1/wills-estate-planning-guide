@@ -1,0 +1,1572 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Wills & Estate Planning Guide</title>
+  <style>
+    @page { size: A4 portrait; margin: 14mm 12mm; }
+    @media screen {
+      html { background: #d0d0d0; }
+      body { margin: 0; padding: 20px 0; }
+      body > section { width: 210mm; min-height: 297mm; margin: 0 auto 20px; background: #fff; box-shadow: 0 4px 24px rgba(0,0,0,0.18); box-sizing: border-box; overflow: hidden; }
+    }
+    * { box-sizing: border-box; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+    :root {
+      --accent: #1a6b4a;
+      --ink: #1a1a1e;
+      --muted: #5a5a5a;
+      --rule: #d4cfc7;
+      --hairline: #e8e4dc;
+      --paper: #faf9f7;
+    }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", "PingFang SC", "Helvetica Neue", Arial, sans-serif;
+      font-size: 10.5pt;
+      line-height: 1.55;
+      color: var(--ink);
+      background: var(--paper);
+      -webkit-font-smoothing: antialiased;
+      margin: 0;
+      padding: 0;
+    }
+    .cover {
+      min-height: 268mm;
+      background: linear-gradient(135deg, #0f1f2e 0%, #1a2f3e 50%, #0f1f2e 100%);
+      color: #f0ede6;
+      padding: 40mm 20mm;
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+    .cover::before {
+      content: '';
+      position: absolute;
+      top: 20mm;
+      right: 20mm;
+      width: 80mm;
+      height: 80mm;
+      background: radial-gradient(circle, rgba(26,107,74,0.3) 0%, transparent 70%);
+      border-radius: 50%;
+    }
+    .cover::after {
+      content: '';
+      position: absolute;
+      bottom: 30mm;
+      left: -10mm;
+      width: 120mm;
+      height: 120mm;
+      background: radial-gradient(circle, rgba(26,107,74,0.2) 0%, transparent 70%);
+      border-radius: 50%;
+    }
+    .cover-tag {
+      font-size: 8pt;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      color: #8a9aa5;
+      margin-bottom: 15mm;
+    }
+    .cover h1 {
+      font-size: 32pt;
+      font-weight: 300;
+      line-height: 1.2;
+      margin: 0 0 10mm 0;
+      color: #ffffff;
+    }
+    .cover .subtitle {
+      font-size: 12pt;
+      line-height: 1.5;
+      color: #b8c4ce;
+      margin: 0;
+      max-width: 140mm;
+    }
+    .cover-meta {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-end;
+      margin-top: auto;
+      padding-top: 20mm;
+      border-top: 0.5pt solid rgba(255,255,255,0.2);
+    }
+    .meta-info {
+      font-size: 8.5pt;
+      color: #8a9aa5;
+      line-height: 1.6;
+    }
+    .meta-version {
+      font-size: 9pt;
+      color: #8a9aa5;
+      text-align: right;
+    }
+    .page { page-break-after: always; min-height: 268mm; padding: 20mm 0; position: relative; }
+    .page:last-child { page-break-after: auto; }
+    .section-header { padding: 0 20mm; margin-bottom: 12mm; }
+    .section-num {
+      display: block;
+      font-size: 8pt;
+      color: var(--accent);
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
+      margin-bottom: 4mm;
+    }
+    .section-title {
+      font-size: 18pt;
+      font-weight: 400;
+      color: var(--ink);
+      margin: 0;
+      line-height: 1.3;
+    }
+    .section-line {
+      width: 30mm;
+      height: 2pt;
+      background: var(--accent);
+      margin-top: 6mm;
+    }
+    .content { padding: 0 20mm; }
+    .lead {
+      font-size: 11pt;
+      color: var(--muted);
+      margin: 0 0 10mm 0;
+      line-height: 1.6;
+    }
+    .chapter { margin-bottom: 14mm; }
+    .chapter h3 {
+      font-size: 13pt;
+      font-weight: 600;
+      color: var(--ink);
+      margin: 0 0 6mm 0;
+      padding-bottom: 3mm;
+      border-bottom: 0.5pt solid var(--hairline);
+    }
+    .chapter p {
+      margin: 0 0 5mm 0;
+      text-align: justify;
+    }
+    .chapter ul, .chapter ol {
+      margin: 0 0 6mm 0;
+      padding-left: 8mm;
+    }
+    .chapter li {
+      margin-bottom: 3mm;
+      padding-left: 2mm;
+    }
+    .callout {
+      background: linear-gradient(135deg, #f0f7f3 0%, #e8f3ed 100%);
+      border-left: 3pt solid var(--accent);
+      padding: 8mm 10mm;
+      margin: 8mm 0;
+      page-break-inside: avoid;
+    }
+    .callout-title {
+      font-size: 9.5pt;
+      font-weight: 600;
+      color: var(--accent);
+      margin-bottom: 4mm;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+    .callout p {
+      margin: 0;
+      font-size: 10pt;
+    }
+    .highlight-box {
+      background: #fff9e6;
+      border: 0.5pt solid #e6d9b8;
+      padding: 6mm 8mm;
+      margin: 8mm 0;
+      border-radius: 2mm;
+      page-break-inside: avoid;
+    }
+    .highlight-box p {
+      margin: 0;
+      font-size: 9.5pt;
+    }
+    .toc {
+      padding: 0 20mm;
+      margin-top: 10mm;
+    }
+    .toc-title {
+      font-size: 14pt;
+      font-weight: 500;
+      color: var(--ink);
+      margin: 0 0 10mm 0;
+      padding-bottom: 5mm;
+      border-bottom: 1pt solid var(--ink);
+    }
+    .toc-item {
+      display: flex;
+      justify-content: space-between;
+      padding: 3mm 0;
+      border-bottom: 0.5pt solid var(--hairline);
+      text-decoration: none;
+      color: var(--ink);
+    }
+    .toc-item:hover { color: var(--accent); }
+    .toc-item .title { flex: 1; }
+    .toc-item .page-num { color: var(--muted); font-size: 9pt; }
+    .toc-item.sub { padding-left: 8mm; font-size: 9.5pt; }
+    .stat-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 6mm;
+      margin: 10mm 0;
+    }
+    .stat-card {
+      background: var(--paper);
+      border: 0.5pt solid var(--hairline);
+      padding: 6mm;
+      text-align: center;
+      page-break-inside: avoid;
+    }
+    .stat-card .number {
+      font-size: 20pt;
+      font-weight: 300;
+      color: var(--accent);
+      margin-bottom: 2mm;
+    }
+    .stat-card .label {
+      font-size: 8.5pt;
+      color: var(--muted);
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+    .table-card {
+      margin: 8mm 0;
+      page-break-inside: avoid;
+    }
+    .table-card figcaption {
+      font-size: 9pt;
+      font-weight: 600;
+      color: var(--ink);
+      margin-bottom: 4mm;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 9pt;
+    }
+    th {
+      background: var(--accent);
+      color: #ffffff;
+      padding: 5mm 6mm;
+      text-align: left;
+      font-weight: 500;
+    }
+    td {
+      padding: 4mm 6mm;
+      border-bottom: 0.5pt solid var(--hairline);
+      vertical-align: top;
+    }
+    tr:nth-child(even) td { background: #faf9f7; }
+    .footer {
+      position: absolute;
+      bottom: 12mm;
+      left: 20mm;
+      right: 20mm;
+      display: flex;
+      justify-content: space-between;
+      font-size: 8pt;
+      color: var(--muted);
+      border-top: 0.5pt solid var(--hairline);
+      padding-top: 4mm;
+    }
+    .page-number {
+      font-weight: 500;
+      color: var(--ink);
+    }
+    .checklist { margin: 6mm 0; }
+    .checklist-item {
+      display: flex;
+      align-items: flex-start;
+      margin-bottom: 5mm;
+      padding: 4mm 6mm;
+      background: #faf9f7;
+      border-left: 2pt solid var(--accent);
+    }
+    .checklist-item .check {
+      width: 6mm;
+      height: 6mm;
+      border: 1pt solid var(--accent);
+      margin-right: 5mm;
+      flex-shrink: 0;
+      margin-top: 1mm;
+    }
+    .checklist-item .text { flex: 1; }
+    .checklist-item .text strong {
+      display: block;
+      margin-bottom: 1mm;
+    }
+    .checklist-item .text span {
+      font-size: 9pt;
+      color: var(--muted);
+    }
+    .two-col {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 10mm;
+      margin: 8mm 0;
+    }
+    .col h4 {
+      font-size: 11pt;
+      font-weight: 600;
+      color: var(--ink);
+      margin: 0 0 5mm 0;
+      padding-bottom: 3mm;
+      border-bottom: 0.5pt solid var(--hairline);
+    }
+    .col ul {
+      margin: 0;
+      padding-left: 6mm;
+    }
+    .col li {
+      margin-bottom: 3mm;
+    }
+    .final-section {
+      background: linear-gradient(135deg, #0f1f2e 0%, #1a2f3e 100%);
+      color: #f0ede6;
+      padding: 25mm 20mm;
+      min-height: 268mm;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+    .final-section h2 {
+      font-size: 22pt;
+      font-weight: 300;
+      margin: 0 0 8mm 0;
+      color: #ffffff;
+    }
+    .final-section p {
+      font-size: 10.5pt;
+      color: #b8c4ce;
+      margin: 0 0 6mm 0;
+      max-width: 150mm;
+    }
+    .final-section .cta-box {
+      background: var(--accent);
+      padding: 8mm 12mm;
+      display: inline-block;
+      margin-top: 8mm;
+    }
+    .final-section .cta-box span {
+      font-size: 11pt;
+      font-weight: 500;
+    }
+    .insight {
+      background: #fef9e6;
+      border: 0.5pt solid #e6d9b8;
+      padding: 6mm 8mm;
+      margin: 8mm 0;
+      border-radius: 2mm;
+    }
+    .insight-label {
+      font-size: 9pt;
+      font-weight: 600;
+      color: #8a6d1b;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      margin-bottom: 3mm;
+    }
+    .insight p {
+      margin: 0;
+      font-size: 10pt;
+      color: #5a4a1a;
+    }
+  </style>
+</head>
+<body>
+
+<!-- COVER PAGE -->
+<section class="cover page">
+  <div>
+    <span class="cover-tag">Estate Planning Essentials</span>
+    <h1>Wills & Estate<br>Planning Guide</h1>
+    <p class="subtitle">A comprehensive guide to creating legally valid wills, understanding estate planning fundamentals, and protecting your family's future.</p>
+  </div>
+  <div class="cover-meta">
+    <div class="meta-info">
+      <strong>Wills & Estate Planning Guide</strong><br>
+      Essential Documents Series<br>
+      Product 001
+    </div>
+    <div class="meta-version">
+      Version 1.0<br>
+      May 2026
+    </div>
+  </div>
+</section>
+
+<!-- TABLE OF CONTENTS -->
+<section class="page">
+  <div class="toc">
+    <h2 class="toc-title">Table of Contents</h2>
+    <a href="#section1" class="toc-item"><span class="title">Introduction: Why Estate Planning Matters</span><span class="page-num">3</span></a>
+    <a href="#section2" class="toc-item"><span class="title">Understanding Wills: Types and Requirements</span><span class="page-num">4</span></a>
+    <a href="#section3" class="toc-item sub"><span class="title">Legal Requirements for a Valid Will</span><span class="page-num">4</span></a>
+    <a href="#section4" class="toc-item sub"><span class="title">Types of Wills</span><span class="page-num">5</span></a>
+    <a href="#section5" class="toc-item"><span class="title">Creating Your Will: Step-by-Step Process</span><span class="page-num">6</span></a>
+    <a href="#section6" class="toc-item sub"><span class="title">Pre-Planning Preparation</span><span class="page-num">6</span></a>
+    <a href="#section7" class="toc-item sub"><span class="title">Document Execution</span><span class="page-num">7</span></a>
+    <a href="#section8" class="toc-item"><span class="title">Key Estate Planning Documents</span><span class="page-num">8</span></a>
+    <a href="#section9" class="toc-item sub"><span class="title">Durable Power of Attorney</span><span class="page-num">8</span></a>
+    <a href="#section10" class="toc-item sub"><span class="title">Healthcare Directives</span><span class="page-num">9</span></a>
+    <a href="#section11" class="toc-item"><span class="title">Executor Selection and Duties</span><span class="page-num">10</span></a>
+    <a href="#section12" class="toc-item"><span class="title">Common Mistakes to Avoid</span><span class="page-num">11</span></a>
+    <a href="#section13" class="toc-item"><span class="title">Estate Distribution Strategies</span><span class="page-num">12</span></a>
+    <a href="#section14" class="toc-item"><span class="title">Digital Assets and Online Accounts</span><span class="page-num">13</span></a>
+    <a href="#section15" class="toc-item"><span class="title">Updating and Amending Your Will</span><span class="page-num">14</span></a>
+    <a href="#section16" class="toc-item"><span class="title">State-Specific Considerations</span><span class="page-num">15</span></a>
+    <a href="#section17" class="toc-item"><span class="title">Glossary of Estate Planning Terms</span><span class="page-num">16</span></a>
+  </div>
+  <div class="footer">
+    <span>Wills & Estate Planning Guide</span>
+    <span class="page-number">2</span>
+  </div>
+</section>
+
+<!-- SECTION 1: INTRODUCTION -->
+<section class="page" id="section1">
+  <div class="section-header">
+    <span class="section-num">Section 01</span>
+    <h2 class="section-title">Introduction: Why Estate Planning Matters</h2>
+    <div class="section-line"></div>
+  </div>
+  <div class="content">
+    <p class="lead">Estate planning is not just for the wealthy or elderly. Every adult with assets, dependents, or anyone who cares about how their belongings are distributed after death needs an estate plan.</p>
+
+    <div class="chapter">
+      <h3>The Reality of Not Planning</h3>
+      <p>Without a valid will, your state government determines how your assets are distributed according to "intestacy laws." These default rules often produce outcomes that don't reflect your wishes, can cause family conflict, and may result in higher taxes and legal fees.</p>
+      <p>Consider these statistics: approximately 67% of Americans do not have a will or estate plan. This means the majority of families face unnecessary stress, expense, and uncertainty during an already difficult time.</p>
+    </div>
+
+    <div class="stat-grid">
+      <div class="stat-card">
+        <div class="number">67%</div>
+        <div class="label">Americans Without a Will</div>
+      </div>
+      <div class="stat-card">
+        <div class="number">$300B+</div>
+        <div class="label">Annual Estate Transfers</div>
+      </div>
+      <div class="stat-card">
+        <div class="number">6-9 mo</div>
+        <div class="label">Avg. Probate Duration</div>
+      </div>
+    </div>
+
+    <div class="chapter">
+      <h3>What Estate Planning Achieves</h3>
+      <ul>
+        <li><strong>Control:</strong> You decide who receives your assets and when they receive them</li>
+        <li><strong>Protection:</strong> Minimize taxes, avoid probate delays, and reduce family conflicts</li>
+        <li><strong>Peace of Mind:</strong> Your loved ones know your wishes and can act accordingly</li>
+        <li><strong>Efficiency:</strong> Assets transfer smoothly without court involvement</li>
+        <li><strong>Legacy:</strong> Support charitable causes and provide for future generations</li>
+      </ul>
+    </div>
+
+    <div class="callout">
+      <div class="callout-title">Key Insight</div>
+      <p>A valid will is the foundation of any estate plan. Without one, state intestacy laws dictate distribution, which may not align with your values or family situation.</p>
+    </div>
+  </div>
+  <div class="footer">
+    <span>Wills & Estate Planning Guide</span>
+    <span class="page-number">3</span>
+  </div>
+</section>
+
+<!-- SECTION 2: UNDERSTANDING WILLS -->
+<section class="page" id="section2">
+  <div class="section-header">
+    <span class="section-num">Section 02</span>
+    <h2 class="section-title">Understanding Wills: Types and Requirements</h2>
+    <div class="section-line"></div>
+  </div>
+  <div class="content">
+    <p class="lead">A will (formally called a "last will and testament") is a legal document that specifies your wishes for asset distribution and other important decisions after death.</p>
+
+    <div class="chapter">
+      <h3>Legal Requirements for a Valid Will</h3>
+      <p>Every state has specific requirements for a will to be legally valid. Generally, these requirements include:</p>
+      <ul>
+        <li><strong>Age:</strong> You must be at least 18 years old (or married/under parental consent in some states)</li>
+        <li><strong>Mental Capacity:</strong> You must be of sound mind when creating the will</li>
+        <li><strong>Written Document:</strong> The will must be in writing (oral wills are generally not recognized)</li>
+        <li><strong>Signature:</strong> You must sign the will, or someone else can sign on your behalf if you're present</li>
+        <li><strong>Witnesses:</strong> Typically two witnesses must sign the will, witnessing your signature</li>
+        <li><strong>Notarization:</strong> While not always required, notarization can simplify the probate process</li>
+      </ul>
+    </div>
+
+    <div class="highlight-box">
+      <p><strong>Sound Mind Requirement:</strong> To be of sound mind, you must understand the nature of the document you're signing, know the extent of your property, and recognize your natural heirs (those who would typically inherit from you).</p>
+    </div>
+
+    <div class="chapter">
+      <h3>Types of Wills</h3>
+    </div>
+
+    <div class="two-col">
+      <div class="col">
+        <h4>Formal Will</h4>
+        <ul>
+          <li>Typed and printed document</li>
+          <li>Signed by testator</li>
+          <li>Witnessed by two individuals</li>
+          <li>Self-proving (if notarized)</li>
+        </ul>
+      </div>
+      <div class="col">
+        <h4>Holographic Will</h4>
+        <ul>
+          <li>Handwritten by testator</li>
+          <li>Must be entirely in testator's handwriting</li>
+          <li>May not require witnesses in some states</li>
+          <li>Can be harder to validate</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="callout">
+      <div class="callout-title">State Variation</div>
+      <p>Holographic wills are recognized in about half of U.S. states, but rules vary significantly. Always use a formal typed will for reliability and easier probate.</p>
+    </div>
+
+    <div class="chapter">
+      <h3>What a Will Can Accomplish</h3>
+      <ul>
+        <li>Designate beneficiaries for specific assets</li>
+        <li>Name a guardian for minor children</li>
+        <li>Appoint an executor to manage your estate</li>
+        <li>Establish trusts for beneficiaries</li>
+        <li>Direct charitable giving</li>
+        <li>Specify funeral arrangements (non-binding)</li>
+      </ul>
+    </div>
+
+    <div class="chapter">
+      <h3>What a Will Cannot Do</h3>
+      <ul>
+        <li>Transfer assets with designated beneficiaries (life insurance, retirement accounts)</li>
+        <li>Avoid paying legitimate debts and taxes</li>
+        <li>Override community property laws in some states</li>
+        <li>Disinherit a spouse without their consent in most states</li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer">
+    <span>Wills & Estate Planning Guide</span>
+    <span class="page-number">4</span>
+  </div>
+</section>
+
+<!-- SECTION 3: CREATING YOUR WILL -->
+<section class="page" id="section5">
+  <div class="section-header">
+    <span class="section-num">Section 03</span>
+    <h2 class="section-title">Creating Your Will: Step-by-Step Process</h2>
+    <div class="section-line"></div>
+  </div>
+  <div class="content">
+    <p class="lead">Creating a valid will involves careful preparation and attention to legal requirements. Follow this step-by-step process to ensure your will stands up to legal scrutiny.</p>
+
+    <div class="chapter">
+      <h3>Pre-Planning Preparation</h3>
+      <p>Before drafting your will, complete the following preparatory steps:</p>
+    </div>
+
+    <div class="checklist">
+      <div class="checklist-item">
+        <div class="check"></div>
+        <div class="text">
+          <strong>Gather All Asset Information</strong>
+          <span>Compile comprehensive records of all assets including bank accounts, investments, real estate, vehicles, business interests, and valuable personal property. Include approximate values and account numbers.</span>
+        </div>
+      </div>
+      <div class="checklist-item">
+        <div class="check"></div>
+        <div class="text">
+          <strong>Review Existing Beneficiary Designations</strong>
+          <span>Check life insurance policies, retirement accounts (401k, IRA), and other accounts with named beneficiaries. These override your will for those specific assets.</span>
+        </div>
+      </div>
+      <div class="checklist-item">
+        <div class="check"></div>
+        <div class="text">
+          <strong>Identify All Beneficiaries</strong>
+          <span>List everyone you want to include in your will: spouse, children, grandchildren, other relatives, friends, and charitable organizations.</span>
+        </div>
+      </div>
+      <div class="checklist-item">
+        <div class="check"></div>
+        <div class="text">
+          <strong>Select an Executor</strong>
+          <span>Choose someone trustworthy and organized to manage your estate. Consider backup executors in case your first choice is unable or unwilling to serve.</span>
+        </div>
+      </div>
+      <div class="checklist-item">
+        <div class="check"></div>
+        <div class="text">
+          <strong>Designate Guardians for Minor Children</strong>
+          <span>If you have children under 18, name both primary and alternate guardians. Discuss this responsibility with your chosen guardians beforehand.</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="chapter">
+      <h3>Document Execution</h3>
+      <p>The execution process is critical. Improper execution is the primary reason wills are challenged or deemed invalid.</p>
+    </div>
+
+    <div class="table-card">
+      <figcaption>Will Execution Checklist</figcaption>
+      <table>
+        <thead>
+          <tr>
+            <th>Step</th>
+            <th>Action Required</th>
+            <th>Notes</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>1</td>
+            <td>Complete the will document</td>
+            <td>Ensure all sections are filled in completely</td>
+          </tr>
+          <tr>
+            <td>2</td>
+            <td>Initial each page</td>
+            <td>Optional but helps prevent page substitution</td>
+          </tr>
+          <tr>
+            <td>3</td>
+            <td>Sign in front of witnesses</td>
+            <td>Both witnesses must observe signing</td>
+          </tr>
+          <tr>
+            <td>4</td>
+            <td>Witnesses sign the will</td>
+            <td>Include witness addresses</td>
+          </tr>
+          <tr>
+            <td>5</td>
+            <td>Complete self-proving affidavit (if desired)</td>
+            <td>Requires notarization</td>
+          </tr>
+          <tr>
+            <td>6</td>
+            <td>Store in safe location</td>
+            <td>Inform executor of location</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="insight">
+      <div class="insight-label">Important</div>
+      <p>Never sign a will alone. Always have at least two witnesses present who can attest to your mental capacity and identity. Witnesses should not be beneficiaries in the will.</p>
+    </div>
+
+    <div class="chapter">
+      <h3>Witness Requirements</h3>
+      <p>Most states require two witnesses who meet the following criteria:</p>
+      <ul>
+        <li>Must be at least 18 years old</li>
+        <li>Must be mentally competent</li>
+        <li>Must witness you sign (or acknowledge your signature)</li>
+        <li>Should not be beneficiaries under the will (to avoid conflicts)</li>
+        <li>Must sign their own name and provide addresses</li>
+      </ul>
+    </div>
+
+    <div class="callout">
+      <div class="callout-title">Professional Recommendation</div>
+      <p>Consider having the witnesses sign a separate declaration stating they witnessed the signing and believe you were of sound mind. This strengthens the will's validity.</p>
+    </div>
+  </div>
+  <div class="footer">
+    <span>Wills & Estate Planning Guide</span>
+    <span class="page-number">6</span>
+  </div>
+</section>
+
+<!-- SECTION 4: KEY ESTATE PLANNING DOCUMENTS -->
+<section class="page" id="section8">
+  <div class="section-header">
+    <span class="section-num">Section 04</span>
+    <h2 class="section-title">Key Estate Planning Documents</h2>
+    <div class="section-line"></div>
+  </div>
+  <div class="content">
+    <p class="lead">Beyond a will, several other documents are essential for a complete estate plan. Together, they ensure your wishes are followed during life and after death.</p>
+
+    <div class="chapter">
+      <h3>Durable Power of Attorney (Financial)</h3>
+      <p>A financial power of attorney grants someone the authority to manage your financial affairs if you become incapacitated. "Durable" means the document remains valid even if you lose mental capacity.</p>
+      <p>Key powers typically include:</p>
+      <ul>
+        <li>Managing bank accounts and investments</li>
+        <li>Paying bills and managing debt</li>
+        <li>Filing tax returns</li>
+        <li>Buying and selling property</li>
+        <li>Managing business interests</li>
+      </ul>
+    </div>
+
+    <div class="highlight-box">
+      <p><strong>Springing vs. Immediate Power:</strong> Some POAs are "springing," only taking effect upon disability. Others take effect immediately upon signing. Immediate POAs provide smoother transitions but require high trust in the agent.</p>
+    </div>
+
+    <div class="chapter">
+      <h3>Healthcare Directives</h3>
+    </div>
+
+    <div class="two-col">
+      <div class="col">
+        <h4>Healthcare Power of Attorney</h4>
+        <p>Designates someone to make medical decisions if you're unable to do so. This person (called a healthcare agent or proxy) can:</p>
+        <ul>
+          <li>Consent to or refuse treatments</li>
+          <li>Access medical records</li>
+          <li>Make end-of-life decisions</li>
+          <li>Interact with healthcare providers</li>
+        </ul>
+      </div>
+      <div class="col">
+        <h4>Living Will (Advance Directive)</h4>
+        <p>A written document stating your wishes regarding end-of-life medical care. Specifies your preferences for:</p>
+        <ul>
+          <li>Artificial nutrition and hydration</li>
+          <li>Resuscitation (DNR orders)</li>
+          <li>Mechanical ventilation</li>
+          <li>Palliative care options</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="callout">
+      <div class="callout-title">HIPAA Authorization</div>
+      <p>Include a HIPAA authorization with your healthcare documents. Without it, your healthcare agent may face delays accessing critical medical information during emergencies.</p>
+    </div>
+
+    <div class="chapter">
+      <h3>Additional Important Documents</h3>
+    </div>
+
+    <div class="table-card">
+      <figcaption>Essential Estate Planning Documents</figcaption>
+      <table>
+        <thead>
+          <tr>
+            <th>Document</th>
+            <th>Purpose</th>
+            <th>Priority</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Last Will and Testament</td>
+            <td>Asset distribution after death</td>
+            <td>Essential</td>
+          </tr>
+          <tr>
+            <td>Durable Power of Attorney</td>
+            <td>Financial decisions during incapacity</td>
+            <td>Essential</td>
+          </tr>
+          <tr>
+            <td>Healthcare Power of Attorney</td>
+            <td>Medical decisions during incapacity</td>
+            <td>Essential</td>
+          </tr>
+          <tr>
+            <td>Living Will</td>
+            <td>End-of-life care preferences</td>
+            <td>Recommended</td>
+          </tr>
+          <tr>
+            <td>HIPAA Authorization</td>
+            <td>Medical information access</td>
+            <td>Essential</td>
+          </tr>
+          <tr>
+            <td>Letter of Instruction</td>
+            <td>Non-legal guidance for family</td>
+            <td>Recommended</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="chapter">
+      <h3>Letter of Instruction</h3>
+      <p>While not legally binding, a letter of instruction provides invaluable guidance to your family. Include information such as:</p>
+      <ul>
+        <li>Location of important documents</li>
+        <li>Contact information for attorneys, accountants, and advisors</li>
+        <li>Insurance policy details</li>
+        <li>Online account information and passwords</li>
+        <li>Funeral and memorial preferences</li>
+        <li>Personal messages to loved ones</li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer">
+    <span>Wills & Estate Planning Guide</span>
+    <span class="page-number">8</span>
+  </div>
+</section>
+
+<!-- SECTION 5: EXECUTOR SELECTION AND DUTIES -->
+<section class="page" id="section11">
+  <div class="section-header">
+    <span class="section-num">Section 05</span>
+    <h2 class="section-title">Executor Selection and Duties</h2>
+    <div class="section-line"></div>
+  </div>
+  <div class="content">
+    <p class="lead">The executor of your estate plays a critical role in ensuring your final wishes are carried out. Choosing the right person and preparing them for this responsibility is essential.</p>
+
+    <div class="chapter">
+      <h3>Qualities to Look for in an Executor</h3>
+      <p>The ideal executor combines several important qualities:</p>
+      <ul>
+        <li><strong>Trustworthiness:</strong> Must handle financial matters with integrity</li>
+        <li><strong>Organization:</strong> Must manage complex tasks and deadlines</li>
+        <li><strong>Availability:</strong> Must have time to dedicate to estate management</li>
+        <li><strong>Age Appropriate:</strong> Should outlive you and remain capable</li>
+        <li><strong>Family Harmony:</strong> Can navigate potential family conflicts</li>
+        <li><strong>Financial Competence:</strong> Basic understanding of accounting and finances</li>
+      </ul>
+    </div>
+
+    <div class="highlight-box">
+      <p><strong>Professional vs. Family Executor:</strong> While family members are often chosen, a professional executor (bank trust department or attorney) may be appropriate for complex estates, blended families, or when family members live far away.</p>
+    </div>
+
+    <div class="chapter">
+      <h3>Executor Duties Overview</h3>
+      <p>Understanding what an executor does helps you prepare your chosen person and set realistic expectations.</p>
+    </div>
+
+    <div class="table-card">
+      <figcaption>Executor Responsibilities Timeline</figcaption>
+      <table>
+        <thead>
+          <tr>
+            <th>Phase</th>
+            <th>Duties</th>
+            <th>Timeframe</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Immediate</td>
+            <td>Obtain death certificate, secure property, notify beneficiaries</td>
+            <td>Days 1-14</td>
+          </tr>
+          <tr>
+            <td>Probate Filing</td>
+            <td>File will with probate court, obtain court appointment</td>
+            <td>Days 14-30</td>
+          </tr>
+          <tr>
+            <td>Asset Inventory</td>
+            <td>Identify, value, and secure all estate assets</td>
+            <td>Days 30-90</td>
+          </tr>
+          <tr>
+            <td>Debt Settlement</td>
+            <td>Notify creditors, pay valid debts, file tax returns</td>
+            <td>Months 2-6</td>
+          </tr>
+          <tr>
+            <td>Distribution</td>
+            <td>Transfer assets to beneficiaries, close estate</td>
+            <td>Months 6-18</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="chapter">
+      <h3>Executor Compensation</h3>
+      <p>Executors are entitled to reasonable compensation for their services, though many family members serve without charge. Compensation options include:</p>
+      <ul>
+        <li>Percentage of estate value (varies by state, typically 1-5%)</li>
+        <li>Hourly fees for complex estates</li>
+        <li>Flat fee agreements</li>
+        <li>Reimbursement for out-of-pocket expenses</li>
+      </ul>
+    </div>
+
+    <div class="callout">
+      <div class="callout-title">Preparation Tip</div>
+      <p>Give your executor a copy of your will and this guide while you're alive. Discuss your wishes, explain where important documents are located, and ensure they understand your reasons for specific bequests.</p>
+    </div>
+
+    <div class="chapter">
+      <h3>Common Executor Mistakes to Avoid</h3>
+      <ul>
+        <li>Failing to notify beneficiaries promptly</li>
+        <li>Mishandling estate funds or commingling with personal money</li>
+        <li>Making distributions before paying debts and taxes</li>
+        <li>Ignoring deadlines for tax filings and court reports</li>
+        <li>Selling estate assets without proper authorization</li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer">
+    <span>Wills & Estate Planning Guide</span>
+    <span class="page-number">10</span>
+  </div>
+</section>
+
+<!-- SECTION 6: COMMON MISTAKES -->
+<section class="page" id="section12">
+  <div class="section-header">
+    <span class="section-num">Section 06</span>
+    <h2 class="section-title">Common Mistakes to Avoid</h2>
+    <div class="section-line"></div>
+  </div>
+  <div class="content">
+    <p class="lead">Many estate plans fail due to preventable errors. Understanding common mistakes helps you avoid them and create a more effective plan.</p>
+
+    <div class="chapter">
+      <h3>Legal and Procedural Mistakes</h3>
+      <ul>
+        <li><strong>Improper Execution:</strong> Failing to follow witness and signature requirements invalidates the will</li>
+        <li><strong>Handwritten Changes:</strong> Unwitnessed changes (interlineations) on a typed will may not be honored</li>
+        <li><strong>Self-Proving Affidavit:</strong> Skipping notarization makes probate more complicated</li>
+        <li><strong>Outdated Documents:</strong> Wills from decades ago may not reflect current laws and relationships</li>
+      </ul>
+    </div>
+
+    <div class="callout">
+      <div class="callout-title">Key Insight</div>
+      <p>A will that fails execution requirements is treated as if no will exists. Courts cannot "fix" an improperly executed will, even if the testator's intent is clear.</p>
+    </div>
+
+    <div class="chapter">
+      <h3>Content Mistakes</h3>
+      <ul>
+        <li><strong>Vague Language:</strong> "Split equally among children" fails to account for children who predecease you</li>
+        <li><strong>Forgotten Assets:</strong> Not cataloging all assets leads to intestate distribution of some property</li>
+        <li><strong>Beneficiary Conflicts:</strong> Designating both a spouse and children without clear guidance creates disputes</li>
+        <li><strong>Specific vs. Residual Confusion:</strong> Mixing specific bequests with residuary clauses causes ambiguity</li>
+      </ul>
+    </div>
+
+    <div class="chapter">
+      <h3>Relationship Mistakes</h3>
+      <ul>
+        <li><strong>Not Discussing with Family:</strong> Surprise beneficiaries or disinheritances cause family conflict</li>
+        <li><strong>Guardian Selection:</strong> Not discussing guardianship with the proposed guardian</li>
+        <li><strong>Executor Not Informed:</strong> Naming someone without telling them causes delays</li>
+        <li><strong>Forgotten Heirs:</strong> Omitting stepchildren, foster children, or longtime partners</li>
+      </ul>
+    </div>
+
+    <div class="highlight-box">
+      <p><strong>Asset-Title Mistakes:</strong> Adding children to property as joint owners or TOD beneficiaries can trigger unintended consequences including loss of control, tax issues, and exposure to the child's creditors.</p>
+    </div>
+
+    <div class="chapter">
+      <h3>Planning Mistakes</h3>
+      <ul>
+        <li><strong>Neglecting Beneficiary Designations:</strong> Retirement accounts and life insurance pass outside the will</li>
+        <li><strong>Ignoring Digital Assets:</strong> Without planning, online accounts may be inaccessible or lost</li>
+        <li><strong>No Contingency Plans:</strong> Not naming alternate executors, guardians, or trustees</li>
+        <li><strong>Estate Size Assumptions:</strong> Assuming you don't need planning because "there's not much"</li>
+      </ul>
+    </div>
+
+    <div class="table-card">
+      <figcaption>Common Will Clause Mistakes</figcaption>
+      <table>
+        <thead>
+          <tr>
+            <th>Mistake</th>
+            <th>Problem</th>
+            <th>Solution</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>"Split among my children"</td>
+            <td>No provision if child is deceased</td>
+            <td>Include per stirpes language</td>
+          </tr>
+          <tr>
+            <td>"To my sister Mary"</td>
+            <td>Mary may predecease you</td>
+            <td>Add alternate beneficiary</td>
+          </tr>
+          <tr>
+            <td>"My car to John"</td>
+            <td>You no longer own the car</td>
+            <td>Use "any car I own at death"</td>
+          </tr>
+          <tr>
+            <td>"To whoever cared for me"</td>
+            <td>Impossible to verify</td>
+            <td>Name specific individuals</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+  <div class="footer">
+    <span>Wills & Estate Planning Guide</span>
+    <span class="page-number">11</span>
+  </div>
+</section>
+
+<!-- SECTION 7: ESTATE DISTRIBUTION STRATEGIES -->
+<section class="page" id="section13">
+  <div class="section-header">
+    <span class="section-num">Section 07</span>
+    <h2 class="section-title">Estate Distribution Strategies</h2>
+    <div class="section-line"></div>
+  </div>
+  <div class="content">
+    <p class="lead">How you structure your bequests affects taxes, control, and the ultimate benefit to your heirs. Understanding distribution strategies helps you make informed decisions.</p>
+
+    <div class="chapter">
+      <h3>Types of Bequests</h3>
+      <ul>
+        <li><strong>Specific Bequests:</strong> "I give my diamond ring to my daughter Sarah" - particular item to particular person</li>
+        <li><strong>General Bequests:</strong> "I give $10,000 to my brother John" - money from the general estate</li>
+        <li><strong>Residuary Bequests:</strong> "I give all remaining assets to my spouse" - what's left after other bequests</li>
+        <li><strong>Charitable Bequests:</strong> Gifts to qualified charitable organizations - often provide tax benefits</li>
+      </ul>
+    </div>
+
+    <div class="chapter">
+      <h3>Per Stirpes vs. Per Capita</h3>
+      <p>Understanding these terms prevents family disputes:</p>
+      <ul>
+        <li><strong>Per Stirpes:</strong> "By representation" - if a beneficiary predeceases you, their share passes to their descendants</li>
+        <li><strong>Per Capita:</strong> "By head" - everyone shares equally regardless of generation</li>
+      </ul>
+    </div>
+
+    <div class="highlight-box">
+      <p><strong>Example:</strong> If you leave $100,000 "per stirpes" to your three children, and one child (John) dies leaving two children, the distribution is: $33,333 to each surviving child and $33,333 to John's two children split equally ($16,666 each).</p>
+    </div>
+
+    <div class="chapter">
+      <h3>Trust-Based Distributions</h3>
+      <p>For complex situations, distributions through trusts provide benefits:</p>
+      <ul>
+        <li><strong>Testamentary Trusts:</strong> Created by your will, funded after death - provides ongoing management</li>
+        <li><strong>Minor's Trusts:</strong> Holds assets for children until they reach a specified age</li>
+        <li><strong>Special Needs Trusts:</strong> Provides for disabled beneficiaries without affecting government benefits</li>
+        <li><strong>Generation-Skipping Trusts:</strong> Maximizes wealth transfer across generations</li>
+      </ul>
+    </div>
+
+    <div class="callout">
+      <div class="callout-title">Professional Guidance</div>
+      <p>Trust-based planning involves complex tax and legal considerations. Consult with an estate planning attorney to determine if trusts benefit your situation.</p>
+    </div>
+
+    <div class="chapter">
+      <h3>Tax-Efficient Giving Strategies</h3>
+      <ul>
+        <li><strong>Lifetime Gifts:</strong> Use annual exclusion gifts ($18,000 per recipient in 2026) to reduce estate size</li>
+        <li><strong>529 Plan Contributions:</strong> Front-load education savings with up to five years of annual exclusions</li>
+        <li><strong>Charitable Giving:</strong> Bequests to charity are deductible against the estate tax exemption</li>
+        <li><strong>Grantor Retained Annuity Trusts:</strong> Complex strategy to transfer appreciating assets with minimal tax</li>
+      </ul>
+    </div>
+
+    <div class="chapter">
+      <h3>Federal Estate Tax Considerations</h3>
+      <p>The federal estate tax exemption is significant ($13.61 million for 2024, adjusted annually for inflation). Most estates don't face federal estate tax, but planning remains important for:</p>
+      <ul>
+        <li>Large estates approaching or exceeding the exemption</li>
+        <li>State estate taxes (many states have lower exemptions)</li>
+        <li>Inheritance tax in some states</li>
+        <li>Future law changes that may reduce exemptions</li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer">
+    <span>Wills & Estate Planning Guide</span>
+    <span class="page-number">12</span>
+  </div>
+</section>
+
+<!-- SECTION 8: DIGITAL ASSETS -->
+<section class="page" id="section14">
+  <div class="section-header">
+    <span class="section-num">Section 08</span>
+    <h2 class="section-title">Digital Assets and Online Accounts</h2>
+    <div class="section-line"></div>
+  </div>
+  <div class="content">
+    <p class="lead">In the modern world, digital assets represent a significant portion of many estates. Planning for these assets ensures they're preserved and transferred appropriately.</p>
+
+    <div class="chapter">
+      <h3>Categories of Digital Assets</h3>
+      <ul>
+        <li><strong>Financial:</strong> Online banking, investment accounts, payment apps (PayPal, Venmo)</li>
+        <li><strong>Files and Media:</strong> Photos, videos, documents stored in cloud services</li>
+        <li><strong>Communication:</strong> Email accounts, social media profiles, messaging apps</li>
+        <li><strong>Business:</strong> Domain names, websites, online stores, freelance accounts</li>
+        <li><strong>Entertainment:</strong> Streaming services, digital music, e-books, gaming accounts</li>
+        <li><strong>Crypto:</strong> Cryptocurrency wallets, NFT collections</li>
+      </ul>
+    </div>
+
+    <div class="callout">
+      <div class="callout-title">Legal Framework</div>
+      <p>Most states have adopted the Revised Uniform Fiduciary Access to Digital Assets Act (RUFADAA), which provides a legal framework for executors to access digital assets. However, each platform has its own policies.</p>
+    </div>
+
+    <div class="chapter">
+      <h3>Best Practices for Digital Estate Planning</h3>
+    </div>
+
+    <div class="checklist">
+      <div class="checklist-item">
+        <div class="check"></div>
+        <div class="text">
+          <strong>Create a Digital Asset Inventory</strong>
+          <span>Document all online accounts, platforms, usernames, and approximate values. Include both financial and sentimental assets.</span>
+        </div>
+      </div>
+      <div class="checklist-item">
+        <div class="check"></div>
+        <div class="text">
+          <strong>Designate a Digital Executor</strong>
+          <span>Consider naming someone specifically for digital assets, or add provisions to your general executor appointment.</span>
+        </div>
+      </div>
+      <div class="checklist-item">
+        <div class="check"></div>
+        <div class="text">
+          <strong>Store Passwords Securely</strong>
+          <span>Use a password manager with access given to your executor. Alternatively, maintain a written record in a secure location.</span>
+        </div>
+      </div>
+      <div class="checklist-item">
+        <div class="check"></div>
+        <div class="text">
+          <strong>Review Platform Policies</strong>
+          <span>Some services (Apple, Google, Facebook) have specific tools for legacy contacts. Enable these features while you can.</span>
+        </div>
+      </div>
+      <div class="checklist-item">
+        <div class="check"></div>
+        <div class="text">
+          <strong>Address Cryptocurrency</strong>
+          <span>Cryptocurrency requires special handling. Store private keys securely and provide access instructions to your executor.</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="chapter">
+      <h3>Digital Asset Challenges</h3>
+      <ul>
+        <li><strong>Terms of Service:</strong> Some platforms prohibit access by third parties</li>
+        <li><strong>Privacy Laws:</strong> Electronically stored information laws can restrict executor access</li>
+        <li><strong>Value Fluctuation:</strong> Cryptocurrencies and digital assets may have volatile values</li>
+        <li><strong>Password Changes:</strong> Security measures may block access if credentials aren't updated</li>
+      </ul>
+    </div>
+
+    <div class="highlight-box">
+      <p><strong>Memorial vs. Deletion:</strong> Decide what should happen to your social media accounts. Some platforms offer memorialization options; others delete accounts upon notification of death. Include your preferences in your letter of instruction.</p>
+    </div>
+  </div>
+  <div class="footer">
+    <span>Wills & Estate Planning Guide</span>
+    <span class="page-number">13</span>
+  </div>
+</section>
+
+<!-- SECTION 9: UPDATING YOUR WILL -->
+<section class="page" id="section15">
+  <div class="section-header">
+    <span class="section-num">Section 09</span>
+    <h2 class="section-title">Updating and Amending Your Will</h2>
+    <div class="section-line"></div>
+  </div>
+  <div class="content">
+    <p class="lead">A will should be a living document that evolves with your life circumstances. Regular reviews and proper updates ensure it remains valid and reflects your current wishes.</p>
+
+    <div class="chapter">
+      <h3>When to Update Your Will</h3>
+      <p>Review your will after major life events:</p>
+      <ul>
+        <li>Marriage or divorce</li>
+        <li>Birth or adoption of children</li>
+        <li>Death of a beneficiary or executor</li>
+        <li>Significant change in assets</li>
+        <li>Move to another state</li>
+        <li>Change in family relationships</li>
+        <li>Significant tax law changes</li>
+      </ul>
+    </div>
+
+    <div class="chapter">
+      <h3>Codicils vs. Complete Revision</h3>
+      <p>You have two options for making changes:</p>
+    </div>
+
+    <div class="two-col">
+      <div class="col">
+        <h4>Codicil</h4>
+        <p>A separate document that modifies specific provisions of an existing will. Requirements:</p>
+        <ul>
+          <li>Must meet same execution requirements as original will</li>
+          <li>Should reference the original will specifically</li>
+          <li>Best for simple, isolated changes</li>
+          <li>Can become confusing if multiple codicils accumulate</li>
+        </ul>
+      </div>
+      <div class="col">
+        <h4>Complete Revision</h4>
+        <p>Creates a new will that completely supersedes the old one. Best when:</p>
+        <ul>
+          <li>Multiple changes are needed</li>
+          <li>Changes are significant</li>
+          <li>Original will has become difficult to follow</li>
+          <li>Significant time has passed since original execution</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="callout">
+      <div class="callout-title">Important</div>
+      <p>Never attempt to modify a will by crossing out text, adding handwriting, or making changes without proper execution. These "interlineations" are generally invalid unless witnessed and executed like a codicil.</p>
+    </div>
+
+    <div class="chapter">
+      <h3>Proper Revocation</h3>
+      <p>If you destroy your will to revoke it:</p>
+      <ul>
+        <li>Destroy all copies</li>
+        <li>Intent must be clear (destruction with intent to revoke)</li>
+        <li>Consider executing a new will simultaneously</li>
+        <li>Create a new will before destroying the old one</li>
+      </ul>
+    </div>
+
+    <div class="chapter">
+      <h3>Annual Review Checklist</h3>
+    </div>
+
+    <div class="checklist">
+      <div class="checklist-item">
+        <div class="check"></div>
+        <div class="text">
+          <strong>Review Beneficiaries</strong>
+          <span>Confirm all named beneficiaries are still living and still desired recipients</span>
+        </div>
+      </div>
+      <div class="checklist-item">
+        <div class="check"></div>
+        <div class="text">
+          <strong>Verify Executor Availability</strong>
+          <span>Check that your named executor is still willing and able to serve</span>
+        </div>
+      </div>
+      <div class="checklist-item">
+        <div class="check"></div>
+        <div class="text">
+          <strong>Check Asset List</strong>
+          <span>Update descriptions of assets and remove items no longer owned</span>
+        </div>
+      </div>
+      <div class="checklist-item">
+        <div class="check"></div>
+        <div class="text">
+          <strong>Confirm Storage Location</strong>
+          <span>Verify your will is in the expected location and hasn't been moved</span>
+        </div>
+      </div>
+      <div class="checklist-item">
+        <div class="check"></div>
+        <div class="text">
+          <strong>Update Professional Contacts</strong>
+          <span>Ensure attorney and financial advisor information is current</span>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="footer">
+    <span>Wills & Estate Planning Guide</span>
+    <span class="page-number">14</span>
+  </div>
+</section>
+
+<!-- SECTION 10: STATE-SPECIFIC -->
+<section class="page" id="section16">
+  <div class="section-header">
+    <span class="section-num">Section 10</span>
+    <h2 class="section-title">State-Specific Considerations</h2>
+    <div class="section-line"></div>
+  </div>
+  <div class="content">
+    <p class="lead">Estate planning laws vary significantly by state. Understanding your state's requirements ensures your will is valid and your estate is managed correctly.</p>
+
+    <div class="chapter">
+      <h3>Key State Variations</h3>
+    </div>
+
+    <div class="table-card">
+      <figcaption>State Estate Planning Differences</figcaption>
+      <table>
+        <thead>
+          <tr>
+            <th>Topic</th>
+            <th>Variation</th>
+            <th>Impact</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Community Property</td>
+            <td>9 states use community property rules</td>
+            <td>Affects what each spouse can bequeath</td>
+          </tr>
+          <tr>
+            <td>Holographic Wills</td>
+            <td>~25 states recognize handwritten wills</td>
+            <td>May be useful in emergencies</td>
+          </tr>
+          <tr>
+            <td>Witness Requirements</td>
+            <td>2-3 witnesses depending on state</td>
+            <td>Execution procedure varies</td>
+          </tr>
+          <tr>
+            <td>Self-Proving Affidavit</td>
+            <td>Not all states offer this option</td>
+            <td>May affect probate speed</td>
+          </tr>
+          <tr>
+            <td>Estate Tax Exemption</td>
+            <td>State exemptions vary widely</td>
+            <td>Planning priorities differ</td>
+          </tr>
+          <tr>
+            <td>Inheritance Tax</td>
+            <td>6 states have inheritance tax</td>
+            <td>Beneficiary planning important</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="chapter">
+      <h3>Community Property States</h3>
+      <p>The nine community property states (Arizona, California, Idaho, Louisiana, Nevada, New Mexico, Texas, Washington, and Wisconsin) have specific rules about property ownership during marriage:</p>
+      <ul>
+        <li>Income and assets earned during marriage are community property</li>
+        <li>Each spouse generally controls their half of community property</li>
+        <li>Separate property (owned before marriage or received as gift/inheritance) remains individual</li>
+        <li>Wills may be challenged if they dispose of community property without consent</li>
+      </ul>
+    </div>
+
+    <div class="highlight-box">
+      <p><strong>Non-Community Property States:</strong> In common law states, property ownership is more flexible. Either spouse can generally bequeath their interest in jointly owned property, but proper planning remains important.</p>
+    </div>
+
+    <div class="chapter">
+      <h3>Probate Variations</h3>
+      <p>Probate processes and costs vary by state:</p>
+      <ul>
+        <li><strong>Simplified Probate:</strong> Many states offer simplified procedures for small estates (under $100,000 or specific thresholds)</li>
+        <li><strong>Independent vs. Supervised:</strong> Some states allow independent executors while others require more court oversight</li>
+        <li><strong>Filing Fees:</strong> Court costs vary significantly between jurisdictions</li>
+        <li><strong>Time Requirements:</strong> Waiting periods after death before distribution range from 30 days to 6 months</li>
+      </ul>
+    </div>
+
+    <div class="chapter">
+      <h3>State Death Taxes</h3>
+      <p>Some states impose their own death taxes in addition to federal estate tax:</p>
+      <ul>
+        <li><strong>Estate Tax:</strong> Connecticut, District of Columbia, Hawaii, Illinois, Maine, Maryland, Massachusetts, Minnesota, New York, Oregon, Rhode Island, Vermont, Washington</li>
+        <li><strong>Inheritance Tax:</strong> Iowa, Kentucky, Maryland, Nebraska, New Jersey, Pennsylvania</li>
+      </ul>
+      <p>Inheritance tax rates often depend on the relationship between deceased and beneficiary, with closer relations receiving lower rates or exemptions.</p>
+    </div>
+
+    <div class="callout">
+      <div class="callout-title">Professional Recommendation</div>
+      <p>Because laws vary significantly, always consult with an estate planning attorney licensed in your state when making major planning decisions or if you own property in multiple states.</p>
+    </div>
+  </div>
+  <div class="footer">
+    <span>Wills & Estate Planning Guide</span>
+    <span class="page-number">15</span>
+  </div>
+</section>
+
+<!-- SECTION 11: GLOSSARY -->
+<section class="page" id="section17">
+  <div class="section-header">
+    <span class="section-num">Section 11</span>
+    <h2 class="section-title">Glossary of Estate Planning Terms</h2>
+    <div class="section-line"></div>
+  </div>
+  <div class="content">
+    <p class="lead">Understanding estate planning terminology helps you make informed decisions and communicate effectively with legal and financial professionals.</p>
+
+    <div class="table-card">
+      <table>
+        <thead>
+          <tr>
+            <th style="width: 30%">Term</th>
+            <th>Definition</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>Administrator</strong></td>
+            <td>Person appointed by court to manage an estate when there is no will or no named executor</td>
+          </tr>
+          <tr>
+            <td><strong>Beneficiary</strong></td>
+            <td>Person or entity designated to receive assets from a will, trust, or account</td>
+          </tr>
+          <tr>
+            <td><strong>Codicil</strong></td>
+            <td>Amendment to an existing will that modifies specific provisions</td>
+          </tr>
+          <tr>
+            <td><strong>Community Property</strong></td>
+            <td>Assets acquired during marriage in community property states</td>
+          </tr>
+          <tr>
+            <td><strong>Devise</strong></td>
+            <td>To give property by will; "devisee" is the recipient</td>
+          </tr>
+          <tr>
+            <td><strong>Durable Power of Attorney</strong></td>
+            <td>Legal document authorizing someone to act on your behalf, remaining valid if you become incapacitated</td>
+          </tr>
+          <tr>
+            <td><strong>Estate</strong></td>
+            <td>All assets and property owned by a person at death</td>
+          </tr>
+          <tr>
+            <td><strong>Executor</strong></td>
+            <td>Person named in a will to administer the estate and carry out the testator's wishes</td>
+          </tr>
+          <tr>
+            <td><strong>Fiduciary</strong></td>
+            <td>Person or entity legally obligated to act in someone else's best interest</td>
+          </tr>
+          <tr>
+            <td><strong>Grantor/Trustor</strong></td>
+            <td>Person who creates and funds a trust</td>
+          </tr>
+          <tr>
+            <td><strong>Guardian</strong></td>
+            <td>Person appointed to care for minor children or legally incapacitated adults</td>
+          </tr>
+          <tr>
+            <td><strong>Heir</strong></td>
+            <td>Person entitled to receive property under intestacy laws when there is no will</td>
+          </tr>
+          <tr>
+            <td><strong>Incapacity</strong></td>
+            <td>Inability to make decisions due to mental or physical disability</td>
+          </tr>
+          <tr>
+            <td><strong>Inter Vivos Trust</strong></td>
+            <td>Trust created and funded during the grantor's lifetime</td>
+          </tr>
+          <tr>
+            <td><strong>Intestate/Intestacy</strong></td>
+            <td>Dying without a valid will; state laws govern distribution</td>
+          </tr>
+          <tr>
+            <td><strong>Legacy</strong></td>
+            <td>Gift of property to a beneficiary through a will</td>
+          </tr>
+          <tr>
+            <td><strong>Letter of Instruction</strong></td>
+            <td>Non-legal document providing guidance to family about personal matters</td>
+          </tr>
+          <tr>
+            <td><strong>Living Will</strong></td>
+            <td>Document stating preferences for end-of-life medical care</td>
+          </tr>
+          <tr>
+            <td><strong>Per Capita</strong></td>
+            <td>"By head" - distribution where each person receives an equal share</td>
+          </tr>
+          <tr>
+            <td><strong>Per Stirpes</strong></td>
+            <td>"By representation" - distribution where deceased beneficiary's share passes to their descendants</td>
+          </tr>
+          <tr>
+            <td><strong>Personal Representative</strong></td>
+            <td>Generic term for executor or administrator</td>
+          </tr>
+          <tr>
+            <td><strong>Probate</strong></td>
+            <td>Court-supervised process of validating a will and distributing estate assets</td>
+          </tr>
+          <tr>
+            <td><strong>Residuary Estate</strong></td>
+            <td>Assets remaining after all specific bequests, debts, and taxes are paid</td>
+          </tr>
+          <tr>
+            <td><strong>Self-Proving Affidavit</strong></td>
+            <td>Notarized statement attached to a will confirming proper execution</td>
+          </tr>
+          <tr>
+            <td><strong>Testamentary Capacity</strong></td>
+            <td>Mental ability required to create a valid will</td>
+          </tr>
+          <tr>
+            <td><strong>Testator</strong></td>
+            <td>Person who creates and signs a will</td>
+          </tr>
+          <tr>
+            <td><strong>Trust</strong></td>
+            <td>Legal arrangement where a trustee holds property for beneficiaries</td>
+          </tr>
+          <tr>
+            <td><strong>Trustee</strong></td>
+            <td>Person or entity managing trust assets for beneficiaries</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+  <div class="footer">
+    <span>Wills & Estate Planning Guide</span>
+    <span class="page-number">16</span>
+  </div>
+</section>
+
+<!-- FINAL PAGE: NEXT STEPS -->
+<section class="page final-section">
+  <div>
+    <h2>Take Action Today</h2>
+    <p>Estate planning is one of the most important gifts you can give your loved ones. Don't let the complexity of the task prevent you from taking the first step.</p>
+    <p>This guide provides the foundation for creating a comprehensive estate plan. Use the checklists, templates, and information provided to begin your journey.</p>
+    <p>For complex situations, family conflicts, significant assets, or business ownership, consult with a qualified estate planning attorney in your state.</p>
+
+    <div class="cta-box">
+      <span>Your family's future starts with one decision today.</span>
+    </div>
+  </div>
+</section>
+
+</body>
+</html>

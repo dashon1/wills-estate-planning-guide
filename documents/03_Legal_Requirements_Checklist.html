@@ -1,0 +1,986 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Legal Requirements Checklist - Wills & Estate Planning</title>
+  <style>
+    @page { size: A4 portrait; margin: 14mm 12mm; }
+    @media screen {
+      html { background: #d0d0d0; }
+      body { margin: 0; padding: 20px 0; }
+      body > section { width: 210mm; min-height: 297mm; margin: 0 auto 20px; background: #fff; box-shadow: 0 4px 24px rgba(0,0,0,0.18); box-sizing: border-box; overflow: hidden; }
+    }
+    * { box-sizing: border-box; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+    :root {
+      --accent: #1a6b4a;
+      --ink: #1a1a1e;
+      --muted: #5a5a5a;
+      --rule: #d4cfc7;
+      --hairline: #e8e4dc;
+      --paper: #faf9f7;
+    }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", "PingFang SC", "Helvetica Neue", Arial, sans-serif;
+      font-size: 10.5pt;
+      line-height: 1.55;
+      color: var(--ink);
+      background: var(--paper);
+      -webkit-font-smoothing: antialiased;
+      margin: 0;
+      padding: 0;
+    }
+    .cover {
+      min-height: 268mm;
+      background: linear-gradient(135deg, #0f1f2e 0%, #1a2f3e 50%, #0f1f2e 100%);
+      color: #f0ede6;
+      padding: 40mm 20mm;
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+    .cover::before {
+      content: '';
+      position: absolute;
+      top: 20mm;
+      right: 20mm;
+      width: 80mm;
+      height: 80mm;
+      background: radial-gradient(circle, rgba(26,107,74,0.3) 0%, transparent 70%);
+      border-radius: 50%;
+    }
+    .cover-tag {
+      font-size: 8pt;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      color: #8a9aa5;
+      margin-bottom: 15mm;
+    }
+    .cover h1 {
+      font-size: 28pt;
+      font-weight: 300;
+      line-height: 1.2;
+      margin: 0 0 10mm 0;
+      color: #ffffff;
+    }
+    .cover .subtitle {
+      font-size: 11pt;
+      line-height: 1.5;
+      color: #b8c4ce;
+      margin: 0;
+      max-width: 140mm;
+    }
+    .cover-meta {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-end;
+      margin-top: auto;
+      padding-top: 20mm;
+      border-top: 0.5pt solid rgba(255,255,255,0.2);
+    }
+    .meta-info {
+      font-size: 8.5pt;
+      color: #8a9aa5;
+      line-height: 1.6;
+    }
+    .page { page-break-after: always; min-height: 268mm; padding: 20mm 0; position: relative; }
+    .page:last-child { page-break-after: auto; }
+    .content { padding: 0 20mm; }
+    .section-header { padding: 0 20mm; margin-bottom: 10mm; }
+    .section-title {
+      font-size: 16pt;
+      font-weight: 400;
+      color: var(--ink);
+      margin: 0;
+      line-height: 1.3;
+      border-bottom: 2pt solid var(--accent);
+      padding-bottom: 4mm;
+    }
+    .section-subtitle {
+      font-size: 9pt;
+      color: var(--muted);
+      margin: 4mm 0 0 0;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+    .checklist-section {
+      margin-bottom: 12mm;
+    }
+    .checklist-title {
+      font-size: 12pt;
+      font-weight: 600;
+      color: var(--accent);
+      margin: 0 0 6mm 0;
+      display: flex;
+      align-items: center;
+    }
+    .checklist-title::before {
+      content: '';
+      width: 8mm;
+      height: 8mm;
+      background: var(--accent);
+      margin-right: 4mm;
+      flex-shrink: 0;
+    }
+    .check-item {
+      display: flex;
+      align-items: flex-start;
+      margin-bottom: 4mm;
+      padding: 4mm 5mm;
+      background: #faf9f7;
+      border-left: 2pt solid var(--accent);
+      page-break-inside: avoid;
+    }
+    .check-box {
+      width: 5mm;
+      height: 5mm;
+      border: 1pt solid var(--accent);
+      margin-right: 4mm;
+      flex-shrink: 0;
+      margin-top: 1mm;
+    }
+    .check-content { flex: 1; }
+    .check-content strong {
+      display: block;
+      font-size: 10pt;
+      margin-bottom: 1mm;
+    }
+    .check-content span {
+      font-size: 9pt;
+      color: var(--muted);
+      line-height: 1.4;
+    }
+    .sub-check { margin-left: 9mm; }
+    .sub-check .check-box { width: 4mm; height: 4mm; }
+    .note-box {
+      background: #fef9e6;
+      border: 0.5pt solid #e6d9b8;
+      padding: 5mm 7mm;
+      margin: 6mm 0;
+      border-radius: 2mm;
+    }
+    .note-box strong {
+      font-size: 9pt;
+      color: #8a6d1b;
+      display: block;
+      margin-bottom: 2mm;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+    .note-box p {
+      margin: 0;
+      font-size: 9.5pt;
+      color: #5a4a1a;
+    }
+    .callout {
+      background: linear-gradient(135deg, #f0f7f3 0%, #e8f3ed 100%);
+      border-left: 3pt solid var(--accent);
+      padding: 6mm 8mm;
+      margin: 6mm 0;
+      page-break-inside: avoid;
+    }
+    .callout strong {
+      font-size: 9pt;
+      color: var(--accent);
+      display: block;
+      margin-bottom: 2mm;
+    }
+    .callout p {
+      margin: 0;
+      font-size: 9.5pt;
+    }
+    .progress-bar {
+      display: flex;
+      margin: 6mm 0;
+      gap: 1mm;
+    }
+    .progress-segment {
+      flex: 1;
+      height: 3mm;
+      background: var(--hairline);
+    }
+    .progress-segment.active { background: var(--accent); }
+    .footer {
+      position: absolute;
+      bottom: 12mm;
+      left: 20mm;
+      right: 20mm;
+      display: flex;
+      justify-content: space-between;
+      font-size: 8pt;
+      color: var(--muted);
+      border-top: 0.5pt solid var(--hairline);
+      padding-top: 4mm;
+    }
+    .page-number { font-weight: 500; color: var(--ink); }
+    .table-simple {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 9pt;
+      margin: 6mm 0;
+    }
+    .table-simple th {
+      background: var(--accent);
+      color: #ffffff;
+      padding: 4mm 5mm;
+      text-align: left;
+      font-weight: 500;
+    }
+    .table-simple td {
+      padding: 3mm 5mm;
+      border-bottom: 0.5pt solid var(--hairline);
+    }
+    .table-simple tr:nth-child(even) td { background: #faf9f7; }
+    .sign-box {
+      border: 1pt solid var(--hairline);
+      padding: 6mm;
+      margin: 8mm 0;
+      background: #faf9f7;
+    }
+    .sign-box h4 {
+      font-size: 10pt;
+      margin: 0 0 4mm 0;
+      color: var(--ink);
+    }
+    .sign-row {
+      display: flex;
+      gap: 10mm;
+      margin-top: 5mm;
+    }
+    .sign-item {
+      flex: 1;
+    }
+    .sign-item label {
+      font-size: 8pt;
+      color: var(--muted);
+      display: block;
+      margin-bottom: 2mm;
+    }
+    .sign-line {
+      border-bottom: 0.5pt solid var(--ink);
+      height: 8mm;
+    }
+    .sign-item small {
+      font-size: 7.5pt;
+      color: var(--muted);
+      display: block;
+      margin-top: 1mm;
+    }
+  </style>
+</head>
+<body>
+
+<!-- COVER PAGE -->
+<section class="cover page">
+  <div>
+    <span class="cover-tag">Estate Planning Essentials</span>
+    <h1>Legal Requirements<br>Checklist</h1>
+    <p class="subtitle">Step-by-step verification for creating a legally valid will. Ensure every requirement is met with this comprehensive checklist.</p>
+  </div>
+  <div class="cover-meta">
+    <div class="meta-info">
+      <strong>Wills & Estate Planning Guide</strong><br>
+      Document 03 of 06<br>
+      Version 1.0
+    </div>
+  </div>
+</section>
+
+<!-- PAGE 1: PRE-PLANNING -->
+<section class="page">
+  <div class="content">
+    <div class="section-header">
+      <h2 class="section-title">Pre-Planning Requirements</h2>
+      <span class="section-subtitle">Complete before drafting your will</span>
+    </div>
+
+    <div class="progress-bar">
+      <div class="progress-segment active"></div>
+      <div class="progress-segment active"></div>
+      <div class="progress-segment"></div>
+      <div class="progress-segment"></div>
+      <div class="progress-segment"></div>
+    </div>
+
+    <div class="checklist-section">
+      <h3 class="checklist-title">Identity Verification</h3>
+
+      <div class="check-item">
+        <div class="check-box"></div>
+        <div class="check-content">
+          <strong>Valid Government-Issued ID</strong>
+          <span>Obtain a valid driver's license, passport, or state ID. This confirms your identity and age for witnesses.</span>
+        </div>
+      </div>
+
+      <div class="check-item sub-check">
+        <div class="check-box"></div>
+        <div class="check-content">
+          <span>Driver's license number documented</span>
+        </div>
+      </div>
+
+      <div class="check-item sub-check">
+        <div class="check-box"></div>
+        <div class="check-content">
+          <span>Passport number documented (if applicable)</span>
+        </div>
+      </div>
+
+      <div class="check-item">
+        <div class="check-box"></div>
+        <div class="check-content">
+          <strong>Full Legal Name Confirmation</strong>
+          <span>Verify your full legal name as it appears on official documents. Use this exact name in your will.</span>
+        </div>
+      </div>
+
+      <div class="check-item">
+        <div class="check-box"></div>
+        <div class="check-content">
+          <strong>Social Security Number Ready</strong>
+          <span>Have your SSN available for estate planning documents. Do not include it in the will itself.</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="checklist-section">
+      <h3 class="checklist-title">Mental Capacity Requirements</h3>
+
+      <div class="check-item">
+        <div class="check-box"></div>
+        <div class="check-content">
+          <strong>Understanding of Document Nature</strong>
+          <span>Confirm you understand that you are creating a will - a legal document that controls asset distribution after death.</span>
+        </div>
+      </div>
+
+      <div class="check-item">
+        <div class="check-box"></div>
+        <div class="check-content">
+          <strong>Knowledge of Assets</strong>
+          <span>Have a general understanding of the nature and extent of your property and assets.</span>
+        </div>
+      </div>
+
+      <div class="check-item">
+        <div class="check-box"></div>
+        <div class="check-content">
+          <strong>Recognition of Heirs</strong>
+          <span>Understand who your natural heirs are - family members who would typically inherit from you.</span>
+        </div>
+      </div>
+
+      <div class="note-box">
+        <strong>Mental Capacity Note</strong>
+        <p>If there is any question about your mental capacity (due to illness, medication, or other factors), consult with a medical professional before executing your will.</p>
+      </div>
+    </div>
+
+    <div class="checklist-section">
+      <h3 class="checklist-title">Age Requirements</h3>
+
+      <div class="check-item">
+        <div class="check-box"></div>
+        <div class="check-content">
+          <strong>Minimum Age Verification</strong>
+          <span>Confirm you are at least 18 years old (or legally married, or have been emancipated by court order in some states).</span>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="footer">
+    <span>Legal Requirements Checklist</span>
+    <span class="page-number">2</span>
+  </div>
+</section>
+
+<!-- PAGE 2: DOCUMENT PREPARATION -->
+<section class="page">
+  <div class="content">
+    <div class="section-header">
+      <h2 class="section-title">Document Preparation</h2>
+      <span class="section-subtitle">Steps for preparing your will document</span>
+    </div>
+
+    <div class="progress-bar">
+      <div class="progress-segment active"></div>
+      <div class="progress-segment active"></div>
+      <div class="progress-segment active"></div>
+      <div class="progress-segment"></div>
+      <div class="progress-segment"></div>
+    </div>
+
+    <div class="checklist-section">
+      <h3 class="checklist-title">Document Format</h3>
+
+      <div class="check-item">
+        <div class="check-box"></div>
+        <div class="check-content">
+          <strong>Written Document</strong>
+          <span>Your will must be in writing. Oral wills are generally not recognized in any U.S. state.</span>
+        </div>
+      </div>
+
+      <div class="check-item">
+        <div class="check-box"></div>
+        <div class="check-content">
+          <strong>Typed or Handwritten</strong>
+          <span>Either a typed document or a fully handwritten (holographic) will is acceptable. Typed is preferred for clarity and validity.</span>
+        </div>
+      </div>
+
+      <div class="check-item">
+        <div class="check-box"></div>
+        <div class="check-content">
+          <strong>Clear Language</strong>
+          <span>Use unambiguous language. Avoid vague terms like "my belongings" - specify items or categories.</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="checklist-section">
+      <h3 class="checklist-title">Required Content Elements</h3>
+
+      <div class="check-item">
+        <div class="check-box"></div>
+        <div class="check-content">
+          <strong>Opening Declaration</strong>
+          <span>Include standard opening: "I, [full legal name], being of sound mind, declare this to be my Last Will and Testament."</span>
+        </div>
+      </div>
+
+      <div class="check-item sub-check">
+        <div class="check-box"></div>
+        <div class="check-content">
+          <span>Full legal name appears in opening</span>
+        </div>
+      </div>
+
+      <div class="check-item sub-check">
+        <div class="check-box"></div>
+        <div class="check-content">
+          <span>Sound mind declaration included</span>
+        </div>
+      </div>
+
+      <div class="check-item">
+        <div class="check-box"></div>
+        <div class="check-content">
+          <strong>Revocation of Prior Wills</strong>
+          <span>Include language revoking any previous wills: "I revoke all previous wills and codicils."</span>
+        </div>
+      </div>
+
+      <div class="check-item">
+        <div class="check-box"></div>
+        <div class="check-content">
+          <strong>Beneficiary Designations</strong>
+          <span>Clearly name each beneficiary with full legal names. Include relationship if not obvious.</span>
+        </div>
+      </div>
+
+      <div class="check-item sub-check">
+        <div class="check-box"></div>
+        <div class="check-content">
+          <span>Primary beneficiaries named</span>
+        </div>
+      </div>
+
+      <div class="check-item sub-check">
+        <div class="check-box"></div>
+        <div class="check-content">
+          <span>Contingent beneficiaries named</span>
+        </div>
+      </div>
+
+      <div class="check-item">
+        <div class="check-box"></div>
+        <div class="check-content">
+          <strong>Executor Appointment</strong>
+          <span>Name your executor with full legal name. Include alternate executor in case first choice is unavailable.</span>
+        </div>
+      </div>
+
+      <div class="check-item">
+        <div class="check-box"></div>
+        <div class="check-content">
+          <strong>Guardian Appointment (if applicable)</strong>
+          <span>If you have minor children, name both primary and alternate guardians.</span>
+        </div>
+      </div>
+
+      <div class="check-item">
+        <div class="check-box"></div>
+        <div class="check-content">
+          <strong>Signature Block</strong>
+          <span>Include a clearly marked signature line at the end of your will, before witness attestation.</span>
+        </div>
+      </div>
+
+      <div class="check-item">
+        <div class="check-box"></div>
+        <div class="check-content">
+          <strong>Witness Attestation Block</strong>
+          <span>Include formal attestation language for witnesses to sign, confirming they observed your signature.</span>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="footer">
+    <span>Legal Requirements Checklist</span>
+    <span class="page-number">3</span>
+  </div>
+</section>
+
+<!-- PAGE 3: WITNESS REQUIREMENTS -->
+<section class="page">
+  <div class="content">
+    <div class="section-header">
+      <h2 class="section-title">Witness Requirements</h2>
+      <span class="section-subtitle">Critical execution requirements for valid signing</span>
+    </div>
+
+    <div class="progress-bar">
+      <div class="progress-segment active"></div>
+      <div class="progress-segment active"></div>
+      <div class="progress-segment active"></div>
+      <div class="progress-segment active"></div>
+      <div class="progress-segment"></div>
+    </div>
+
+    <div class="checklist-section">
+      <h3 class="checklist-title">Witness Eligibility</h3>
+
+      <div class="check-item">
+        <div class="check-box"></div>
+        <div class="check-content">
+          <strong>Minimum Age</strong>
+          <span>Both witnesses must be at least 18 years old (or 21 in some states). Verify age before the signing.</span>
+        </div>
+      </div>
+
+      <div class="check-item">
+        <div class="check-box"></div>
+        <div class="check-content">
+          <strong>Mental Competence</strong>
+          <span>Witnesses must be mentally competent - able to understand what they are witnessing and testify if needed.</span>
+        </div>
+      </div>
+
+      <div class="check-item">
+        <div class="check-box"></div>
+        <div class="check-content">
+          <strong>Presence During Signing</strong>
+          <span>Both witnesses must be present when you sign the will. They must either see you sign or acknowledge your signature.</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="checklist-section">
+      <h3 class="checklist-title">Witness Number Requirements</h3>
+
+      <div class="check-item">
+        <div class="check-box"></div>
+        <div class="check-content">
+          <strong>Two-Witness Standard</strong>
+          <span>Most states require two witnesses. Verify your state's specific requirements before execution.</span>
+        </div>
+      </div>
+
+      <div class="table-simple">
+        <thead>
+          <tr>
+            <th>State Type</th>
+            <th>Witness Requirement</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Standard States</td>
+            <td>2 witnesses required</td>
+          </tr>
+          <tr>
+            <td>Holographic Will States</td>
+            <td>May require 0-2 witnesses depending on circumstances</td>
+          </tr>
+          <tr>
+            <td>Self-Proving Affidavit States</td>
+            <td>2 witnesses + notarization</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="checklist-section">
+      <h3 class="checklist-title">Witness Information Required</h3>
+
+      <div class="check-item">
+        <div class="check-box"></div>
+        <div class="check-content">
+          <strong>Full Legal Name</strong>
+          <span>Each witness must provide their full legal name as it appears on their ID.</span>
+        </div>
+      </div>
+
+      <div class="check-item">
+        <div class="check-box"></div>
+        <div class="check-content">
+          <strong>Current Address</strong>
+          <span>Include current street address (not just city) for each witness. This may be needed for court verification.</span>
+        </div>
+      </div>
+
+      <div class="check-item">
+        <div class="check-box"></div>
+        <div class="check-content">
+          <strong>Signature</strong>
+          <span>Each witness must sign the will, confirming they witnessed your signature and believe you were of sound mind.</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="callout">
+      <strong>Important</strong>
+      <p>Ideally, witnesses should not be beneficiaries in your will to avoid potential conflicts. If witnesses are beneficiaries, the gift to them may still be valid but could be subject to greater scrutiny.</p>
+    </div>
+  </div>
+  <div class="footer">
+    <span>Legal Requirements Checklist</span>
+    <span class="page-number">4</span>
+  </div>
+</section>
+
+<!-- PAGE 4: SIGNING PROCEDURE -->
+<section class="page">
+  <div class="content">
+    <div class="section-header">
+      <h2 class="section-title">Signing Procedure</h2>
+      <span class="section-subtitle">Step-by-step execution process</span>
+    </div>
+
+    <div class="progress-bar">
+      <div class="progress-segment active"></div>
+      <div class="progress-segment active"></div>
+      <div class="progress-segment active"></div>
+      <div class="progress-segment active"></div>
+      <div class="progress-segment active"></div>
+    </div>
+
+    <div class="checklist-section">
+      <h3 class="checklist-title">Pre-Signing Checklist</h3>
+
+      <div class="check-item">
+        <div class="check-box"></div>
+        <div class="check-content">
+          <strong>Document Review Complete</strong>
+          <span>Final review of will content. All sections complete, no blank spaces that could be filled later.</span>
+        </div>
+      </div>
+
+      <div class="check-item">
+        <div class="check-box"></div>
+        <div class="check-content">
+          <strong>Witnesses Available</strong>
+          <span>Two eligible witnesses are present and prepared to sign. Their IDs are verified.</span>
+        </div>
+      </div>
+
+      <div class="check-item">
+        <div class="check-box"></div>
+        <div class="check-content">
+          <strong>Location Prepared</strong>
+          <span>Signing takes place in a quiet, private location. Adequate space for all parties.</span>
+        </div>
+      </div>
+
+      <div class="check-item">
+        <div class="check-box"></div>
+        <div class="check-content">
+          <strong>Notary Available (if using self-proving affidavit)</strong>
+          <span>If your state supports self-proving affidavits, a notary is present with their seal.</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="checklist-section">
+      <h3 class="checklist-title">Signing Sequence</h3>
+
+      <div class="check-item">
+        <div class="check-box"></div>
+        <div class="check-content">
+          <strong>Step 1: Testator Signs</strong>
+          <span>You sign the will in the presence of both witnesses. Use the same signature as on your ID.</span>
+        </div>
+      </div>
+
+      <div class="check-item sub-check">
+        <div class="check-box"></div>
+        <div class="check-content">
+          <span>Sign in permanent ink (blue or black)</span>
+        </div>
+      </div>
+
+      <div class="check-item sub-check">
+        <div class="check-box"></div>
+        <div class="check-content">
+          <span>Sign on the designated signature line</span>
+        </div>
+      </div>
+
+      <div class="check-item">
+        <div class="check-box"></div>
+        <div class="check-content">
+          <strong>Step 2: Witnesses Sign</strong>
+          <span>Immediately after your signature, both witnesses sign the will, attesting they witnessed your signing.</span>
+        </div>
+      </div>
+
+      <div class="check-item sub-check">
+        <div class="check-box"></div>
+        <div class="check-content">
+          <span>Witness 1 signs and provides address</span>
+        </div>
+      </div>
+
+      <div class="check-item sub-check">
+        <div class="check-box"></div>
+        <div class="check-content">
+          <span>Witness 2 signs and provides address</span>
+        </div>
+      </div>
+
+      <div class="check-item">
+        <div class="check-box"></div>
+        <div class="check-content">
+          <strong>Step 3: Self-Proving Affidavit (if applicable)</strong>
+          <span>If using, complete and notarize the self-proving affidavit immediately while all parties are present.</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="callout">
+      <strong>Witness Declaration</strong>
+      <p>Consider having witnesses sign a separate declaration stating they witnessed your signing and believe you were of sound mind. This provides additional evidence of validity if challenged.</p>
+    </div>
+
+    <div class="sign-box">
+      <h4>Post-Execution Signatures</h4>
+      <p>Complete this section after the will is signed to document the execution.</p>
+      <div class="sign-row">
+        <div class="sign-item">
+          <label>Testator Signature</label>
+          <div class="sign-line"></div>
+          <small>Date signed</small>
+        </div>
+        <div class="sign-item">
+          <label>Print Name</label>
+          <div class="sign-line"></div>
+          <small></small>
+        </div>
+      </div>
+      <div class="sign-row">
+        <div class="sign-item">
+          <label>Witness 1 Signature</label>
+          <div class="sign-line"></div>
+          <small>Date / Address</small>
+        </div>
+        <div class="sign-item">
+          <label>Witness 2 Signature</label>
+          <div class="sign-line"></div>
+          <small>Date / Address</small>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="footer">
+    <span>Legal Requirements Checklist</span>
+    <span class="page-number">5</span>
+  </div>
+</section>
+
+<!-- PAGE 5: STORAGE AND FILING -->
+<section class="page">
+  <div class="content">
+    <div class="section-header">
+      <h2 class="section-title">Storage and Filing</h2>
+      <span class="section-subtitle">Proper handling after execution</span>
+    </div>
+
+    <div class="checklist-section">
+      <h3 class="checklist-title">Document Storage</h3>
+
+      <div class="check-item">
+        <div class="check-box"></div>
+        <div class="check-content">
+          <strong>Safe Location Selected</strong>
+          <span>Choose a secure location for your original will: home safe, bank safe deposit box, or with your attorney.</span>
+        </div>
+      </div>
+
+      <div class="check-item">
+        <div class="check-box"></div>
+        <div class="check-content">
+          <strong>Original Document Secured</strong>
+          <span>Store the original will (not copies). Keep it in a fireproof, waterproof container.</span>
+        </div>
+      </div>
+
+      <div class="check-item">
+        <div class="check-box"></div>
+        <div class="check-content">
+          <strong>Multiple Copies Avoided</strong>
+          <span>Keep one official copy if needed. Multiple originals can cause confusion about which is valid.</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="checklist-section">
+      <h3 class="checklist-title">Executor Notification</h3>
+
+      <div class="check-item">
+        <div class="check-box"></div>
+        <div class="check-content">
+          <strong>Executor Informed</strong>
+          <span>Your executor knows the location of your will and has access instructions.</span>
+        </div>
+      </div>
+
+      <div class="check-item">
+        <div class="check-box"></div>
+        <div class="check-content">
+          <strong>Location Documented</strong>
+          <span>Written instructions with will location given to executor, alternate executor, and a trusted person.</span>
+        </div>
+      </div>
+
+      <div class="check-item">
+        <div class="check-box"></div>
+        <div class="check-content">
+          <strong>Attorney Copy (if applicable)</strong>
+          <span>If your attorney prepared the will, they have a copy on file as backup.</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="checklist-section">
+      <h3 class="checklist-title">Important Records</h3>
+
+      <div class="check-item">
+        <div class="check-box"></div>
+        <div class="check-content">
+          <strong>Death Certificate Location Known</strong>
+          <span>Instructions for obtaining death certificates are documented for your executor.</span>
+        </div>
+      </div>
+
+      <div class="check-item">
+        <div class="check-box"></div>
+        <div class="check-content">
+          <strong>Asset Inventory Available</strong>
+          <span>Complete asset inventory is stored with or accessible to your executor.</span>
+        </div>
+      </div>
+
+      <div class="check-item">
+        <div class="check-box"></div>
+        <div class="check-content">
+          <strong>Professional Contacts Listed</strong>
+          <span>Attorney, accountant, and financial advisor contact information is accessible.</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="note-box">
+      <strong>Bank Safe Deposit Box Note</strong>
+      <p>If storing your will in a safe deposit box, check state law. Some states prohibit wills in bank boxes due to access restrictions upon death. Consider a home safe or attorney safe as alternatives.</p>
+    </div>
+  </div>
+  <div class="footer">
+    <span>Legal Requirements Checklist</span>
+    <span class="page-number">6</span>
+  </div>
+</section>
+
+<!-- PAGE 6: STATE-SPECIFIC CHECKLIST -->
+<section class="page">
+  <div class="content">
+    <div class="section-header">
+      <h2 class="section-title">State-Specific Requirements</h2>
+      <span class="section-subtitle">Verify requirements for your state</span>
+    </div>
+
+    <div class="table-simple">
+      <thead>
+        <tr>
+          <th>State Category</th>
+          <th>Requirements</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><strong>Community Property States</strong></td>
+          <td>AZ, CA, ID, LA, NV, NM, TX, WA, WI - Spouse may have rights to half of community property regardless of will provisions.</td>
+        </tr>
+        <tr>
+          <td><strong>Holographic Will States</strong></td>
+          <td>~25 states recognize handwritten wills without witnesses. Verify your state.</td>
+        </tr>
+        <tr>
+          <td><strong>Self-Proving Affidavit States</strong></td>
+          <td>Most states offer notarized self-proving affidavit to speed probate. Check availability.</td>
+        </tr>
+        <tr>
+          <td><strong>Inheritance Tax States</strong></td>
+          <td>IA, KY, MD, NE, NJ, PA - Additional planning may be needed for inheritance tax.</td>
+        </tr>
+      </tbody>
+    </div>
+
+    <div class="checklist-section">
+      <h3 class="checklist-title">State Verification Steps</h3>
+
+      <div class="check-item">
+        <div class="check-box"></div>
+        <div class="check-content">
+          <strong>Determine Your State</strong>
+          <span>Confirm the state where you are domiciled (permanently reside). This determines which laws apply.</span>
+        </div>
+      </div>
+
+      <div class="check-item">
+        <div class="check-box"></div>
+        <div class="check-content">
+          <strong>Research State Requirements</strong>
+          <span>Verify witness requirements, notarization options, and any special provisions for your state.</span>
+        </div>
+      </div>
+
+      <div class="check-item">
+        <div class="check-box"></div>
+        <div class="check-content">
+          <strong>Consult State Bar or Attorney</strong>
+          <span>For complex situations or property in multiple states, consult a licensed estate planning attorney in your state.</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="callout">
+      <strong>Premium Document Available</strong>
+      <p>Upgrade to Premium for a comprehensive state-by-state guide covering specific requirements for all 50 states, including witness rules, notarization procedures, and probate variations.</p>
+    </div>
+
+    <div class="note-box">
+      <strong>Annual Review Reminder</strong>
+      <p>Review your will and this checklist annually or after any major life event (marriage, divorce, birth, death, significant asset changes, or move to another state).</p>
+    </div>
+  </div>
+  <div class="footer">
+    <span>Legal Requirements Checklist</span>
+    <span class="page-number">7</span>
+  </div>
+</section>
+
+</body>
+</html>

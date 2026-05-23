@@ -1,0 +1,1060 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Executor Duties Guide - Wills & Estate Planning</title>
+  <style>
+    @page { size: A4 portrait; margin: 14mm 12mm; }
+    @media screen {
+      html { background: #d0d0d0; }
+      body { margin: 0; padding: 20px 0; }
+      body > section { width: 210mm; min-height: 297mm; margin: 0 auto 20px; background: #fff; box-shadow: 0 4px 24px rgba(0,0,0,0.18); box-sizing: border-box; overflow: hidden; }
+    }
+    * { box-sizing: border-box; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+    :root {
+      --accent: #1a6b4a;
+      --ink: #1a1a1e;
+      --muted: #5a5a5a;
+      --rule: #d4cfc7;
+      --hairline: #e8e4dc;
+      --paper: #faf9f7;
+    }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", "PingFang SC", "Helvetica Neue", Arial, sans-serif;
+      font-size: 10.5pt;
+      line-height: 1.55;
+      color: var(--ink);
+      background: var(--paper);
+      -webkit-font-smoothing: antialiased;
+      margin: 0;
+      padding: 0;
+    }
+    .cover {
+      min-height: 268mm;
+      background: linear-gradient(135deg, #0f1f2e 0%, #1a2f3e 50%, #0f1f2e 100%);
+      color: #f0ede6;
+      padding: 40mm 20mm;
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+    .cover::before {
+      content: '';
+      position: absolute;
+      top: 20mm;
+      right: 20mm;
+      width: 80mm;
+      height: 80mm;
+      background: radial-gradient(circle, rgba(26,107,74,0.3) 0%, transparent 70%);
+      border-radius: 50%;
+    }
+    .cover-tag {
+      font-size: 8pt;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      color: #8a9aa5;
+      margin-bottom: 15mm;
+    }
+    .cover h1 {
+      font-size: 28pt;
+      font-weight: 300;
+      line-height: 1.2;
+      margin: 0 0 10mm 0;
+      color: #ffffff;
+    }
+    .cover .subtitle {
+      font-size: 11pt;
+      line-height: 1.5;
+      color: #b8c4ce;
+      margin: 0;
+      max-width: 140mm;
+    }
+    .cover-meta {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-end;
+      margin-top: auto;
+      padding-top: 20mm;
+      border-top: 0.5pt solid rgba(255,255,255,0.2);
+    }
+    .meta-info {
+      font-size: 8.5pt;
+      color: #8a9aa5;
+      line-height: 1.6;
+    }
+    .page { page-break-after: always; min-height: 268mm; padding: 20mm 0; position: relative; }
+    .page:last-child { page-break-after: auto; }
+    .content { padding: 0 20mm; }
+    .section-header { padding: 0 20mm; margin-bottom: 10mm; }
+    .section-title {
+      font-size: 16pt;
+      font-weight: 400;
+      color: var(--ink);
+      margin: 0;
+      line-height: 1.3;
+      border-bottom: 2pt solid var(--accent);
+      padding-bottom: 4mm;
+    }
+    .chapter { margin-bottom: 12mm; }
+    .chapter h3 {
+      font-size: 12pt;
+      font-weight: 600;
+      color: var(--accent);
+      margin: 0 0 5mm 0;
+      padding-bottom: 2mm;
+      border-bottom: 0.5pt solid var(--hairline);
+      display: flex;
+      align-items: center;
+    }
+    .chapter h3::before {
+      content: '';
+      width: 6mm;
+      height: 6mm;
+      background: var(--accent);
+      margin-right: 4mm;
+      flex-shrink: 0;
+    }
+    .chapter p { margin: 0 0 4mm 0; }
+    .chapter ul, .chapter ol { margin: 0 0 5mm 0; padding-left: 8mm; }
+    .chapter li { margin-bottom: 3mm; }
+    .timeline-item {
+      display: flex;
+      margin-bottom: 8mm;
+      page-break-inside: avoid;
+    }
+    .timeline-marker {
+      width: 20mm;
+      flex-shrink: 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    .timeline-dot {
+      width: 8mm;
+      height: 8mm;
+      background: var(--accent);
+      border-radius: 50%;
+      flex-shrink: 0;
+    }
+    .timeline-line {
+      width: 1pt;
+      flex: 1;
+      background: var(--hairline);
+      min-height: 15mm;
+    }
+    .timeline-content {
+      flex: 1;
+      padding-left: 5mm;
+    }
+    .timeline-time {
+      font-size: 8.5pt;
+      color: var(--accent);
+      font-weight: 600;
+      margin-bottom: 2mm;
+    }
+    .timeline-title {
+      font-size: 11pt;
+      font-weight: 600;
+      margin-bottom: 2mm;
+    }
+    .table-card {
+      margin: 6mm 0;
+      page-break-inside: avoid;
+    }
+    .table-card figcaption {
+      font-size: 9.5pt;
+      font-weight: 600;
+      color: var(--ink);
+      margin-bottom: 3mm;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 9pt;
+    }
+    th {
+      background: var(--accent);
+      color: #ffffff;
+      padding: 4mm 5mm;
+      text-align: left;
+      font-weight: 500;
+    }
+    td {
+      padding: 3mm 5mm;
+      border-bottom: 0.5pt solid var(--hairline);
+      vertical-align: top;
+    }
+    tr:nth-child(even) td { background: #faf9f7; }
+    .callout {
+      background: linear-gradient(135deg, #f0f7f3 0%, #e8f3ed 100%);
+      border-left: 3pt solid var(--accent);
+      padding: 6mm 8mm;
+      margin: 6mm 0;
+      page-break-inside: avoid;
+    }
+    .callout strong {
+      font-size: 9pt;
+      color: var(--accent);
+      display: block;
+      margin-bottom: 2mm;
+    }
+    .callout p { margin: 0; font-size: 9.5pt; }
+    .highlight-box {
+      background: #fef9e6;
+      border: 0.5pt solid #e6d9b8;
+      padding: 5mm 7mm;
+      margin: 6mm 0;
+      border-radius: 2mm;
+    }
+    .highlight-box p { margin: 0; font-size: 9.5pt; }
+    .two-col {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 8mm;
+      margin: 6mm 0;
+    }
+    .col h4 {
+      font-size: 10pt;
+      font-weight: 600;
+      color: var(--ink);
+      margin: 0 0 4mm 0;
+    }
+    .col ul { margin: 0; padding-left: 6mm; }
+    .col li { margin-bottom: 2mm; font-size: 9.5pt; }
+    .footer {
+      position: absolute;
+      bottom: 12mm;
+      left: 20mm;
+      right: 20mm;
+      display: flex;
+      justify-content: space-between;
+      font-size: 8pt;
+      color: var(--muted);
+      border-top: 0.5pt solid var(--hairline);
+      padding-top: 4mm;
+    }
+    .page-number { font-weight: 500; color: var(--ink); }
+    .step-box {
+      background: #faf9f7;
+      border: 0.5pt solid var(--hairline);
+      padding: 5mm 6mm;
+      margin: 5mm 0;
+      page-break-inside: avoid;
+    }
+    .step-box h4 {
+      font-size: 10pt;
+      font-weight: 600;
+      color: var(--accent);
+      margin: 0 0 3mm 0;
+    }
+    .step-box p { margin: 0; font-size: 9pt; }
+    .warning-box {
+      background: #fff5f5;
+      border: 0.5pt solid #e8d4d4;
+      border-left: 3pt solid #c62828;
+      padding: 5mm 7mm;
+      margin: 6mm 0;
+    }
+    .warning-box strong {
+      font-size: 9pt;
+      color: #c62828;
+      display: block;
+      margin-bottom: 2mm;
+    }
+    .warning-box p { margin: 0; font-size: 9pt; color: #5a1a1a; }
+  </style>
+</head>
+<body>
+
+<!-- COVER PAGE -->
+<section class="cover page">
+  <div>
+    <span class="cover-tag">Estate Planning Essentials</span>
+    <h1>Executor Duties<br>Guide</h1>
+    <p class="subtitle">A comprehensive guide for anyone appointed to administer an estate. Learn your responsibilities, timelines, and best practices.</p>
+  </div>
+  <div class="cover-meta">
+    <div class="meta-info">
+      <strong>Wills & Estate Planning Guide</strong><br>
+      Document 04 of 06<br>
+      Version 1.0
+    </div>
+  </div>
+</section>
+
+<!-- PAGE 1: INTRODUCTION -->
+<section class="page">
+  <div class="content">
+    <div class="section-header">
+      <h2 class="section-title">Understanding Your Role</h2>
+    </div>
+
+    <div class="chapter">
+      <h3>What Is an Executor?</h3>
+      <p>An executor (also called a personal representative or administrator in some contexts) is the person named in a will to manage the deceased person's estate. Your primary duties include:</p>
+      <ul>
+        <li>Locating and managing the deceased's assets</li>
+        <li>Paying debts, taxes, and expenses</li>
+        <li>Distributing property to beneficiaries</li>
+        <li>Acting in the best interest of the estate at all times</li>
+      </ul>
+    </div>
+
+    <div class="callout">
+      <strong>Fiduciary Duty</strong>
+      <p>As an executor, you have a fiduciary duty to the beneficiaries. This means you must act with the highest level of care, honesty, and loyalty. You cannot benefit personally from your position (beyond your allowed compensation) and must avoid conflicts of interest.</p>
+    </div>
+
+    <div class="chapter">
+      <h3>When You Should Accept the Role</h3>
+      <p>Before accepting an executor appointment, consider whether you can:</p>
+      <ul>
+        <li>Dedicate the time required (typically 6-18 months for complex estates)</li>
+        <li>Handle complex financial and legal matters</li>
+        <li>Remain neutral among family members who may have conflicts</li>
+        <li>Make difficult decisions under pressure</li>
+        <li>Maintain accurate records and documentation</li>
+      </ul>
+    </div>
+
+    <div class="highlight-box">
+      <p><strong>If You Decline:</strong> If you are named executor but cannot or do not want to serve, you can decline by submitting a written renunciation to the probate court. The alternate executor you named will then assume the role.</p>
+    </div>
+
+    <div class="chapter">
+      <h3>Types of Executors</h3>
+    </div>
+
+    <div class="two-col">
+      <div class="col">
+        <h4>Individual Executor</h4>
+        <ul>
+          <li>Family member or friend</li>
+          <li>Knows the deceased's wishes</li>
+          <li>May have emotional involvement</li>
+          <li>May lack professional expertise</li>
+        </ul>
+      </div>
+      <div class="col">
+        <h4>Professional Executor</h4>
+        <ul>
+          <li>Bank trust department</li>
+          <li>Estate attorney</li>
+          <li>Professional fiduciaries</li>
+          <li>Impartial, experienced, available</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="callout">
+      <strong>Co-Executors</strong>
+      <p>Some wills name multiple executors to serve together. This can provide checks and balances but may also slow decision-making. Consider whether co-executors can work together effectively.</p>
+    </div>
+  </div>
+  <div class="footer">
+    <span>Executor Duties Guide</span>
+    <span class="page-number">2</span>
+  </div>
+</section>
+
+<!-- PAGE 2: IMMEDIATE ACTIONS -->
+<section class="page">
+  <div class="content">
+    <div class="section-header">
+      <h2 class="section-title">Immediate Actions (Days 1-14)</h2>
+    </div>
+
+    <p style="font-size: 10pt; color: var(--muted); margin: 0 0 8mm 0;">The first two weeks are critical. Your actions during this period set the foundation for successful estate administration.</p>
+
+    <div class="chapter">
+      <h3>Death Notification and Documentation</h3>
+    </div>
+
+    <div class="timeline-item">
+      <div class="timeline-marker">
+        <div class="timeline-dot"></div>
+        <div class="timeline-line"></div>
+      </div>
+      <div class="timeline-content">
+        <div class="timeline-time">Day 1-3</div>
+        <div class="timeline-title">Obtain Death Certificates</div>
+        <p>Request multiple certified copies (10-15 is recommended) from the funeral home or vital records office. You'll need these for banks, investment accounts, insurance claims, and government agencies.</p>
+      </div>
+    </div>
+
+    <div class="timeline-item">
+      <div class="timeline-marker">
+        <div class="timeline-dot"></div>
+        <div class="timeline-line"></div>
+      </div>
+      <div class="timeline-content">
+        <div class="timeline-time">Day 1-5</div>
+        <div class="timeline-title">Notify Beneficiaries</div>
+        <p>Contact all beneficiaries named in the will. Be sensitive - many may be grieving. Provide basic information about what happens next without making promises about timing or amounts.</p>
+      </div>
+    </div>
+
+    <div class="chapter">
+      <h3>Property Security</h3>
+    </div>
+
+    <div class="table-card">
+      <figcaption>Immediate Security Checklist</figcaption>
+      <table>
+        <thead>
+          <tr>
+            <th>Property Type</th>
+            <th>Action Required</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Real Estate</td>
+            <td>Secure property, change locks if deceased lived alone, verify insurance is active</td>
+          </tr>
+          <tr>
+            <td>Vehicles</td>
+            <td>Locate keys, verify insurance, store in secure location</td>
+          </tr>
+          <tr>
+            <td>Financial Accounts</td>
+            <td>Contact banks to note death, freeze suspicious activity, protect access</td>
+          </tr>
+          <tr>
+            <td>Valuables</td>
+            <td>Secure jewelry, collectibles, cash, and other portable valuables</td>
+          </tr>
+          <tr>
+            <td>Digital Devices</td>
+            <td>Secure computers, phones, tablets; preserve data without accessing</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="warning-box">
+      <strong>Do Not Access Accounts Without Authority</strong>
+      <p>Do not withdraw money from bank accounts, access investment accounts, or make changes to property ownership until you have court authority (Letters Testamentary). Premature actions can create legal liability.</p>
+    </div>
+
+    <div class="chapter">
+      <h3>Initial Document Collection</h3>
+      <p>Gather the following documents if not already in your possession:</p>
+      <ul>
+        <li>Original will (look in safe deposit box, home safe, attorney's office)</li>
+        <li>Life insurance policies</li>
+        <li>Bank statements and investment account information</li>
+        <li>Real estate deeds and mortgage statements</li>
+        <li>Vehicle registration and loan documents</li>
+        <li>Tax returns for the past 3-5 years</li>
+        <li>Social Security information</li>
+        <li>Medicare or health insurance information</li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer">
+    <span>Executor Duties Guide</span>
+    <span class="page-number">3</span>
+  </div>
+</section>
+
+<!-- PAGE 3: PROBATE PROCESS -->
+<section class="page">
+  <div class="content">
+    <div class="section-header">
+      <h2 class="section-title">Probate Court Process (Weeks 2-6)</h2>
+    </div>
+
+    <p style="font-size: 10pt; color: var(--muted); margin: 0 0 8mm 0;">Probate is the court-supervised process of validating the will and administering the estate. Understanding this process helps you navigate it efficiently.</p>
+
+    <div class="chapter">
+      <h3>Filing the Will</h3>
+    </div>
+
+    <div class="step-box">
+      <h4>Step 1: Locate the Probate Court</h4>
+      <p>File the will with the probate court in the county where the deceased lived at the time of death. Each state has specific courts with estate jurisdiction.</p>
+    </div>
+
+    <div class="step-box">
+      <h4>Step 2: Petition for Probate</h4>
+      <p>File a petition asking the court to admit the will to probate and appoint you as executor. Include the original will and death certificate.</p>
+    </div>
+
+    <div class="step-box">
+      <h4>Step 3: Court Hearing</h4>
+      <p>Attend a brief hearing where the court reviews the petition. If there are no objections and the will appears valid, the court issues Letters Testamentary (or Letters of Administration).</p>
+    </div>
+
+    <div class="step-box">
+      <h4>Step 4: Receive Authority</h4>
+      <p>Once you have Letters Testamentary, you have legal authority to act on behalf of the estate. Banks, investment firms, and other institutions will require this document.</p>
+    </div>
+
+    <div class="callout">
+      <strong>Timeline Note</strong>
+      <p>Probate timelines vary significantly by state and complexity. Simple estates may complete in 3-6 months; complex estates can take 1-2 years or longer.</p>
+    </div>
+
+    <div class="chapter">
+      <h3>Publication Notice</h3>
+      <p>In most states, you must publish a notice in a local newspaper informing creditors of the death. This gives unknown creditors an opportunity to make claims against the estate.</p>
+      <ul>
+        <li>Publication typically runs for 3 consecutive weeks</li>
+        <li>Affects the timeline for creditor claims</li>
+        <li>Creates official record of your actions as executor</li>
+      </ul>
+    </div>
+
+    <div class="table-card">
+      <figcaption>Probate Timeline by State Type</figcaption>
+      <table>
+        <thead>
+          <tr>
+            <th>State Category</th>
+            <th>Typical Probate Duration</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Streamlined States (Uniform Laws)</td>
+            <td>3-6 months for standard estates</td>
+          </tr>
+          <tr>
+            <td>Complex Property States</td>
+            <td>6-12 months minimum</td>
+          </tr>
+          <tr>
+            <td>Small Estate Threshold States</td>
+            <td>30-90 days for estates under threshold</td>
+          </tr>
+          <tr>
+            <td>High Population States</td>
+            <td>6-18 months due to court caseload</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+  <div class="footer">
+    <span>Executor Duties Guide</span>
+    <span class="page-number">4</span>
+  </div>
+</section>
+
+<!-- PAGE 4: ASSET MANAGEMENT -->
+<section class="page">
+  <div class="content">
+    <div class="section-header">
+      <h2 class="section-title">Asset Management (Months 1-4)</h2>
+    </div>
+
+    <p style="font-size: 10pt; color: var(--muted); margin: 0 0 8mm 0;">Once you have court authority, you must identify, locate, secure, and manage all estate assets. This is one of the most time-consuming executor duties.</p>
+
+    <div class="chapter">
+      <h3>Asset Inventory Process</h3>
+    </div>
+
+    <div class="table-card">
+      <figcaption>Asset Categories and Inventory Steps</figcaption>
+      <table>
+        <thead>
+          <tr>
+            <th>Category</th>
+            <th>Examples</th>
+            <th>Valuation Method</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Financial Accounts</td>
+            <td>Checking, savings, CDs, money market</td>
+            <td>Bank statements (current value)</td>
+          </tr>
+          <tr>
+            <td>Investments</td>
+            <td>Stocks, bonds, mutual funds, ETFs</td>
+            <td>Market value on date of death</td>
+          </tr>
+          <tr>
+            <td>Retirement Accounts</td>
+            <td>401k, IRA, pension, profit sharing</td>
+            <td>Statement value (beneficiary designation controls)</td>
+          </tr>
+          <tr>
+            <td>Real Estate</td>
+            <td>Homes, land, rental properties</td>
+            <td>Professional appraisal</td>
+          </tr>
+          <tr>
+            <td>Vehicles</td>
+            <td>Cars, boats, motorcycles, RVs</td>
+            <td>Kelly Blue Book or dealer quote</td>
+          </tr>
+          <tr>
+            <td>Personal Property</td>
+            <td>Jewelry, art, furniture, collectibles</td>
+            <td>Estate sale or appraisal value</td>
+          </tr>
+          <tr>
+            <td>Life Insurance</td>
+            <td>Policies with named beneficiaries</td>
+            <td>Death benefit amount</td>
+          </tr>
+          <tr>
+            <td>Digital Assets</td>
+            <td>Crypto, online accounts, domains</td>
+            <td>Current market or estimated value</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="callout">
+      <strong>Date of Death Valuation</strong>
+      <p>For most assets, fair market value on the date of death is used for estate inventory. Some states use alternate valuation date (6 months after death) - check your state's rules.</p>
+    </div>
+
+    <div class="chapter">
+      <h3>Working with Professionals</h3>
+      <p>As an executor, you are entitled to hire professionals to help manage the estate:</p>
+      <ul>
+        <li><strong>Estate Attorney:</strong> Navigate legal requirements, court filings, and complex situations</li>
+        <li><strong>CPA/Accountant:</strong> Prepare tax returns and manage tax planning</li>
+        <li><strong>Financial Advisor:</strong> Manage investments and create distribution strategy</li>
+        <li><strong>Real Estate Agent:</strong> Sell property if needed</li>
+        <li><strong>Appraiser:</strong> Value real estate, jewelry, art, and other valuables</li>
+      </ul>
+    </div>
+
+    <div class="warning-box">
+      <strong>Compensation Disclosure</strong>
+      <p>Professional fees are paid from the estate. Document all hires and their fees. Beneficiaries have the right to review these expenses. Keep detailed records of why each professional was necessary.</p>
+    </div>
+
+    <div class="chapter">
+      <h3>Asset Protection Duties</h3>
+      <ul>
+        <li>Maintain insurance on all estate property</li>
+        <li>Continue paying mortgages and property taxes</li>
+        <li>Prevent waste, decay, or theft of assets</li>
+        <li>Invest estate funds prudently (check your state's rules on executor investments)</li>
+        <li>Document all decisions and their rationale</li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer">
+    <span>Executor Duties Guide</span>
+    <span class="page-number">5</span>
+  </div>
+</section>
+
+<!-- PAGE 5: DEBTS AND TAXES -->
+<section class="page">
+  <div class="content">
+    <div class="section-header">
+      <h2 class="section-title">Debt and Tax Settlement</h2>
+    </div>
+
+    <p style="font-size: 10pt; color: var(--muted); margin: 0 0 8mm 0;">Before distributing assets to beneficiaries, you must pay all valid debts and taxes. This protects the estate from later claims.</p>
+
+    <div class="chapter">
+      <h3>Creditor Claims Process</h3>
+    </div>
+
+    <div class="table-card">
+      <figcaption>Handling Creditor Claims</figcaption>
+      <table>
+        <thead>
+          <tr>
+            <th>Step</th>
+            <th>Action</th>
+            <th>Timeline</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Publication</td>
+            <td>Publish notice to creditors in newspaper</td>
+            <td>Within 30 days of appointment</td>
+          </tr>
+          <tr>
+            <td>Claim Period</td>
+            <td>Wait for creditor claims (typically 3-12 months)</td>
+            <td>Per state law</td>
+          </tr>
+          <tr>
+            <td>Review</td>
+            <td>Evaluate each claim's validity</td>
+            <td>As claims arrive</td>
+          </tr>
+          <tr>
+            <td>Payment</td>
+            <td>Pay valid claims, dispute invalid ones</td>
+            <td>After review</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="callout">
+      <strong>Priority of Claims</strong>
+      <p>When estate assets are limited, state law typically establishes a priority order: (1) Administration expenses, (2) Funeral costs, (3) Secured claims (mortgage, car loan), (4) Wages and salaries, (5) General unsecured claims, (6) Late claims.</p>
+    </div>
+
+    <div class="chapter">
+      <h3>Types of Debts to Address</h3>
+    </div>
+
+    <div class="two-col">
+      <div class="col">
+        <h4>Priority Debts</h4>
+        <ul>
+          <li>Funeral and burial costs</li>
+          <li>Administration expenses</li>
+          <li>Medical bills (last illness)</li>
+          <li>Final income taxes</li>
+          <li>Federal estate taxes</li>
+        </ul>
+      </div>
+      <div class="col">
+        <h4>Other Common Debts</h4>
+        <ul>
+          <li>Credit card balances</li>
+          <li>Mortgages (must be paid or property sold)</li>
+          <li>Car loans (repossess or pay)</li>
+          <li>Utilities and recurring bills</li>
+          <li>Business debts (if applicable)</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="warning-box">
+      <strong>Do Not Pay All Claims Immediately</strong>
+      <p>Wait for the creditor claim period to expire before paying unsecured claims. Paying creditors too early could leave insufficient funds for later legitimate claims.</p>
+    </div>
+
+    <div class="chapter">
+      <h3>Tax Responsibilities</h3>
+      <ul>
+        <li><strong>Final Income Tax Return:</strong> File the deceased's final tax return for the year of death (due April 15 of following year)</li>
+        <li><strong>Estate Tax Return:</strong> If estate exceeds federal exemption (~$13.6M for 2024), Form 706 may be required (9 months from death)</li>
+        <li><strong>Estate Income Tax:</strong> If estate generates income over $600, file Form 1041 for estate/trust income tax</li>
+        <li><strong>State Death Taxes:</strong> Check for state estate or inheritance taxes</li>
+      </ul>
+    </div>
+
+    <div class="highlight-box">
+      <p><strong>Tax Extensions:</strong> If you cannot file within the deadline, request an extension. Interest and penalties accrue on late payments, so extension requests should be filed promptly even if you expect no tax due.</p>
+    </div>
+  </div>
+  <div class="footer">
+    <span>Executor Duties Guide</span>
+    <span class="page-number">6</span>
+  </div>
+</section>
+
+<!-- PAGE 6: DISTRIBUTION -->
+<section class="page">
+  <div class="content">
+    <div class="section-header">
+      <h2 class="section-title">Asset Distribution</h2>
+    </div>
+
+    <p style="font-size: 10pt; color: var(--muted); margin: 0 0 8mm 0;">Once debts and taxes are paid, you can distribute assets to beneficiaries according to the will's instructions.</p>
+
+    <div class="chapter">
+      <h3>Distribution Sequence</h3>
+    </div>
+
+    <div class="table-card">
+      <figcaption>Distribution Order</figcaption>
+      <table>
+        <thead>
+          <tr>
+            <th>Priority</th>
+            <th>Asset Type</th>
+            <th>Notes</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>1</td>
+            <td>Specific Bequests</td>
+            <td>Particular items to particular beneficiaries</td>
+          </tr>
+          <tr>
+            <td>2</td>
+            <td>General Bequests</td>
+            <td>Money or percentage from general estate</td>
+          </tr>
+          <tr>
+            <td>3</td>
+            <td>Residuary Estate</td>
+            <td>Remaining assets per will instructions</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="chapter">
+      <h3>Distribution Process</h3>
+    </div>
+
+    <div class="step-box">
+      <h4>Step 1: Confirm All Debts Paid</h4>
+      <p>Verify all creditor claims have been addressed, taxes are filed and paid, and administration expenses are settled.</p>
+    </div>
+
+    <div class="step-box">
+      <h4>Step 2: Create Distribution Schedule</h4>
+      <p>Prepare a detailed accounting showing all assets, debts paid, taxes paid, and remaining assets to distribute to each beneficiary.</p>
+    </div>
+
+    <div class="step-box">
+      <h4>Step 3: Obtain Receipts</h4>
+      <p>Have beneficiaries sign receipts for their distributions. Keep these records as proof of proper administration.</p>
+    </div>
+
+    <div class="step-box">
+      <h4>Step 4: Distribute Assets</h4>
+      <p>Transfer real estate (via deed), distribute personal property, and transfer financial accounts according to the will.</p>
+    </div>
+
+    <div class="callout">
+      <strong>Beneficiary Conflicts</strong>
+      <p>If beneficiaries disagree on distribution, do not make unilateral decisions. Seek court guidance or negotiate a resolution. Document all discussions and agreements.</p>
+    </div>
+
+    <div class="chapter">
+      <h3>Property Distribution Methods</h3>
+    </div>
+
+    <div class="two-col">
+      <div class="col">
+        <h4>Direct Transfer</h4>
+        <ul>
+          <li>Real estate via warranty or quitclaim deed</li>
+          <li>Vehicles via title transfer</li>
+          <li>Bank accounts via beneficiary claim forms</li>
+          <li>Securities via transfer agent or broker</li>
+        </ul>
+      </div>
+      <div class="col">
+        <h4>Sale and Distribution</h4>
+        <ul>
+          <li>Sell assets if beneficiaries prefer cash</li>
+          <li>Estate pays for selling expenses</li>
+          <li>Proceeds distributed to entitled beneficiaries</li>
+          <li>Useful when property cannot be divided</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div class="footer">
+    <span>Executor Duties Guide</span>
+    <span class="page-number">7</span>
+  </div>
+</section>
+
+<!-- PAGE 7: ACCOUNTING AND CLOSING -->
+<section class="page">
+  <div class="content">
+    <div class="section-header">
+      <h2 class="section-title">Final Accounting and Closing</h2>
+    </div>
+
+    <p style="font-size: 10pt; color: var(--muted); margin: 0 0 8mm 0;">Proper accounting protects you from liability and formally closes the estate administration.</p>
+
+    <div class="chapter">
+      <h3>Estate Accounting Requirements</h3>
+    </div>
+
+    <div class="table-card">
+      <figcaption>Estate Accounting Components</figcaption>
+      <table>
+        <thead>
+          <tr>
+            <th>Element</th>
+            <th>Description</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>Receipts</strong></td>
+            <td>All money received (bank account balances, asset sales, insurance proceeds)</td>
+          </tr>
+          <tr>
+            <td><strong>Disbursements</strong></td>
+            <td>All money paid out (debts, taxes, expenses, distributions)</td>
+          </tr>
+          <tr>
+            <td><strong>Asset List</strong></td>
+            <td>Beginning assets, changes during administration, ending assets</td>
+          </tr>
+          <tr>
+            <td><strong>Transactions</strong></td>
+            <td>Chronological record of all financial activity with documentation</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="callout">
+      <strong>Detailed Records Required</strong>
+      <p>Maintain receipts for every expenditure over $25. Bank statements, invoices, and canceled checks should be retained. Poor record-keeping is the primary cause of executor liability.</p>
+    </div>
+
+    <div class="chapter">
+      <h3>Estate Closure Process</h3>
+    </div>
+
+    <div class="step-box">
+      <h4>Step 1: Final Tax Returns</h4>
+      <p>Confirm all tax returns are filed and payments made. Obtain tax clearance from IRS and state if required.</p>
+    </div>
+
+    <div class="step-box">
+      <h4>Step 2: Prepare Final Accounting</h4>
+      <p>Compile complete accounting showing all receipts, disbursements, and asset distributions. Some states require court approval.</p>
+    </div>
+
+    <div class="step-box">
+      <h4>Step 3: Distribute Remaining Assets</h4>
+      <p>Ensure all assets are properly distributed and obtain beneficiary receipts.</p>
+    </div>
+
+    <div class="step-box">
+      <h4>Step 4: File Closure Documents</h4>
+      <p>File final accounting and petition to close estate with the probate court. Obtain court order closing estate.</p>
+    </div>
+
+    <div class="chapter">
+      <h3>Executor Compensation</h3>
+      <p>Executors are entitled to reasonable compensation. Options include:</p>
+      <ul>
+        <li>Percentage of estate value (typical range: 1-5% depending on state)</li>
+        <li>Hourly fees (for complex estates with extensive work)</li>
+        <li>Flat fee agreements</li>
+        <li>Reimbursement for out-of-pocket expenses</li>
+      </ul>
+    </div>
+
+    <div class="highlight-box">
+      <p><strong>Compensation Disclosure:</strong> Document your compensation in writing and provide it to beneficiaries. Most executors serving family members waive compensation, which is perfectly acceptable and appreciated.</p>
+    </div>
+  </div>
+  <div class="footer">
+    <span>Executor Duties Guide</span>
+    <span class="page-number">8</span>
+  </div>
+</section>
+
+<!-- PAGE 8: BEST PRACTICES -->
+<section class="page">
+  <div class="content">
+    <div class="section-header">
+      <h2 class="section-title">Best Practices and Pitfalls</h2>
+    </div>
+
+    <p style="font-size: 10pt; color: var(--muted); margin: 0 0 8mm 0;">Avoid common executor mistakes by following these guidelines and understanding what can go wrong.</p>
+
+    <div class="chapter">
+      <h3>Executor Best Practices</h3>
+    </div>
+
+    <div class="table-card">
+      <figcaption>Recommended Practices</figcaption>
+      <table>
+        <thead>
+          <tr>
+            <th>Practice</th>
+            <th>Why It Matters</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Communicate regularly with beneficiaries</td>
+            <td>Reduces conflict and builds trust</td>
+          </tr>
+          <tr>
+            <td>Make decisions in writing</td>
+            <td>Creates documentation for your protection</td>
+          </tr>
+          <tr>
+            <td>Never commingle estate and personal funds</td>
+            <td>Essential for clear accounting</td>
+          </tr>
+          <tr>
+            <td>Seek court approval for unusual actions</td>
+            <td>Protects you from beneficiary challenges</td>
+          </tr>
+          <tr>
+            <td>Keep detailed records of all time spent</td>
+            <td>Supports compensation requests</td>
+          </tr>
+          <tr>
+            <td>Follow will instructions precisely</td>
+            <td>Avoids claims of self-dealing</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="warning-box">
+      <strong>Never Self-Deal</strong>
+      <p>As an executor, you cannot purchase estate assets for yourself (unless specifically authorized by the will), benefit personally from your position, or favor one beneficiary over others without legal justification.</p>
+    </div>
+
+    <div class="chapter">
+      <h3>Common Pitfalls to Avoid</h3>
+    </div>
+
+    <div class="two-col">
+      <div class="col">
+        <h4>Timing Mistakes</h4>
+        <ul>
+          <li>Distributing assets before paying debts</li>
+          <li>Missing tax filing deadlines</li>
+          <li>Ignoring creditor claim periods</li>
+          <li>Rushing the process unnecessarily</li>
+        </ul>
+      </div>
+      <div class="col">
+        <h4>Documentation Mistakes</h4>
+        <ul>
+          <li>Not keeping receipts</li>
+          <li>Mixing personal and estate funds</li>
+          <li>Failing to document decisions</li>
+          <li>Losing important documents</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="callout">
+      <strong>When to Seek Legal Help</strong>
+      <p>Consult an estate attorney if you face: contested wills, beneficiary disputes, complex tax situations, business interests, real estate in multiple states, or any situation where you're uncertain about the correct action.</p>
+    </div>
+
+    <div class="chapter">
+      <h3>Emotional Considerations</h3>
+      <p>Serving as executor while grieving is challenging. Consider these suggestions:</p>
+      <ul>
+        <li>Be patient with yourself and beneficiaries</li>
+        <li>Accept help from family members</li>
+        <li>Take breaks when feeling overwhelmed</li>
+        <li>Remember that this role is temporary</li>
+        <li>Celebrate completing each major phase</li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer">
+    <span>Executor Duties Guide</span>
+    <span class="page-number">9</span>
+  </div>
+</section>
+
+</body>
+</html>

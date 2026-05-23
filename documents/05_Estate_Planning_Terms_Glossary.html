@@ -1,0 +1,770 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Estate Planning Terms Glossary - Wills & Estate Planning</title>
+  <style>
+    @page { size: A4 portrait; margin: 14mm 12mm; }
+    @media screen {
+      html { background: #d0d0d0; }
+      body { margin: 0; padding: 20px 0; }
+      body > section { width: 210mm; min-height: 297mm; margin: 0 auto 20px; background: #fff; box-shadow: 0 4px 24px rgba(0,0,0,0.18); box-sizing: border-box; overflow: hidden; }
+    }
+    * { box-sizing: border-box; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+    :root {
+      --accent: #1a6b4a;
+      --ink: #1a1a1e;
+      --muted: #5a5a5a;
+      --rule: #d4cfc7;
+      --hairline: #e8e4dc;
+      --paper: #faf9f7;
+    }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", "PingFang SC", "Helvetica Neue", Arial, sans-serif;
+      font-size: 10.5pt;
+      line-height: 1.55;
+      color: var(--ink);
+      background: var(--paper);
+      -webkit-font-smoothing: antialiased;
+      margin: 0;
+      padding: 0;
+    }
+    .cover {
+      min-height: 268mm;
+      background: linear-gradient(135deg, #0f1f2e 0%, #1a2f3e 50%, #0f1f2e 100%);
+      color: #f0ede6;
+      padding: 40mm 20mm;
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+    .cover::before {
+      content: '';
+      position: absolute;
+      top: 20mm;
+      right: 20mm;
+      width: 80mm;
+      height: 80mm;
+      background: radial-gradient(circle, rgba(26,107,74,0.3) 0%, transparent 70%);
+      border-radius: 50%;
+    }
+    .cover-tag {
+      font-size: 8pt;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      color: #8a9aa5;
+      margin-bottom: 15mm;
+    }
+    .cover h1 {
+      font-size: 28pt;
+      font-weight: 300;
+      line-height: 1.2;
+      margin: 0 0 10mm 0;
+      color: #ffffff;
+    }
+    .cover .subtitle {
+      font-size: 11pt;
+      line-height: 1.5;
+      color: #b8c4ce;
+      margin: 0;
+      max-width: 140mm;
+    }
+    .cover-meta {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-end;
+      margin-top: auto;
+      padding-top: 20mm;
+      border-top: 0.5pt solid rgba(255,255,255,0.2);
+    }
+    .meta-info {
+      font-size: 8.5pt;
+      color: #8a9aa5;
+      line-height: 1.6;
+    }
+    .page { page-break-after: always; min-height: 268mm; padding: 20mm 0; position: relative; }
+    .page:last-child { page-break-after: auto; }
+    .content { padding: 0 20mm; }
+    .section-header { padding: 0 20mm; margin-bottom: 10mm; }
+    .section-title {
+      font-size: 16pt;
+      font-weight: 400;
+      color: var(--ink);
+      margin: 0;
+      line-height: 1.3;
+      border-bottom: 2pt solid var(--accent);
+      padding-bottom: 4mm;
+    }
+    .section-subtitle {
+      font-size: 9pt;
+      color: var(--muted);
+      margin: 4mm 0 0 0;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+    .letter-group {
+      margin-bottom: 12mm;
+      page-break-inside: avoid;
+    }
+    .letter-header {
+      font-size: 24pt;
+      font-weight: 300;
+      color: var(--accent);
+      margin: 0 0 6mm 0;
+      border-bottom: 0.5pt solid var(--hairline);
+      padding-bottom: 2mm;
+    }
+    .term-item {
+      margin-bottom: 8mm;
+      page-break-inside: avoid;
+    }
+    .term-word {
+      font-size: 11pt;
+      font-weight: 600;
+      color: var(--ink);
+      margin: 0 0 2mm 0;
+    }
+    .term-def {
+      font-size: 9.5pt;
+      color: var(--muted);
+      margin: 0;
+      line-height: 1.5;
+    }
+    .term-example {
+      font-size: 9pt;
+      color: var(--accent);
+      font-style: italic;
+      margin: 2mm 0 0 0;
+    }
+    .related-terms {
+      font-size: 8.5pt;
+      color: var(--muted);
+      margin: 2mm 0 0 0;
+    }
+    .search-box {
+      background: #faf9f7;
+      border: 0.5pt solid var(--hairline);
+      padding: 6mm;
+      margin-bottom: 10mm;
+    }
+    .search-box label {
+      font-size: 8.5pt;
+      color: var(--muted);
+      display: block;
+      margin-bottom: 2mm;
+    }
+    .search-line {
+      border-bottom: 0.5pt solid var(--ink);
+      height: 8mm;
+    }
+    .footer {
+      position: absolute;
+      bottom: 12mm;
+      left: 20mm;
+      right: 20mm;
+      display: flex;
+      justify-content: space-between;
+      font-size: 8pt;
+      color: var(--muted);
+      border-top: 0.5pt solid var(--hairline);
+      padding-top: 4mm;
+    }
+    .page-number { font-weight: 500; color: var(--ink); }
+    .toc-mini {
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      gap: 2mm;
+      margin-bottom: 10mm;
+    }
+    .toc-item {
+      background: var(--paper);
+      border: 0.5pt solid var(--hairline);
+      padding: 2mm 4mm;
+      font-size: 10pt;
+      font-weight: 600;
+      text-align: center;
+      color: var(--accent);
+    }
+    .note-box {
+      background: #f0f7f3;
+      border: 0.5pt solid #c8e6d4;
+      padding: 5mm 7mm;
+      margin: 6mm 0;
+    }
+    .note-box p { margin: 0; font-size: 9.5pt; }
+  </style>
+</head>
+<body>
+
+<!-- COVER PAGE -->
+<section class="cover page">
+  <div>
+    <span class="cover-tag">Estate Planning Essentials</span>
+    <h1>Estate Planning<br>Terms Glossary</h1>
+    <p class="subtitle">A comprehensive reference defining all key terminology used in wills, trusts, and estate planning documents.</p>
+  </div>
+  <div class="cover-meta">
+    <div class="meta-info">
+      <strong>Wills & Estate Planning Guide</strong><br>
+      Document 05 of 06<br>
+      Version 1.0
+    </div>
+  </div>
+</section>
+
+<!-- PAGE 1: A-D -->
+<section class="page">
+  <div class="content">
+    <div class="section-header">
+      <h2 class="section-title">Terms A-D</h2>
+    </div>
+
+    <div class="search-box">
+      <label>Quick Search</label>
+      <div class="search-line"></div>
+    </div>
+
+    <div class="toc-mini">
+      <div class="toc-item">A</div>
+      <div class="toc-item">B</div>
+      <div class="toc-item">C</div>
+      <div class="toc-item">D</div>
+      <div class="toc-item">E</div>
+    </div>
+
+    <div class="letter-group">
+      <h3 class="letter-header">A</h3>
+
+      <div class="term-item">
+        <div class="term-word">Administrator</div>
+        <p class="term-def">A person appointed by the probate court to manage and distribute an estate when the deceased had no will (intestate) or no named executor. Similar to an executor but required when there is no valid will.</p>
+        <p class="related-terms">Related: Executor, Personal Representative, Intestate</p>
+      </div>
+
+      <div class="term-item">
+        <div class="term-word">Advance Directive</div>
+        <p class="term-def">A legal document outlining a person's wishes regarding medical care and treatment if they become incapacitated. Also known as a living will or healthcare directive.</p>
+        <p class="related-terms">Related: Living Will, Healthcare Power of Attorney, HIPAA Authorization</p>
+      </div>
+
+      <div class="term-item">
+        <div class="term-word">Beneficiary</div>
+        <p class="term-def">A person, organization, or entity designated to receive assets or benefits from a will, trust, insurance policy, retirement account, or other financial arrangement. The person who ultimately receives the property.</p>
+        <p class="related-terms">Related: Primary Beneficiary, Contingent Beneficiary, Devisee</p>
+      </div>
+
+      <div class="term-item">
+        <div class="term-word">Bequeath</div>
+        <p class="term-def">To give or leave property by will. The act of making a bequest or legacy in a will.</p>
+        <p class="term-example">Example: "I bequeath my diamond ring to my daughter Sarah."</p>
+        <p class="related-terms">Related: Bequest, Devise, Legacy</p>
+      </div>
+    </div>
+
+    <div class="letter-group">
+      <h3 class="letter-header">B</h3>
+
+      <div class="term-item">
+        <div class="term-word">Bequest</div>
+        <p class="term-def">A gift of personal property or money made through a will. Can be specific (a particular item) or general (a sum of money from the estate).</p>
+        <p class="related-terms">Related: Specific Bequest, General Bequest, Demonstrative Bequest</p>
+      </div>
+
+      <div class="term-item">
+        <div class="term-word">Community Property</div>
+        <p class="term-def">In community property states (AZ, CA, ID, LA, NV, NM, TX, WA, WI), property acquired during marriage is owned equally by both spouses. Each spouse can generally bequeath only their half of community property.</p>
+        <p class="related-terms">Related: Separate Property, Community Property State, Equitable Distribution</p>
+      </div>
+    </div>
+
+    <div class="letter-group">
+      <h3 class="letter-header">C</h3>
+
+      <div class="term-item">
+        <div class="term-word">Codicil</div>
+        <p class="term-def">A written amendment or addition to an existing will. Must meet the same execution requirements as a will (signed, witnessed) to be valid. Used for minor changes without rewriting the entire will.</p>
+        <p class="term-example">Example: "This codicil amends my will dated [date] as follows: [changes]"</p>
+        <p class="related-terms">Related: Amendment, Will Revocation, Superseding Will</p>
+      </div>
+
+      <div class="term-item">
+        <div class="term-word">Contingent Beneficiary</div>
+        <p class="term-def">A person who receives assets if the primary beneficiary is unable or unwilling to accept the gift (due to death, disinheritance, or refusal). Also called alternate beneficiary.</p>
+        <p class="related-terms">Related: Primary Beneficiary, Per Stirpes, Remainder Beneficiary</p>
+      </div>
+
+      <div class="term-item">
+        <div class="term-word">Custodian</div>
+        <p class="term-def">Under the Uniform Transfers to Minors Act (UTMA), the person responsible for managing property given to a minor until the minor reaches adulthood (age 18-25 depending on state).</p>
+        <p class="related-terms">Related: Minor, UTMA Account, Guardian</p>
+      </div>
+    </div>
+
+    <div class="letter-group">
+      <h3 class="letter-header">D</h3>
+
+      <div class="term-item">
+        <div class="term-word">Debts of the Decedent</div>
+        <p class="term-def">Obligations owed by the deceased at the time of death. These must be paid from the estate before distribution to beneficiaries. Includes mortgages, car loans, credit cards, medical bills, and other liabilities.</p>
+        <p class="related-terms">Related: Secured Debt, Unsecured Debt, Priority Claims</p>
+      </div>
+
+      <div class="term-item">
+        <div class="term-word">Devise</div>
+        <p class="term-def">To give or transfer real property (land and buildings) by will. "Devisee" is the recipient of real property, while "legatee" receives personal property.</p>
+        <p class="term-example">Example: "I devise my house at [address] to my son John."</p>
+        <p class="related-terms">Related: Bequest, Legacy, Devisee</p>
+      </div>
+
+      <div class="term-item">
+        <div class="term-word">Digital Assets</div>
+        <p class="term-def">Electronic records and accounts including email, social media, online financial accounts, cryptocurrency, digital photos and videos, domain names, and other internet-based property.</p>
+        <p class="related-terms">Related: Electronic Assets, Online Accounts, RUFADAA</p>
+      </div>
+
+      <div class="term-item">
+        <div class="term-word">Durable Power of Attorney</div>
+        <p class="term-def">A legal document granting someone authority to manage your financial affairs that remains in effect even if you become incapacitated. The "durable" aspect means it survives mental incapacity.</p>
+        <p class="related-terms">Related: Healthcare Power of Attorney, Financial POA, Springing POA</p>
+      </div>
+    </div>
+  </div>
+  <div class="footer">
+    <span>Estate Planning Terms Glossary</span>
+    <span class="page-number">2</span>
+  </div>
+</section>
+
+<!-- PAGE 2: E-H -->
+<section class="page">
+  <div class="content">
+    <div class="section-header">
+      <h2 class="section-title">Terms E-H</h2>
+    </div>
+
+    <div class="toc-mini">
+      <div class="toc-item">E</div>
+      <div class="toc-item">F</div>
+      <div class="toc-item">G</div>
+      <div class="toc-item">H</div>
+      <div class="toc-item">I</div>
+    </div>
+
+    <div class="letter-group">
+      <h3 class="letter-header">E</h3>
+
+      <div class="term-item">
+        <div class="term-word">Estate</div>
+        <p class="term-def">The total collection of assets and property owned by a person at the time of death. Includes real estate, bank accounts, investments, vehicles, personal property, and any other owned assets, minus any debts.</p>
+        <p class="related-terms">Related: Gross Estate, Net Estate, Estate Value</p>
+      </div>
+
+      <div class="term-item">
+        <div class="term-word">Estate Tax</div>
+        <p class="term-def">A tax imposed on the transfer of property at death. The federal estate tax applies to estates exceeding the exemption amount (approximately $13.6 million for 2024). Some states also impose separate estate taxes.</p>
+        <p class="related-terms">Related: Federal Estate Tax, State Estate Tax, Generation-Skipping Tax</p>
+      </div>
+
+      <div class="term-item">
+        <div class="term-word">Executor</div>
+        <p class="term-def">The person named in a will to administer the estate, pay debts and taxes, and distribute assets to beneficiaries. Also called personal representative or coexecutor if multiple are named.</p>
+        <p class="related-terms">Related: Administrator, Personal Representative, Successor Executor</p>
+      </div>
+
+      <div class="term-item">
+        <div class="term-word">Expressio Unius Est Exclusio Alterius</div>
+        <p class="term-def">A legal principle meaning "the expression of one thing is the exclusion of another." In wills, if you name specific beneficiaries, others may be excluded from receiving gifts.</p>
+      </div>
+    </div>
+
+    <div class="letter-group">
+      <h3 class="letter-header">F</h3>
+
+      <div class="term-item">
+        <div class="term-word">Fiduciary</div>
+        <p class="term-def">A person or entity legally obligated to act in someone else's best interest. Executors, trustees, and agents under power of attorney are all fiduciaries with duties of loyalty and care.</p>
+        <p class="related-terms">Related: Fiduciary Duty, Trustee, Executor</p>
+      </div>
+
+      <div class="term-item">
+        <div class="term-word">Fiduciary Duty</div>
+        <p class="term-def">The legal obligation to act with the highest level of care, honesty, and loyalty in managing someone else's affairs. Includes duties of prudence, loyalty, and full disclosure.</p>
+        <p class="related-terms">Related: Duty of Loyalty, Duty of Prudence, Breach of Fiduciary Duty</p>
+      </div>
+    </div>
+
+    <div class="letter-group">
+      <h3 class="letter-header">G</h3>
+
+      <div class="term-item">
+        <div class="term-word">Generation-Skipping Transfer (GST)</div>
+        <p class="term-def">A transfer of wealth to a beneficiary who is two or more generations below the transferor (typically grandchildren). Subject to special tax treatment and exemption.</p>
+        <p class="related-terms">Related: GST Tax Exemption, Skip Person, Grandchildren</p>
+      </div>
+
+      <div class="term-item">
+        <div class="term-word">Grantor</div>
+        <p class="term-def">The person who creates and transfers property to a trust. Also called settlor, trustor, or creator depending on context. The grantor establishes the trust and defines its terms.</p>
+        <p class="related-terms">Related: Trustor, Settlor, Trust Creator</p>
+      </div>
+
+      <div class="term-item">
+        <div class="term-word">Guardian</div>
+        <p class="term-def">A person appointed by a court or named in a will to care for a minor child or legally incapacitated adult. Guardianship of the person covers care; guardianship of the estate covers finances.</p>
+        <p class="related-terms">Related: Guardian of the Person, Guardian of the Estate, Conservator</p>
+      </div>
+    </div>
+
+    <div class="letter-group">
+      <h3 class="letter-header">H</h3>
+
+      <div class="term-item">
+        <div class="term-word">Heir</div>
+        <p class="term-def">A person entitled to receive property under intestacy laws when there is no valid will. The legal successor to property based on statutory relationship, not the deceased's wishes.</p>
+        <p class="related-terms">Related: Heir at Law, Intestate Heir, Statutory Heir</p>
+      </div>
+
+      <div class="term-item">
+        <div class="term-word">HIPAA Authorization</div>
+        <p class="term-def">A document authorizing healthcare providers to release medical information to designated individuals. Required for healthcare agents to access medical records during emergencies.</p>
+        <p class="related-terms">Related: Healthcare Proxy, Privacy Rule, Medical Records</p>
+      </div>
+
+      <div class="term-item">
+        <div class="term-word">Holographic Will</div>
+        <p class="term-def">A will that is entirely handwritten and signed by the testator. May not require witnesses in some states. Recognized in about half of U.S. states. Less reliable than formally executed typed wills.</p>
+        <p class="related-terms">Related: Handwritten Will, Formal Will, Witness Requirement</p>
+      </div>
+
+      <div class="term-item">
+        <div class="term-word">Homestead Exemption</div>
+        <p class="term-def">A legal protection allowing a surviving spouse to continue living in the family home, sometimes regardless of will provisions. Varies by state and may protect against creditor claims.</p>
+        <p class="related-terms">Related: Spousal Protection, Family Allowance, Right of Survivorship</p>
+      </div>
+    </div>
+  </div>
+  <div class="footer">
+    <span>Estate Planning Terms Glossary</span>
+    <span class="page-number">3</span>
+  </div>
+</section>
+
+<!-- PAGE 3: I-L -->
+<section class="page">
+  <div class="content">
+    <div class="section-header">
+      <h2 class="section-title">Terms I-L</h2>
+    </div>
+
+    <div class="toc-mini">
+      <div class="toc-item">I</div>
+      <div class="toc-item">J-L</div>
+      <div class="toc-item">M</div>
+      <div class="toc-item">N</div>
+      <div class="toc-item">O</div>
+    </div>
+
+    <div class="letter-group">
+      <h3 class="letter-header">I</h3>
+
+      <div class="term-item">
+        <div class="term-word">Incapacity</div>
+        <p class="term-def">The inability to make informed decisions due to physical or mental disability. Triggers the use of advance directives, powers of attorney, and court-appointed guardians or conservators.</p>
+        <p class="related-terms">Related: Incapacitated, Disability, Mental Incompetence</p>
+      </div>
+
+      <div class="term-item">
+        <div class="term-word">Inheritance Tax</div>
+        <p class="term-def">A tax on property received from a deceased person, calculated based on the relationship between the deceased and the beneficiary. Imposed by some states (IA, KY, MD, NE, NJ, PA) rather than federal government.</p>
+        <p class="related-terms">Related: Estate Tax, Death Tax, State Tax</p>
+      </div>
+
+      <div class="term-item">
+        <div class="term-word">Inter Vivos Trust</div>
+        <p class="term-def">A trust created and funded during the grantor's lifetime, as opposed to a testamentary trust that takes effect at death. Also called living trust.</p>
+        <p class="term-example">Example: "An irrevocable life insurance trust (ILIT) is an inter vivos trust."</p>
+        <p class="related-terms">Related: Living Trust, Revocable Trust, Testamentary Trust</p>
+      </div>
+
+      <div class="term-item">
+        <div class="term-word">Intestate / Intestacy</div>
+        <p class="term-def">The state of dying without a valid will. When someone dies intestate, state intestacy laws determine who receives their property. Courts appoint an administrator to manage the estate.</p>
+        <p class="related-terms">Related: Testate, No Will, Intestate Succession</p>
+      </div>
+    </div>
+
+    <div class="letter-group">
+      <h3 class="letter-header">L</h3>
+
+      <div class="term-item">
+        <div class="term-word">Legacy</div>
+        <p class="term-def">A gift of personal property or money made through a will. The term can also refer to the overall gift or bequest transferred by a will, or specifically a charitable gift.</p>
+        <p class="related-terms">Related: Bequest, Devise, Charitable Gift</p>
+      </div>
+
+      <div class="term-item">
+        <div class="term-word">Legal Representative</div>
+        <p class="term-def">A general term for any person authorized to act on another's behalf in legal matters, including executors, administrators, guardians, and agents under power of attorney.</p>
+        <p class="related-terms">Related: Personal Representative, Attorney-in-Fact, Fiduciary</p>
+      </div>
+
+      <div class="term-item">
+        <div class="term-word">Letter of Instruction</div>
+        <p class="term-def">A non-legal document providing practical guidance to family members about asset location, funeral wishes, online accounts, and other information not contained in formal legal documents.</p>
+        <p class="related-terms">Related: Letter of Intent, Memorandum, Instruction Letter</p>
+      </div>
+
+      <div class="term-item">
+        <div class="term-word">Letters Testamentary</div>
+        <p class="term-def">A document issued by the probate court certifying that the executor has authority to act on behalf of the estate. Also called Letters of Authority in some states.</p>
+        <p class="term-example">Example: "Present Letters Testamentary to the bank to access the deceased's accounts."</p>
+        <p class="related-terms">Related: Court Appointment, Executor Authority, Probate</p>
+      </div>
+
+      <div class="term-item">
+        <div class="term-word">Living Trust</div>
+        <p class="term-def">A trust created during the grantor's lifetime that holds assets for the benefit of the grantor or others. Can be revocable (changeable) or irrevocable (cannot be changed once created).</p>
+        <p class="related-terms">Related: Revocable Trust, Irrevocable Trust, Trust Agreement</p>
+      </div>
+
+      <div class="term-item">
+        <div class="term-word">Living Will</div>
+        <p class="term-def">A legal document stating a person's preferences for end-of-life medical treatment, including use of life support, resuscitation, and artificial nutrition and hydration.</p>
+        <p class="related-terms">Related: Advance Directive, Healthcare Directive, Terminal Illness</p>
+      </div>
+    </div>
+
+    <div class="note-box">
+      <p>This glossary contains common estate planning terms. For definitions of specific legal terms relevant to your state, consult with a licensed estate planning attorney.</p>
+    </div>
+  </div>
+  <div class="footer">
+    <span>Estate Planning Terms Glossary</span>
+    <span class="page-number">4</span>
+  </div>
+</section>
+
+<!-- PAGE 4: M-P -->
+<section class="page">
+  <div class="content">
+    <div class="section-header">
+      <h2 class="section-title">Terms M-P</h2>
+    </div>
+
+    <div class="toc-mini">
+      <div class="toc-item">M</div>
+      <div class="toc-item">N</div>
+      <div class="toc-item">O</div>
+      <div class="toc-item">P</div>
+      <div class="toc-item">R</div>
+    </div>
+
+    <div class="letter-group">
+      <h3 class="letter-header">M</h3>
+
+      <div class="term-item">
+        <div class="term-word">Minor</div>
+        <p class="term-def">A person who has not reached the age of majority (18 in most states). Cannot legally own property directly; assets must be held in trust or UTMA account managed by a custodian.</p>
+        <p class="related-terms">Related: Age of Majority, UTMA, Custodian</p>
+      </div>
+
+      <div class="term-item">
+        <div class="term-word">Mutual Will</div>
+        <p class="term-def">A will executed jointly by two or more people (typically spouses) that cannot be revoked without the consent of all parties. Common in estate planning for married couples.</p>
+        <p class="related-terms">Related: Joint Will, Reciprocal Will, Surviving Spouse</p>
+      </div>
+    </div>
+
+    <div class="letter-group">
+      <h3 class="letter-header">N</h3>
+
+      <div class="term-item">
+        <div class="term-word">Net Estate</div>
+        <p class="term-def">The value of the estate after subtracting all debts, taxes, and administration expenses. The amount available for distribution to beneficiaries.</p>
+        <p class="related-terms">Related: Gross Estate, Estate Value, Distributable Estate</p>
+      </div>
+
+      <div class="term-item">
+        <div class="term-word">No-Contest Clause</div>
+        <p class="term-def">A provision in a will that disinherits anyone who challenges or contests the will. Designed to discourage family disputes about the estate distribution.</p>
+        <p class="term-example">Example: "If any beneficiary contests this will, they shall receive only $1 in lieu of any other gift."</p>
+        <p class="related-terms">Related: In Terrorem Clause, Contested Will, Disinherit</p>
+      </div>
+    </div>
+
+    <div class="letter-group">
+      <h3 class="letter-header">P</h3>
+
+      <div class="term-item">
+        <div class="term-word">Per Capita</div>
+        <p class="term-def">"By head" - a method of distributing estate assets where each living person in a designated group receives an equal share, regardless of generation or branch of family.</p>
+        <p class="term-example">Example: "Share equally per capita among my grandchildren" means each grandchild receives the same amount.</p>
+        <p class="related-terms">Related: Per Stirpes, Representation, Distribution Method</p>
+      </div>
+
+      <div class="term-item">
+        <div class="term-word">Per Stirpes</div>
+        <p class="term-def">"By representation" - a method of distributing estate assets where if a beneficiary predeceases the testator, that beneficiary's share passes to their descendants (children), not to other beneficiaries.</p>
+        <p class="term-example">Example: "Per stirpes to my children" - if one child died, their share goes to their children.</p>
+        <p class="related-terms">Related: Per Capita, Lineal Descendants, Representation</p>
+      </div>
+
+      <div class="term-item">
+        <div class="term-word">Personal Property</div>
+        <p class="term-def">Any movable property not attached to real estate, including furniture, vehicles, jewelry, clothing, bank accounts, investments, and other tangible or intangible items.</p>
+        <p class="related-terms">Related: Real Property, Tangible Property, Intangible Property</p>
+      </div>
+
+      <div class="term-item">
+        <div class="term-word">Personal Representative</div>
+        <p class="term-def">The general term for the person appointed to manage a decedent's estate, whether as executor (if there is a will) or administrator (if there is no will).</p>
+        <p class="related-terms">Related: Executor, Administrator, Fiduciary</p>
+      </div>
+
+      <div class="term-item">
+        <div class="term-word">Pour-Over Will</div>
+        <p class="term-def">A will that works in conjunction with a living trust by directing any assets not already in the trust to be transferred to the trust upon death. Used to ensure complete estate planning coverage.</p>
+        <p class="related-terms">Related: Living Trust, Revocable Trust, Trust Funding</p>
+      </div>
+
+      <div class="term-item">
+        <div class="term-word">Power of Attorney (POA)</div>
+        <p class="term-def">A legal document authorizing one person to act on another's behalf in financial, legal, or medical matters. Can be general (broad authority) or limited (specific matters only).</p>
+        <p class="related-terms">Related: Durable POA, Healthcare POA, Attorney-in-Fact</p>
+      </div>
+
+      <div class="term-item">
+        <div class="term-word">Probate</div>
+        <p class="term-def">The court-supervised legal process of validating a will, paying debts and taxes, and distributing assets to beneficiaries. May be necessary for assets not transferred through beneficiary designation or joint ownership.</p>
+        <p class="related-terms">Related: Probate Court, Probate Estate, Probate Process</p>
+      </div>
+    </div>
+  </div>
+  <div class="footer">
+    <span>Estate Planning Terms Glossary</span>
+    <span class="page-number">5</span>
+  </div>
+</section>
+
+<!-- PAGE 5: R-T -->
+<section class="page">
+  <div class="content">
+    <div class="section-header">
+      <h2 class="section-title">Terms R-T</h2>
+    </div>
+
+    <div class="toc-mini">
+      <div class="toc-item">R</div>
+      <div class="toc-item">S</div>
+      <div class="toc-item">T</div>
+      <div class="toc-item">U-Z</div>
+      <div class="toc-item"></div>
+    </div>
+
+    <div class="letter-group">
+      <h3 class="letter-header">R</h3>
+
+      <div class="term-item">
+        <div class="term-word">Real Property</div>
+        <p class="term-def">Land and anything permanently attached to it, including buildings, trees, and minerals below the surface. Distinguished from personal property (movable items).</p>
+        <p class="related-terms">Related: Real Estate, Land, Fixtures</p>
+      </div>
+
+      <div class="term-item">
+        <div class="term-word">Remainder Beneficiary</div>
+        <p class="term-def">A person entitled to receive trust assets after the primary beneficiary's interest ends (when the trust terminates or the beneficiary dies).</p>
+        <p class="related-terms">Related: Primary Beneficiary, Trust Beneficiary, Successor</p>
+      </div>
+
+      <div class="term-item">
+        <div class="term-word">Residuary Estate</div>
+        <p class="term-def">The assets remaining in an estate after all specific bequests, general bequests, debts, taxes, and administration expenses have been paid. Also called the residuum.</p>
+        <p class="related-terms">Related: Residuary Clause, Residuary Bequest, Remainder</p>
+      </div>
+
+      <div class="term-item">
+        <div class="term-word">Revocation of Will</div>
+        <p class="term-def">The act of canceling a previously executed will. Can be done by executing a new will that revokes the old one, physically destroying the will, or marriage (in some states).</p>
+        <p class="related-terms">Related: Revoked Will, New Will, Will Invalidity</p>
+      </div>
+
+      <div class="term-item">
+        <div class="term-word">Right of Survivorship</div>
+        <p class="term-def">A feature of joint tenancy where the surviving owner automatically inherits the deceased owner's share of the property, bypassing probate. Applies to joint bank accounts and some real estate.</p>
+        <p class="related-terms">Related: Joint Tenancy, Tenancy by the Entirety, Survivorship</p>
+      </div>
+    </div>
+
+    <div class="letter-group">
+      <h3 class="letter-header">S</h3>
+
+      <div class="term-item">
+        <div class="term-word">Self-Proving Affidavit</div>
+        <p class="term-def">A notarized document attached to a will, signed by the testator and witnesses, declaring that the will was properly executed. Simplifies probate by eliminating the need for witness testimony.</p>
+        <p class="related-terms">Related: Notarization, Witness Testimony, Probate</p>
+      </div>
+
+      <div class="term-item">
+        <div class="term-word">Separate Property</div>
+        <p class="term-def">In community property states, property owned before marriage or received as a gift or inheritance during marriage. Belongs solely to one spouse and can be bequeathed freely.</p>
+        <p class="related-terms">Related: Community Property, Equitable Distribution, Marital Property</p>
+      </div>
+
+      <div class="term-item">
+        <div class="term-word">Specific Bequest</div>
+        <p class="term-def">A gift of a particular, identifiable item to a named beneficiary. Examples include "my grandmother's ring" or "my 2020 Honda Accord."</p>
+        <p class="term-example">Example: "I give my diamond engagement ring to my daughter."</p>
+        <p class="related-terms">Related: General Bequest, Demonstrative Bequest, Itemized Gift</p>
+      </div>
+
+      <div class="term-item">
+        <div class="term-word">Successor Trustee</div>
+        <p class="term-def">The person who takes over management of a trust if the original trustee dies, becomes incapacitated, or resigns. Named in the trust document.</p>
+        <p class="related-terms">Related: Trustee, Trust Administration, Trust Amendment</p>
+      </div>
+    </div>
+
+    <div class="letter-group">
+      <h3 class="letter-header">T</h3>
+
+      <div class="term-item">
+        <div class="term-word">Testamentary Capacity</div>
+        <p class="term-def">The mental ability required to create a valid will. Must understand the nature of the document, know the extent of your property, and recognize your natural heirs at the time of signing.</p>
+        <p class="related-terms">Related: Sound Mind, Mental Competence, Undue Influence</p>
+      </div>
+
+      <div class="term-item">
+        <div class="term-word">Testamentary Trust</div>
+        <p class="term-def">A trust created by and funded through a will, taking effect upon the testator's death. Unlike a living trust, it does not exist during the grantor's lifetime.</p>
+        <p class="related-terms">Related: Living Trust, Trust Creation, Will Provisions</p>
+      </div>
+
+      <div class="term-item">
+        <div class="term-word">Testator</div>
+        <p class="term-def">The person who creates and signs a will. From Latin "testari" meaning "to witness" or "to make a will."</p>
+        <p class="related-terms">Related: Testatrix (female), Will Creator, Will Maker</p>
+      </div>
+
+      <div class="term-item">
+        <div class="term-word">Trust</div>
+        <p class="term-def">A legal arrangement where one person (trustee) holds property for the benefit of others (beneficiaries). Can be used to manage assets during incapacity, for minors, or to avoid probate.</p>
+        <p class="related-terms">Related: Trust Agreement, Trustee, Trust Beneficiary</p>
+      </div>
+
+      <div class="term-item">
+        <div class="term-word">Trustee</div>
+        <p class="term-def">The person or entity responsible for managing trust assets and following the trust's terms. Has fiduciary duties to the beneficiaries and must act in their best interests.</p>
+        <p class="related-terms">Related: Trust Administration, Successor Trustee, Corporate Trustee</p>
+      </div>
+    </div>
+  </div>
+  <div class="footer">
+    <span>Estate Planning Terms Glossary</span>
+    <span class="page-number">6</span>
+  </div>
+</section>
+
+</body>
+</html>

@@ -1,0 +1,432 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Healthcare Directives Package - Wills & Estate Planning</title>
+  <style>
+    @page { size: A4 portrait; margin: 14mm 12mm; }
+    @media screen {
+      html { background: #d0d0d0; }
+      body { margin: 0; padding: 20px 0; }
+      body > section { width: 210mm; min-height: 297mm; margin: 0 auto 20px; background: #fff; box-shadow: 0 4px 24px rgba(0,0,0,0.18); box-sizing: border-box; overflow: hidden; }
+    }
+    * { box-sizing: border-box; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+    :root { --accent: #1a6b4a; --ink: #1a1a1e; --muted: #5a5a5a; --paper: #faf9f7; }
+    body { font-family: -apple-system, sans-serif; font-size: 10.5pt; line-height: 1.55; color: var(--ink); background: var(--paper); margin: 0; padding: 0; }
+    .cover { min-height: 268mm; background: linear-gradient(135deg, #1a2f3e 0%, #0f1f2e 100%); color: #f0ede6; padding: 40mm 20mm; display: flex; flex-direction: column; justify-content: space-between; }
+    .cover h1 { font-size: 26pt; font-weight: 300; margin: 0 0 10mm 0; color: #fff; }
+    .cover .subtitle { font-size: 11pt; color: #b8c4ce; margin: 0; }
+    .cover-meta { border-top: 0.5pt solid rgba(255,255,255,0.2); padding-top: 10mm; font-size: 8.5pt; color: #8a9aa5; }
+    .page { page-break-after: always; min-height: 268mm; padding: 20mm 0; position: relative; }
+    .page:last-child { page-break-after: auto; }
+    .content { padding: 0 20mm; }
+    .section-header { padding: 0 20mm; margin-bottom: 8mm; }
+    .section-title { font-size: 15pt; font-weight: 400; color: var(--ink); margin: 0; border-bottom: 2pt solid var(--accent); padding-bottom: 3mm; }
+    .subsection-title { font-size: 12pt; font-weight: 600; color: var(--accent); margin: 8mm 0 4mm 0; }
+    .chapter { margin-bottom: 8mm; }
+    .chapter h3 { font-size: 11pt; font-weight: 600; color: var(--accent); margin: 0 0 4mm 0; }
+    .chapter p { margin: 0 0 4mm 0; }
+    .chapter ul { margin: 0 0 5mm 0; padding-left: 7mm; }
+    .chapter li { margin-bottom: 2mm; }
+    .callout { background: linear-gradient(135deg, #f0f7f3 0%, #e8f3ed 100%); border-left: 3pt solid var(--accent); padding: 6mm 8mm; margin: 6mm 0; }
+    .callout strong { font-size: 9pt; color: var(--accent); display: block; margin-bottom: 2mm; }
+    .callout p { margin: 0; font-size: 9.5pt; }
+    table { width: 100%; border-collapse: collapse; font-size: 9pt; margin: 6mm 0; }
+    th { background: var(--accent); color: #fff; padding: 4mm 5mm; text-align: left; font-weight: 500; }
+    td { padding: 3mm 5mm; border-bottom: 0.5pt solid #e8e4dc; vertical-align: top; }
+    tr:nth-child(even) td { background: #faf9f7; }
+    .form-box { background: #f5f5f3; border: 1pt solid #e0ddd5; padding: 8mm; margin: 6mm 0; }
+    .form-box h4 { font-size: 10pt; font-weight: 600; margin: 0 0 4mm 0; color: var(--ink); }
+    .form-field { margin-bottom: 4mm; }
+    .form-field label { display: block; font-size: 8.5pt; color: var(--muted); margin-bottom: 1mm; }
+    .form-field .line { border-bottom: 0.5pt solid #aaa; height: 8mm; }
+    .two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 8mm; margin: 6mm 0; }
+    .col h4 { font-size: 10pt; font-weight: 600; color: var(--ink); margin: 0 0 4mm 0; }
+    .col ul { margin: 0; padding-left: 6mm; }
+    .col li { margin-bottom: 2mm; font-size: 9pt; }
+    .divider { border: none; border-top: 0.5pt solid #e8e4dc; margin: 10mm 0; }
+    .page-break-label { text-align: center; font-size: 9pt; color: var(--muted); padding: 4mm 0; font-style: italic; }
+    .footer { position: absolute; bottom: 10mm; left: 20mm; right: 20mm; font-size: 7.5pt; color: var(--muted); border-top: 0.5pt solid #e8e4dc; padding-top: 3mm; display: flex; justify-content: space-between; }
+    .page-number { color: var(--ink); font-weight: 500; }
+  </style>
+</head>
+<body>
+
+<section class="cover page">
+  <div>
+    <span style="font-size: 8pt; text-transform: uppercase; letter-spacing: 2px; color: #8a9aa5;">Premium Bonus Document</span>
+    <h1>Healthcare Directives<br>Package</h1>
+    <p class="subtitle">Healthcare Power of Attorney and Living Will templates. Ensure your medical wishes are documented and your voice is heard when you cannot speak for yourself.</p>
+  </div>
+  <div class="cover-meta"><strong>Wills & Estate Planning Guide - Premium Package</strong><br>Bonus Document 5 of 6</div>
+</section>
+
+<section class="page">
+  <div class="content">
+    <div class="section-header"><h2 class="section-title">Understanding Healthcare Directives</h2></div>
+    <div class="chapter">
+      <h3>What Are Healthcare Directives?</h3>
+      <p>Healthcare directives are legal documents that specify your wishes regarding medical treatment if you become unable to make decisions for yourself. They ensure your voice is heard even when you cannot communicate.</p>
+    </div>
+    <div class="two-col">
+      <div class="col">
+        <h4>Healthcare Power of Attorney</h4>
+        <ul>
+          <li>Names someone to make medical decisions on your behalf</li>
+          <li>Takes effect when you cannot decide for yourself</li>
+          <li>Can be broad or limited in scope</li>
+          <li>Can be revoked if you regain capacity</li>
+          <li>Applies only to healthcare decisions</li>
+        </ul>
+      </div>
+      <div class="col">
+        <h4>Living Will (Advance Directive)</h4>
+        <ul>
+          <li>Documents your specific medical treatment wishes</li>
+          <li>Does not name a decision-maker</li>
+          <li>Focuses on end-of-life care preferences</li>
+          <li>Guides family and doctors in your absence</li>
+          <li>Cannot be changed once incapacitated</li>
+        </ul>
+      </div>
+    </div>
+    <div class="callout">
+      <strong>Why Both Are Recommended</strong>
+      <p>Using both documents together provides comprehensive coverage. The Healthcare POA designates someone to make decisions, while the Living Will specifies what decisions should be made. Together, they ensure both who decides and what to decide is documented.</p>
+    </div>
+    <div class="chapter">
+      <h3>When Healthcare Directives Take Effect</h3>
+      <p>Healthcare directives generally become active when:</p>
+      <ul>
+        <li>A physician certifies that you are unable to make medical decisions</li>
+        <li>A mental health professional confirms incapacity (for psychiatric decisions)</li>
+        <li>You have been evaluated and found unable to understand your condition or treatment options</li>
+      </ul>
+    </div>
+    <div class="chapter">
+      <h3>Who Should Be Your Healthcare Agent</h3>
+      <p>Choose someone who:</p>
+      <ul>
+        <li>Is willing to serve in this role</li>
+        <li>Lives nearby and can be reached quickly</li>
+        <li>Understands your values and wishes</li>
+        <li>Can make difficult decisions under pressure</li>
+        <li>Is not afraid to ask doctors questions or challenge recommendations</li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer"><span>Healthcare Directives Package - Premium</span><span class="page-number">2</span></div>
+</section>
+
+<section class="page">
+  <div class="content">
+    <div class="page-break-label">— Healthcare Power of Attorney —</div>
+    <div class="section-header"><h2 class="section-title">Healthcare Power of Attorney</h2></div>
+    <div class="chapter">
+      <h3>Legal Notice</h3>
+      <p>This template provides a general format. Healthcare Power of Attorney laws vary significantly by state. Some states require specific language, witnesses, or notarization. Consult with an attorney licensed in your state to ensure this document meets all legal requirements.</p>
+    </div>
+    <div class="form-box">
+      <h4>PART I: DESIGNATION OF HEALTHCARE AGENT</h4>
+      <p style="font-size: 9pt; margin: 0 0 4mm 0;">I, the undersigned, hereby designate the following person as my healthcare agent:</p>
+      <div class="form-field">
+        <label>Full Legal Name of Healthcare Agent</label>
+        <div class="line"></div>
+      </div>
+      <div class="form-field">
+        <label>Relationship to Principal</label>
+        <div class="line"></div>
+      </div>
+      <div class="form-field">
+        <label>Street Address</label>
+        <div class="line"></div>
+      </div>
+      <div class="form-field">
+        <label>City, State, ZIP Code</label>
+        <div class="line"></div>
+      </div>
+      <div class="form-field">
+        <label>Telephone Number</label>
+        <div class="line"></div>
+      </div>
+      <div class="form-field">
+        <label>Email Address (Optional)</label>
+        <div class="line"></div>
+      </div>
+    </div>
+    <div class="form-box">
+      <h4>ALTERNATE HEALTHCARE AGENT</h4>
+      <p style="font-size: 9pt; margin: 0 0 4mm 0;">If my primary healthcare agent is unable or unwilling to serve, I designate the following person as my alternate healthcare agent:</p>
+      <div class="form-field">
+        <label>Full Legal Name of Alternate Agent</label>
+        <div class="line"></div>
+      </div>
+      <div class="form-field">
+        <label>Relationship to Principal</label>
+        <div class="line"></div>
+      </div>
+      <div class="form-field">
+        <label>Telephone Number</label>
+        <div class="line"></div>
+      </div>
+    </div>
+  </div>
+  <div class="footer"><span>Healthcare Directives Package - Premium</span><span class="page-number">3</span></div>
+</section>
+
+<section class="page">
+  <div class="content">
+    <div class="section-header"><h2 class="section-title">Healthcare Agent Authority</h2></div>
+    <div class="form-box">
+      <h4>PART II: AUTHORITY OF HEALTHCARE AGENT</h4>
+      <p style="font-size: 9pt; margin: 0 0 4mm 0;">My healthcare agent is authorized to make all healthcare decisions for me, including but not limited to:</p>
+      <ul style="font-size: 9pt;">
+        <li>Consenting to, refusing, or withdrawing medical treatment, including life-sustaining procedures</li>
+        <li>Choosing healthcare providers and facilities</li>
+        <li>Authorizing admission to or discharge from hospitals, nursing homes, or other care facilities</li>
+        <li>Accessing my medical records and sharing information with healthcare providers</li>
+        <li>Requesting autopsies and authorizing organ donation</li>
+        <li>Making funeral and disposition arrangements</li>
+      </ul>
+    </div>
+    <div class="form-box">
+      <h4>PART III: LIMITATIONS (Optional)</h4>
+      <p style="font-size: 9pt; margin: 0 0 4mm 0;">I specifically limit my healthcare agent's authority as follows (if no limitations, write "NONE"):</p>
+      <div class="form-field">
+        <label>Specific limitations or restrictions</label>
+        <div class="line" style="height: 20mm;"></div>
+      </div>
+    </div>
+    <div class="form-box">
+      <h4>PART IV: DURATION</h4>
+      <p style="font-size: 9pt; margin: 0 0 4mm 0;">This Healthcare Power of Attorney shall become effective when I am unable to make my own healthcare decisions and shall remain in effect until I regain capacity or this document is revoked.</p>
+      <p style="font-size: 9pt; margin: 0 0 4mm 0;"><strong>Initial one:</strong></p>
+      <ul style="font-size: 9pt;">
+        <li>[ ] This document is effective immediately for all healthcare decisions</li>
+        <li>[ ] This document becomes effective only when I am incapacitated</li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer"><span>Healthcare Directives Package - Premium</span><span class="page-number">4</span></div>
+</section>
+
+<section class="page">
+  <div class="content">
+    <div class="section-header"><h2 class="section-title">Living Will (Advance Directive)</h2></div>
+    <div class="chapter">
+      <h3>Statement of Purpose</h3>
+      <p>I, the undersigned, being of sound mind, hereby declare my wishes regarding medical treatment in the event I become terminally ill, permanently unconscious, or otherwise unable to make decisions for myself.</p>
+    </div>
+    <div class="form-box">
+      <h4>DECLARATION OF HEALTHCARE WISHES</h4>
+      <p style="font-size: 9pt; margin: 0 0 4mm 0;">If I am diagnosed with a terminal condition with no reasonable hope of recovery:</p>
+      <p style="font-size: 9pt; margin: 0 0 4mm 0;"><strong>Initial one:</strong></p>
+      <ul style="font-size: 9pt;">
+        <li>[ ] I DIRECT that life-prolonging treatment be withheld or withdrawn</li>
+        <li>[ ] I DIRECT that life-prolonging treatment be provided if there is a reasonable chance of recovery</li>
+        <li>[ ] I WISH my healthcare agent to make this determination based on my known values</li>
+      </ul>
+      <hr class="divider">
+      <p style="font-size: 9pt; margin: 0 0 4mm 0;">If I become permanently unconscious (persistent vegetative state):</p>
+      <p style="font-size: 9pt; margin: 0 0 4mm 0;"><strong>Initial one:</strong></p>
+      <ul style="font-size: 9pt;">
+        <li>[ ] I DIRECT that life-prolonging treatment be withheld or withdrawn</li>
+        <li>[ ] I DIRECT that life-prolonging treatment be provided for a trial period of __________ months</li>
+        <li>[ ] I WISH my healthcare agent to make this determination based on my known values</li>
+      </ul>
+    </div>
+    <div class="form-box">
+      <h4>SPECIFIC TREATMENT DECISIONS</h4>
+      <p style="font-size: 9pt; margin: 0 0 4mm 0;"><strong>Artificial Nutrition and Hydration</strong> (food and water through tubes):</p>
+      <ul style="font-size: 9pt;">
+        <li>[ ] Withhold if terminal or permanently unconscious</li>
+        <li>[ ] Provide indefinitely</li>
+        <li>[ ] Provide only if there is reasonable hope of recovery</li>
+      </ul>
+      <p style="font-size: 9pt; margin: 4mm 0;"><strong>Mechanical Ventilation</strong> (breathing machine):</p>
+      <ul style="font-size: 9pt;">
+        <li>[ ] Withhold if terminal or permanently unconscious</li>
+        <li>[ ] Provide only short-term for acute conditions</li>
+        <li>[ ] Provide indefinitely if other treatments are successful</li>
+      </ul>
+      <p style="font-size: 9pt; margin: 4mm 0;"><strong>CPR/Resuscitation</strong> (if heart stops):</p>
+      <ul style="font-size: 9pt;">
+        <li>[ ] Do not attempt resuscitation (DNR order)</li>
+        <li>[ ] Attempt resuscitation if there is a reasonable chance of recovery</li>
+        <li>[ ] Leave this decision to my healthcare agent</li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer"><span>Healthcare Directives Package - Premium</span><span class="page-number">5</span></div>
+</section>
+
+<section class="page">
+  <div class="content">
+    <div class="section-header"><h2 class="section-title">Additional Provisions</h2></div>
+    <div class="form-box">
+      <h4>PAIN MANAGEMENT</h4>
+      <p style="font-size: 9pt; margin: 0 0 4mm 0;">I direct that pain relief be provided in all circumstances, even if it may hasten my death:</p>
+      <ul style="font-size: 9pt;">
+        <li>[ ] Yes, provide maximum pain relief including if it may shorten life</li>
+        <li>[ ] No, I prefer to remain alert even if experiencing pain</li>
+        <li>[ ] No preference on this matter</li>
+      </ul>
+    </div>
+    <div class="form-box">
+      <h4>ORGAN AND TISSUE DONATION</h4>
+      <p style="font-size: 9pt; margin: 0 0 4mm 0;"><strong>Initial one:</strong></p>
+      <ul style="font-size: 9pt;">
+        <li>[ ] I donate any organs and tissues for transplantation or medical research</li>
+        <li>[ ] I donate only the following organs/tissues: ________________________________</li>
+        <li>[ ] I do not wish to donate any organs or tissues</li>
+        <li>[ ] I leave this decision to my healthcare agent</li>
+      </ul>
+    </div>
+    <div class="form-box">
+      <h4>CREMATION AND FINAL DISPOSITION</h4>
+      <p style="font-size: 9pt; margin: 0 0 4mm 0;"><strong>Initial one:</strong></p>
+      <ul style="font-size: 9pt;">
+        <li>[ ] I prefer cremation</li>
+        <li>[ ] I prefer burial</li>
+        <li>[ ] I have prepaid for: ________________________________</li>
+        <li>[ ] I leave this decision to my healthcare agent or family</li>
+      </ul>
+    </div>
+    <div class="callout">
+      <strong>Signature Requirements</strong>
+      <p>To be legally valid, this document must be signed in the presence of witnesses. Requirements vary by state. Many states require either two witnesses or one witness and notarization. Check your state's specific requirements before signing.</p>
+    </div>
+  </div>
+  <div class="footer"><span>Healthcare Directives Package - Premium</span><span class="page-number">6</span></div>
+</section>
+
+<section class="page">
+  <div class="content">
+    <div class="section-header"><h2 class="section-title">Execution and Witnesses</h2></div>
+    <div class="form-box">
+      <h4>SIGNATURE OF PRINCIPAL</h4>
+      <div class="form-field" style="margin-top: 8mm;">
+        <label>Signature of Person Making This Document</label>
+        <div class="line"></div>
+      </div>
+      <div class="form-field">
+        <label>Print Full Name</label>
+        <div class="line"></div>
+      </div>
+      <div class="form-field">
+        <label>Date</label>
+        <div class="line"></div>
+      </div>
+    </div>
+    <div class="form-box">
+      <h4>WITNESS ATTESTATION</h4>
+      <p style="font-size: 9pt; margin: 0 0 4mm 0;">We, the undersigned witnesses, declare that the person who signed this document did so in our presence, and appears to be of sound mind and acting voluntarily.</p>
+      <div class="two-col" style="gap: 5mm;">
+        <div>
+          <p style="font-size: 9pt; font-weight: 600; margin: 0 0 4mm 0;">Witness 1:</p>
+          <div class="form-field">
+            <label>Signature</label>
+            <div class="line"></div>
+          </div>
+          <div class="form-field">
+            <label>Print Name</label>
+            <div class="line"></div>
+          </div>
+          <div class="form-field">
+            <label>Date</label>
+            <div class="line"></div>
+          </div>
+        </div>
+        <div>
+          <p style="font-size: 9pt; font-weight: 600; margin: 0 0 4mm 0;">Witness 2:</p>
+          <div class="form-field">
+            <label>Signature</label>
+            <div class="line"></div>
+          </div>
+          <div class="form-field">
+            <label>Print Name</label>
+            <div class="line"></div>
+          </div>
+          <div class="form-field">
+            <label>Date</label>
+            <div class="line"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="callout">
+      <strong>Notarization (If Required)</strong>
+      <p>Some states require notarization. If applicable, have a notary public acknowledge your signature below.</p>
+      <div class="form-field" style="margin-top: 4mm;">
+        <label>Notary Public Signature and Seal</label>
+        <div class="line"></div>
+      </div>
+    </div>
+  </div>
+  <div class="footer"><span>Healthcare Directives Package - Premium</span><span class="page-number">7</span></div>
+</section>
+
+<section class="page">
+  <div class="content">
+    <div class="section-header"><h2 class="section-title">Implementation Guide</h2></div>
+    <div class="chapter">
+      <h3>After Completing Your Documents</h3>
+      <ol style="font-size: 9pt; padding-left: 7mm;">
+        <li style="margin-bottom: 3mm;"><strong>Review with attorney:</strong> Have an estate planning attorney review your documents to ensure compliance with state law</li>
+        <li style="margin-bottom: 3mm;"><strong>Make copies:</strong> Create multiple copies - one for yourself, one for your healthcare agent, one for your medical records</li>
+        <li style="margin-bottom: 3mm;"><strong>Store securely:</strong> Keep originals in a secure but accessible location (not a safe deposit box your agent cannot access)</li>
+        <li style="margin-bottom: 3mm;"><strong>Give to healthcare agent:</strong> Provide your agent with a copy and discuss your wishes in detail</li>
+        <li style="margin-bottom: 3mm;"><strong>Notify your doctor:</strong> Give a copy to your primary care physician to include in your medical file</li>
+        <li style="margin-bottom: 3mm;"><strong>Carry wallet card:</strong> Keep a small wallet card indicating you have healthcare directives and where they are located</li>
+      </ol>
+    </div>
+    <div class="chapter">
+      <h3>Review and Update</h3>
+      <p>Review your healthcare directives:</p>
+      <ul>
+        <li>After major life events (marriage, divorce, new child, death of family member)</li>
+        <li>When your health status changes significantly</li>
+        <li>When you move to a different state</li>
+        <li>Every 3-5 years as a general rule</li>
+      </ul>
+    </div>
+    <div class="callout">
+      <strong>Key Points to Remember</strong>
+      <p>Healthcare directives only take effect when you cannot make decisions yourself. While you are capable, you always retain the right to make your own medical decisions, regardless of what your directive says. These documents are backups for unexpected circumstances.</p>
+    </div>
+    <div class="chapter">
+      <h3>Important Contacts</h3>
+      <div class="form-box">
+        <div class="form-field">
+          <label>Primary Healthcare Agent Name</label>
+          <div class="line"></div>
+        </div>
+        <div class="form-field">
+          <label>Agent Phone Number</label>
+          <div class="line"></div>
+        </div>
+        <div class="form-field">
+          <label>Alternate Healthcare Agent Name</label>
+          <div class="line"></div>
+        </div>
+        <div class="form-field">
+          <label>Alternate Agent Phone Number</label>
+          <div class="line"></div>
+        </div>
+        <div class="form-field">
+          <label>Primary Care Physician Name</label>
+          <div class="line"></div>
+        </div>
+        <div class="form-field">
+          <label>Physician Phone Number</label>
+          <div class="line"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="footer"><span>Healthcare Directives Package - Premium</span><span class="page-number">8</span></div>
+</section>
+
+</body>
+</html>

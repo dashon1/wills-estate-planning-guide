@@ -1,0 +1,1257 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Assets Inventory Template - Wills & Estate Planning</title>
+  <style>
+    @page { size: A4 portrait; margin: 14mm 12mm; }
+    @media screen {
+      html { background: #d0d0d0; }
+      body { margin: 0; padding: 20px 0; }
+      body > section { width: 210mm; min-height: 297mm; margin: 0 auto 20px; background: #fff; box-shadow: 0 4px 24px rgba(0,0,0,0.18); box-sizing: border-box; overflow: hidden; }
+    }
+    * { box-sizing: border-box; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+    :root {
+      --accent: #1a6b4a;
+      --ink: #1a1a1e;
+      --muted: #5a5a5a;
+      --rule: #d4cfc7;
+      --hairline: #e8e4dc;
+      --paper: #faf9f7;
+    }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", "PingFang SC", "Helvetica Neue", Arial, sans-serif;
+      font-size: 10.5pt;
+      line-height: 1.55;
+      color: var(--ink);
+      background: var(--paper);
+      -webkit-font-smoothing: antialiased;
+      margin: 0;
+      padding: 0;
+    }
+    .cover {
+      min-height: 268mm;
+      background: linear-gradient(135deg, #0f1f2e 0%, #1a2f3e 50%, #0f1f2e 100%);
+      color: #f0ede6;
+      padding: 40mm 20mm;
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+    .cover::before {
+      content: '';
+      position: absolute;
+      top: 20mm;
+      right: 20mm;
+      width: 80mm;
+      height: 80mm;
+      background: radial-gradient(circle, rgba(26,107,74,0.3) 0%, transparent 70%);
+      border-radius: 50%;
+    }
+    .cover-tag {
+      font-size: 8pt;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      color: #8a9aa5;
+      margin-bottom: 15mm;
+    }
+    .cover h1 {
+      font-size: 28pt;
+      font-weight: 300;
+      line-height: 1.2;
+      margin: 0 0 10mm 0;
+      color: #ffffff;
+    }
+    .cover .subtitle {
+      font-size: 11pt;
+      line-height: 1.5;
+      color: #b8c4ce;
+      margin: 0;
+      max-width: 140mm;
+    }
+    .cover-meta {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-end;
+      margin-top: auto;
+      padding-top: 20mm;
+      border-top: 0.5pt solid rgba(255,255,255,0.2);
+    }
+    .meta-info {
+      font-size: 8.5pt;
+      color: #8a9aa5;
+      line-height: 1.6;
+    }
+    .page { page-break-after: always; min-height: 268mm; padding: 20mm 0; position: relative; }
+    .page:last-child { page-break-after: auto; }
+    .content { padding: 0 20mm; }
+    .section-header { padding: 0 20mm; margin-bottom: 8mm; }
+    .section-title {
+      font-size: 16pt;
+      font-weight: 400;
+      color: var(--ink);
+      margin: 0;
+      line-height: 1.3;
+      border-bottom: 2pt solid var(--accent);
+      padding-bottom: 4mm;
+    }
+    .section-subtitle {
+      font-size: 9pt;
+      color: var(--muted);
+      margin: 4mm 0 0 0;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+    .intro-text {
+      font-size: 10pt;
+      color: var(--muted);
+      margin: 0 0 8mm 0;
+      line-height: 1.5;
+    }
+    .asset-section {
+      margin-bottom: 10mm;
+    }
+    .asset-header {
+      background: var(--accent);
+      color: #ffffff;
+      padding: 4mm 6mm;
+      font-size: 10.5pt;
+      font-weight: 600;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .asset-header .icon {
+      font-size: 12pt;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 9pt;
+    }
+    th {
+      background: #f0f7f3;
+      color: var(--ink);
+      padding: 4mm 5mm;
+      text-align: left;
+      font-weight: 500;
+      border-bottom: 1pt solid var(--accent);
+    }
+    td {
+      padding: 3mm 5mm;
+      border-bottom: 0.5pt solid var(--hairline);
+      vertical-align: top;
+    }
+    .input-cell {
+      border: 0.5pt dashed var(--hairline);
+      min-height: 8mm;
+      background: #fff;
+    }
+    .table-fill {
+      width: 100%;
+      border: none;
+    }
+    .table-fill td {
+      border: none;
+      padding: 2mm 0;
+    }
+    .table-fill .label {
+      width: 40%;
+      color: var(--muted);
+      font-size: 9pt;
+    }
+    .table-fill .value {
+      border-bottom: 0.5pt solid var(--hairline);
+      min-height: 6mm;
+    }
+    .summary-box {
+      background: #f0f7f3;
+      border: 1pt solid var(--accent);
+      padding: 8mm;
+      margin: 8mm 0;
+      page-break-inside: avoid;
+    }
+    .summary-title {
+      font-size: 12pt;
+      font-weight: 600;
+      color: var(--accent);
+      margin: 0 0 6mm 0;
+      text-align: center;
+    }
+    .summary-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 6mm;
+    }
+    .summary-item {
+      text-align: center;
+      padding: 4mm;
+      background: #fff;
+      border: 0.5pt solid var(--hairline);
+    }
+    .summary-item .amount {
+      font-size: 14pt;
+      font-weight: 600;
+      color: var(--accent);
+    }
+    .summary-item .label {
+      font-size: 8.5pt;
+      color: var(--muted);
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+    .footer {
+      position: absolute;
+      bottom: 12mm;
+      left: 20mm;
+      right: 20mm;
+      display: flex;
+      justify-content: space-between;
+      font-size: 8pt;
+      color: var(--muted);
+      border-top: 0.5pt solid var(--hairline);
+      padding-top: 4mm;
+    }
+    .page-number { font-weight: 500; color: var(--ink); }
+    .info-box {
+      background: #fef9e6;
+      border: 0.5pt solid #e6d9b8;
+      padding: 5mm 7mm;
+      margin: 6mm 0;
+    }
+    .info-box strong {
+      font-size: 9pt;
+      color: #8a6d1b;
+      display: block;
+      margin-bottom: 2mm;
+    }
+    .info-box p {
+      margin: 0;
+      font-size: 9pt;
+      color: #5a4a1a;
+    }
+    .note {
+      font-size: 8.5pt;
+      color: var(--muted);
+      font-style: italic;
+      margin: 2mm 0;
+    }
+    .total-row {
+      background: #f0f7f3;
+      font-weight: 600;
+    }
+    .total-row td {
+      border-top: 1pt solid var(--accent);
+    }
+    .sub-section {
+      background: #faf9f7;
+      padding: 5mm 6mm;
+      margin: 4mm 0;
+    }
+    .sub-section-title {
+      font-size: 9.5pt;
+      font-weight: 600;
+      color: var(--accent);
+      margin: 0 0 4mm 0;
+    }
+    .blank-lines {
+      height: 30mm;
+    }
+    .blank-line {
+      border-bottom: 0.5pt dashed var(--hairline);
+      height: 8mm;
+      margin-bottom: 2mm;
+    }
+  </style>
+</head>
+<body>
+
+<!-- COVER PAGE -->
+<section class="cover page">
+  <div>
+    <span class="cover-tag">Estate Planning Essentials</span>
+    <h1>Assets Inventory<br>Template</h1>
+    <p class="subtitle">Comprehensive template for cataloging all your assets, debts, and important documents. Essential for estate planning and executor guidance.</p>
+  </div>
+  <div class="cover-meta">
+    <div class="meta-info">
+      <strong>Wills & Estate Planning Guide</strong><br>
+      Document 06 of 06<br>
+      Version 1.0
+    </div>
+  </div>
+</section>
+
+<!-- PAGE 1: PERSONAL INFORMATION -->
+<section class="page">
+  <div class="content">
+    <div class="section-header">
+      <h2 class="section-title">Personal Information</h2>
+      <span class="section-subtitle">Complete all fields for estate planning records</span>
+    </div>
+
+    <table class="table-fill">
+      <tr>
+        <td class="label">Full Legal Name</td>
+        <td class="value"></td>
+      </tr>
+      <tr>
+        <td class="label">Date of Birth</td>
+        <td class="value"></td>
+      </tr>
+      <tr>
+        <td class="label">Social Security Number</td>
+        <td class="value"></td>
+      </tr>
+      <tr>
+        <td class="label">Current Address</td>
+        <td class="value"></td>
+      </tr>
+      <tr>
+        <td class="label">Phone Number</td>
+        <td class="value"></td>
+      </tr>
+      <tr>
+        <td class="label">Email Address</td>
+        <td class="value"></td>
+      </tr>
+      <tr>
+        <td class="label">Marital Status</td>
+        <td class="value"></td>
+      </tr>
+      <tr>
+        <td class="label">Spouse/Partner Name</td>
+        <td class="value"></td>
+      </tr>
+    </table>
+
+    <div class="info-box">
+      <strong>Instructions</strong>
+      <p>Complete this inventory with current, accurate information. Update annually or after major purchases, sales, or life events. Store a copy with your will and provide location to your executor.</p>
+    </div>
+
+    <div class="asset-section">
+      <div class="asset-header">
+        <span>Primary Emergency Contacts</span>
+      </div>
+    </div>
+
+    <table class="table-fill">
+      <tr>
+        <td class="label">Primary Contact (Name & Phone)</td>
+        <td class="value"></td>
+      </tr>
+      <tr>
+        <td class="label">Secondary Contact (Name & Phone)</td>
+        <td class="value"></td>
+      </tr>
+      <tr>
+        <td class="label">Estate Planning Attorney Name & Phone</td>
+        <td class="value"></td>
+      </tr>
+      <tr>
+        <td class="label">Financial Advisor Name & Phone</td>
+        <td class="value"></td>
+      </tr>
+      <tr>
+        <td class="label">Accountant/Tax Professional Name & Phone</td>
+        <td class="value"></td>
+      </tr>
+    </table>
+  </div>
+  <div class="footer">
+    <span>Assets Inventory Template</span>
+    <span class="page-number">2</span>
+  </div>
+</section>
+
+<!-- PAGE 2: BANK ACCOUNTS -->
+<section class="page">
+  <div class="content">
+    <div class="section-header">
+      <h2 class="section-title">Financial Accounts</h2>
+      <span class="section-subtitle">Checking, Savings, CDs, and Money Market Accounts</span>
+    </div>
+
+    <p class="intro-text">List all bank accounts including checking, savings, certificates of deposit (CDs), and money market accounts.</p>
+
+    <div class="asset-section">
+      <div class="asset-header">
+        <span>Bank Account #1</span>
+      </div>
+    </div>
+
+    <table class="table-fill">
+      <tr>
+        <td class="label">Bank Name</td>
+        <td class="value"></td>
+      </tr>
+      <tr>
+        <td class="label">Account Type</td>
+        <td class="value"></td>
+      </tr>
+      <tr>
+        <td class="label">Account Number (last 4 digits)</td>
+        <td class="value"></td>
+      </tr>
+      <tr>
+        <td class="label">Estimated Balance</td>
+        <td class="value"></td>
+      </tr>
+      <tr>
+        <td class="label">Primary Beneficiary</td>
+        <td class="value"></td>
+      </tr>
+      <tr>
+        <td class="label">Online Banking Access</td>
+        <td class="value"></td>
+      </tr>
+    </table>
+
+    <div class="asset-section">
+      <div class="asset-header">
+        <span>Bank Account #2</span>
+      </div>
+    </div>
+
+    <table class="table-fill">
+      <tr>
+        <td class="label">Bank Name</td>
+        <td class="value"></td>
+      </tr>
+      <tr>
+        <td class="label">Account Type</td>
+        <td class="value"></td>
+      </tr>
+      <tr>
+        <td class="label">Account Number (last 4 digits)</td>
+        <td class="value"></td>
+      </tr>
+      <tr>
+        <td class="label">Estimated Balance</td>
+        <td class="value"></td>
+      </tr>
+      <tr>
+        <td class="label">Primary Beneficiary</td>
+        <td class="value"></td>
+      </tr>
+      <tr>
+        <td class="label">Online Banking Access</td>
+        <td class="value"></td>
+      </tr>
+    </table>
+
+    <div class="asset-section">
+      <div class="asset-header">
+        <span>Bank Account #3</span>
+      </div>
+    </div>
+
+    <table class="table-fill">
+      <tr>
+        <td class="label">Bank Name</td>
+        <td class="value"></td>
+      </tr>
+      <tr>
+        <td class="label">Account Type</td>
+        <td class="value"></td>
+      </tr>
+      <tr>
+        <td class="label">Account Number (last 4 digits)</td>
+        <td class="value"></td>
+      </tr>
+      <tr>
+        <td class="label">Estimated Balance</td>
+        <td class="value"></td>
+      </tr>
+      <tr>
+        <td class="label">Primary Beneficiary</td>
+        <td class="value"></td>
+      </tr>
+      <tr>
+        <td class="label">Online Banking Access</td>
+        <td class="value"></td>
+      </tr>
+    </table>
+
+    <div class="note">Add additional accounts on separate sheets if needed.</div>
+  </div>
+  <div class="footer">
+    <span>Assets Inventory Template</span>
+    <span class="page-number">3</span>
+  </div>
+</section>
+
+<!-- PAGE 3: INVESTMENT ACCOUNTS -->
+<section class="page">
+  <div class="content">
+    <div class="section-header">
+      <h2 class="section-title">Investment Accounts</h2>
+      <span class="section-subtitle">Brokerage, Stocks, Bonds, and Mutual Funds</span>
+    </div>
+
+    <p class="intro-text">List all investment accounts including brokerage accounts, individual stocks, bonds, mutual funds, and ETFs.</p>
+
+    <div class="asset-section">
+      <div class="asset-header">
+        <span>Investment Account #1</span>
+      </div>
+    </div>
+
+    <table class="table-fill">
+      <tr>
+        <td class="label">Brokerage/Firm Name</td>
+        <td class="value"></td>
+      </tr>
+      <tr>
+        <td class="label">Account Number (last 4 digits)</td>
+        <td class="value"></td>
+      </tr>
+      <tr>
+        <td class="label">Account Type</td>
+        <td class="value"></td>
+      </tr>
+      <tr>
+        <td class="label">Estimated Current Value</td>
+        <td class="value"></td>
+      </tr>
+      <tr>
+        <td class="label">Primary Beneficiary (TOD/POD)</td>
+        <td class="value"></td>
+      </tr>
+      <tr>
+        <td class="label">Online Access URL/Instructions</td>
+        <td class="value"></td>
+      </tr>
+    </table>
+
+    <div class="asset-section">
+      <div class="asset-header">
+        <span>Investment Account #2</span>
+      </div>
+    </div>
+
+    <table class="table-fill">
+      <tr>
+        <td class="label">Brokerage/Firm Name</td>
+        <td class="value"></td>
+      </tr>
+      <tr>
+        <td class="label">Account Number (last 4 digits)</td>
+        <td class="value"></td>
+      </tr>
+      <tr>
+        <td class="label">Account Type</td>
+        <td class="value"></td>
+      </tr>
+      <tr>
+        <td class="label">Estimated Current Value</td>
+        <td class="value"></td>
+      </tr>
+      <tr>
+        <td class="label">Primary Beneficiary (TOD/POD)</td>
+        <td class="value"></td>
+      </tr>
+      <tr>
+        <td class="label">Online Access URL/Instructions</td>
+        <td class="value"></td>
+      </tr>
+    </table>
+
+    <div class="info-box">
+      <strong>Important Note</strong>
+      <p>Investment accounts with beneficiary designations (TOD - Transfer on Death, POD - Payable on Death) pass outside of your will. These designations override your will for these specific accounts.</p>
+    </div>
+
+    <div class="asset-section">
+      <div class="asset-header">
+        <span>Individual Securities (Stocks, Bonds)</span>
+      </div>
+    </div>
+
+    <table class="table-fill">
+      <tr>
+        <td class="label">Company/Issuer</td>
+        <td class="value"></td>
+      </tr>
+      <tr>
+        <td class="label">Number of Shares/Units</td>
+        <td class="value"></td>
+      </tr>
+      <tr>
+        <td class="label">Certificate Number (if physical)</td>
+        <td class="value"></td>
+      </tr>
+      <tr>
+        <td class="label">Location of Certificates</td>
+        <td class="value"></td>
+      </tr>
+    </table>
+  </div>
+  <div class="footer">
+    <span>Assets Inventory Template</span>
+    <span class="page-number">4</span>
+  </div>
+</section>
+
+<!-- PAGE 4: RETIREMENT ACCOUNTS -->
+<section class="page">
+  <div class="content">
+    <div class="section-header">
+      <h2 class="section-title">Retirement Accounts</h2>
+      <span class="section-subtitle">401k, IRA, Pension, and Profit Sharing Plans</span>
+    </div>
+
+    <p class="intro-text">List all retirement accounts. These pass by beneficiary designation and may have significant tax implications.</p>
+
+    <div class="asset-section">
+      <div class="asset-header">
+        <span>401(k) / Profit Sharing Account #1</span>
+      </div>
+    </div>
+
+    <table class="table-fill">
+      <tr>
+        <td class="label">Employer Name</td>
+        <td class="value"></td>
+      </tr>
+      <tr>
+        <td class="label">Plan Administrator</td>
+        <td class="value"></td>
+      </tr>
+      <tr>
+        <td class="label">Account Number (last 4 digits)</td>
+        <td class="value"></td>
+      </tr>
+      <tr>
+        <td class="label">Current Balance Estimate</td>
+        <td class="value"></td>
+      </tr>
+      <tr>
+        <td class="label">Primary Beneficiary</td>
+        <td class="value"></td>
+      </tr>
+      <tr>
+        <td class="label">Contingent Beneficiary</td>
+        <td class="value"></td>
+      </tr>
+      <tr>
+        <td class="label">Loans Against Plan (Balance)</td>
+        <td class="value"></td>
+      </tr>
+    </table>
+
+    <div class="asset-section">
+      <div class="asset-header">
+        <span>IRA Account (Traditional or Roth)</span>
+      </div>
+    </div>
+
+    <table class="table-fill">
+      <tr>
+        <td class="label">Custodian/Institution</td>
+        <td class="value"></td>
+      </tr>
+      <tr>
+        <td class="label">Account Type (Traditional/Roth)</td>
+        <td class="value"></td>
+      </tr>
+      <tr>
+        <td class="label">Account Number (last 4 digits)</td>
+        <td class="value"></td>
+      </tr>
+      <tr>
+        <td class="label">Current Balance Estimate</td>
+        <td class="value"></td>
+      </tr>
+      <tr>
+        <td class="label">Primary Beneficiary</td>
+        <td class="value"></td>
+      </tr>
+      <tr>
+        <td class="label">Contingent Beneficiary</td>
+        <td class="value"></td>
+      </tr>
+    </table>
+
+    <div class="info-box">
+      <strong>Beneficiary Designation Alert</strong>
+      <p>Retirement account beneficiary designations are critically important and supersede your will. Review these designations annually and after major life events.</p>
+    </div>
+  </div>
+  <div class="footer">
+    <span>Assets Inventory Template</span>
+    <span class="page-number">5</span>
+  </div>
+</section>
+
+<!-- PAGE 5: REAL ESTATE -->
+<section class="page">
+  <div class="content">
+    <div class="section-header">
+      <h2 class="section-title">Real Estate Holdings</h2>
+      <span class="section-subtitle">Homes, Land, Rental Properties, and Commercial Property</span>
+    </div>
+
+    <p class="intro-text">List all real property including primary residence, vacation homes, rental properties, land, and commercial buildings.</p>
+
+    <div class="asset-section">
+      <div class="asset-header">
+        <span>Property #1 - Primary Residence</span>
+      </div>
+    </div>
+
+    <table class="table-fill">
+      <tr>
+        <td class="label">Property Address</td>
+        <td class="value"></td>
+      </tr>
+      <tr>
+        <td class="label">Ownership Type</td>
+        <td class="value"></td>
+      </tr>
+      <tr>
+        <td class="label">Estimated Current Value</td>
+        <td class="value"></td>
+      </tr>
+      <tr>
+        <td class="label">Mortgage Balance</td>
+        <td class="value"></td>
+      </tr>
+      <tr>
+        <td class="label">Monthly Payment</td>
+        <td class="value"></td>
+      </tr>
+      <tr>
+        <td class="label">Loan Number (last 4 digits)</td>
+        <td class="value"></td>
+      </tr>
+      <tr>
+        <td class="label">Lender Name & Phone</td>
+        <td class="value"></td>
+      </tr>
+      <tr>
+        <td class="label">Intended Beneficiary</td>
+        <td class="value"></td>
+      </tr>
+      <tr>
+        <td class="label">Deed Location</td>
+        <td class="value"></td>
+      </tr>
+    </table>
+
+    <div class="asset-section">
+      <div class="asset-header">
+        <span>Property #2 - Additional Property</span>
+      </div>
+    </div>
+
+    <table class="table-fill">
+      <tr>
+        <td class="label">Property Address</td>
+        <td class="value"></td>
+      </tr>
+      <tr>
+        <td class="label">Property Type (Rental/Vacation/Land)</td>
+        <td class="value"></td>
+      </tr>
+      <tr>
+        <td class="label">Estimated Current Value</td>
+        <td class="value"></td>
+      </tr>
+      <tr>
+        <td class="label">Mortgage Balance</td>
+        <td class="value"></td>
+      </tr>
+      <tr>
+        <td class="label">Intended Beneficiary</td>
+        <td class="value"></td>
+      </tr>
+      <tr>
+        <td class="label">Property Manager (if applicable)</td>
+        <td class="value"></td>
+      </tr>
+    </table>
+  </div>
+  <div class="footer">
+    <span>Assets Inventory Template</span>
+    <span class="page-number">6</span>
+  </div>
+</section>
+
+<!-- PAGE 6: VEHICLES -->
+<section class="page">
+  <div class="content">
+    <div class="section-header">
+      <h2 class="section-title">Vehicles and Equipment</h2>
+      <span class="section-subtitle">Cars, Trucks, Motorcycles, Boats, RVs, and Heavy Equipment</span>
+    </div>
+
+    <p class="intro-text">List all vehicles including cars, trucks, motorcycles, boats, recreational vehicles, and heavy equipment.</p>
+
+    <div class="asset-section">
+      <div class="asset-header">
+        <span>Vehicle #1</span>
+      </div>
+    </div>
+
+    <table class="table-fill">
+      <tr>
+        <td class="label">Year, Make, Model</td>
+        <td class="value"></td>
+      </tr>
+      <tr>
+        <td class="label">VIN (last 6 digits)</td>
+        <td class="value"></td>
+      </tr>
+      <tr>
+        <td class="label">Estimated Current Value</td>
+        <td class="value"></td>
+      </tr>
+      <tr>
+        <td class="label">Loan Balance</td>
+        <td class="value"></td>
+      </tr>
+      <tr>
+        <td class="label">Lender (if financed)</td>
+        <td class="value"></td>
+      </tr>
+      <tr>
+        <td class="label">Intended Beneficiary</td>
+        <td class="value"></td>
+      </tr>
+      <tr>
+        <td class="label">Title Location</td>
+        <td class="value"></td>
+      </tr>
+    </table>
+
+    <div class="asset-section">
+      <div class="asset-header">
+        <span>Vehicle #2</span>
+      </div>
+    </div>
+
+    <table class="table-fill">
+      <tr>
+        <td class="label">Year, Make, Model</td>
+        <td class="value"></td>
+      </tr>
+      <tr>
+        <td class="label">VIN (last 6 digits)</td>
+        <td class="value"></td>
+      </tr>
+      <tr>
+        <td class="label">Estimated Current Value</td>
+        <td class="value"></td>
+      </tr>
+      <tr>
+        <td class="label">Loan Balance</td>
+        <td class="value"></td>
+      </tr>
+      <tr>
+        <td class="label">Intended Beneficiary</td>
+        <td class="value"></td>
+      </tr>
+    </table>
+
+    <div class="asset-section">
+      <div class="asset-header">
+        <span>Additional Vehicles / Equipment</span>
+      </div>
+    </div>
+
+    <div class="blank-lines">
+      <div class="blank-line"></div>
+      <div class="blank-line"></div>
+      <div class="blank-line"></div>
+      <div class="blank-line"></div>
+    </div>
+  </div>
+  <div class="footer">
+    <span>Assets Inventory Template</span>
+    <span class="page-number">7</span>
+  </div>
+</section>
+
+<!-- PAGE 7: INSURANCE POLICIES -->
+<section class="page">
+  <div class="content">
+    <div class="section-header">
+      <h2 class="section-title">Insurance Policies</h2>
+      <span class="section-subtitle">Life Insurance, Health Insurance, and Property Insurance</span>
+    </div>
+
+    <p class="intro-text">Document all insurance policies including life insurance, health insurance, property insurance, and disability insurance.</p>
+
+    <div class="asset-section">
+      <div class="asset-header">
+        <span>Life Insurance Policy #1</span>
+      </div>
+    </div>
+
+    <table class="table-fill">
+      <tr>
+        <td class="label">Insurance Company</td>
+        <td class="value"></td>
+      </tr>
+      <tr>
+        <td class="label">Policy Number</td>
+        <td class="value"></td>
+      </tr>
+      <tr>
+        <td class="label">Policy Type (Term/Whole/Universal)</td>
+        <td class="value"></td>
+      </tr>
+      <tr>
+        <td class="label">Death Benefit Amount</td>
+        <td class="value"></td>
+      </tr>
+      <tr>
+        <td class="label">Policy Owner</td>
+        <td class="value"></td>
+      </tr>
+      <tr>
+        <td class="label">Primary Beneficiary</td>
+        <td class="value"></td>
+      </tr>
+      <tr>
+        <td class="label">Contingent Beneficiary</td>
+        <td class="value"></td>
+      </tr>
+      <tr>
+        <td class="label">Agent Name & Phone</td>
+        <td class="value"></td>
+      </tr>
+      <tr>
+        <td class="label">Policy Location</td>
+        <td class="value"></td>
+      </tr>
+    </table>
+
+    <div class="info-box">
+      <strong>Life Insurance Beneficiary Alert</strong>
+      <p>Life insurance beneficiary designations pass outside of your will and are often the largest single asset transfer. Verify these designations are current and reflect your wishes.</p>
+    </div>
+
+    <div class="asset-section">
+      <div class="asset-header">
+        <span>Health / Disability Insurance</span>
+      </div>
+    </div>
+
+    <table class="table-fill">
+      <tr>
+        <td class="label">Company</td>
+        <td class="value"></td>
+      </tr>
+      <tr>
+        <td class="label">Policy Type</td>
+        <td class="value"></td>
+      </tr>
+      <tr>
+        <td class="label">Policy Number</td>
+        <td class="value"></td>
+      </tr>
+      <tr>
+        <td class="label">Monthly Premium</td>
+        <td class="value"></td>
+      </tr>
+      <tr>
+        <td class="label">Agent/Contact</td>
+        <td class="value"></td>
+      </tr>
+    </table>
+  </div>
+  <div class="footer">
+    <span>Assets Inventory Template</span>
+    <span class="page-number">8</span>
+  </div>
+</section>
+
+<!-- PAGE 8: DEBTS AND LIABILITIES -->
+<section class="page">
+  <div class="content">
+    <div class="section-header">
+      <h2 class="section-title">Debts and Liabilities</h2>
+      <span class="section-subtitle">Mortgages, Loans, Credit Cards, and Other Obligations</span>
+    </div>
+
+    <p class="intro-text">Document all debts and liabilities. These must be paid from your estate before distribution to beneficiaries.</p>
+
+    <div class="asset-section">
+      <div class="asset-header">
+        <span>Secured Debts</span>
+      </div>
+    </div>
+
+    <table class="table-fill">
+      <tr>
+        <td class="label">Mortgage(s) Total Balance</td>
+        <td class="value"></td>
+      </tr>
+      <tr>
+        <td class="label">Home Equity Line of Credit Balance</td>
+        <td class="value"></td>
+      </tr>
+      <tr>
+        <td class="label">Vehicle Loan(s) Total Balance</td>
+        <td class="value"></td>
+      </tr>
+      <tr>
+        <td class="label">Other Secured Loans Total</td>
+        <td class="value"></td>
+      </tr>
+    </table>
+
+    <div class="asset-section">
+      <div class="asset-header">
+        <span>Unsecured Debts</span>
+      </div>
+    </div>
+
+    <table class="table-fill">
+      <tr>
+        <td class="label">Credit Card Total Debt</td>
+        <td class="value"></td>
+      </tr>
+      <tr>
+        <td class="label">Medical Bills Outstanding</td>
+        <td class="value"></td>
+      </tr>
+      <tr>
+        <td class="label">Student Loans Balance</td>
+        <td class="value"></td>
+      </tr>
+      <tr>
+        <td class="label">Personal Loans Total</td>
+        <td class="value"></td>
+      </tr>
+      <tr>
+        <td class="label">Other Unsecured Debts</td>
+        <td class="value"></td>
+      </tr>
+    </table>
+
+    <div class="info-box">
+      <strong>Joint Debt Note</strong>
+      <p>If you have cosigned or joint debts, document the details. Joint debt may survive your death, potentially affecting the cosigner's credit.</p>
+    </div>
+
+    <div class="summary-box">
+      <div class="summary-title">Total Debt Summary</div>
+      <div class="summary-grid">
+        <div class="summary-item">
+          <div class="amount">$_________</div>
+          <div class="label">Secured Debt</div>
+        </div>
+        <div class="summary-item">
+          <div class="amount">$_________</div>
+          <div class="label">Unsecured Debt</div>
+        </div>
+        <div class="summary-item">
+          <div class="amount">$_________</div>
+          <div class="label">Total Debt</div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="footer">
+    <span>Assets Inventory Template</span>
+    <span class="page-number">9</span>
+  </div>
+</section>
+
+<!-- PAGE 9: DIGITAL ASSETS -->
+<section class="page">
+  <div class="content">
+    <div class="section-header">
+      <h2 class="section-title">Digital Assets and Online Accounts</h2>
+      <span class="section-subtitle">Email, Social Media, Cryptocurrency, and Online Services</span>
+    </div>
+
+    <p class="intro-text">Document online accounts and digital assets. These may be forgotten but have value and should be accessible.</p>
+
+    <div class="asset-section">
+      <div class="asset-header">
+        <span>Email and Communication Accounts</span>
+      </div>
+    </div>
+
+    <table class="table-fill">
+      <tr>
+        <td class="label">Primary Email (Gmail, Outlook, etc.)</td>
+        <td class="value"></td>
+      </tr>
+      <tr>
+        <td class="label">Secondary Email</td>
+        <td class="value"></td>
+      </tr>
+      <tr>
+        <td class="label">Password Manager Location</td>
+        <td class="value"></td>
+      </tr>
+      <tr>
+        <td class="label">Phone Number for Recovery</td>
+        <td class="value"></td>
+      </tr>
+    </table>
+
+    <div class="asset-section">
+      <div class="asset-header">
+        <span>Social Media Accounts</span>
+      </div>
+    </div>
+
+    <table class="table-fill">
+      <tr>
+        <td class="label">Facebook</td>
+        <td class="value"></td>
+      </tr>
+      <tr>
+        <td class="label">LinkedIn</td>
+        <td class="value"></td>
+      </tr>
+      <tr>
+        <td class="label">Instagram</td>
+        <td class="value"></td>
+      </tr>
+      <tr>
+        <td class="label">Other Social Media</td>
+        <td class="value"></td>
+      </tr>
+    </table>
+
+    <div class="asset-section">
+      <div class="asset-header">
+        <span>Cryptocurrency and Digital Assets</span>
+      </div>
+    </div>
+
+    <table class="table-fill">
+      <tr>
+        <td class="label">Wallet Type (Hardware/Software)</td>
+        <td class="value"></td>
+      </tr>
+      <tr>
+        <td class="label">Approximate Value</td>
+        <td class="value"></td>
+      </tr>
+      <tr>
+        <td class="label">Location of Private Keys / Recovery Phrase</td>
+        <td class="value"></td>
+      </tr>
+      <tr>
+        <td class="label">Exchange Account (if applicable)</td>
+        <td class="value"></td>
+      </tr>
+    </table>
+
+    <div class="info-box">
+      <strong>Digital Estate Planning</strong>
+      <p>Include instructions for your digital executor on how to access these accounts. Some platforms have specific legacy contact options (Apple, Google, Facebook) - consider enabling these features.</p>
+    </div>
+  </div>
+  <div class="footer">
+    <span>Assets Inventory Template</span>
+    <span class="page-number">10</span>
+  </div>
+</section>
+
+<!-- PAGE 10: ESTATE SUMMARY -->
+<section class="page">
+  <div class="content">
+    <div class="section-header">
+      <h2 class="section-title">Estate Summary</h2>
+      <span class="section-subtitle">Overview of total assets and net estate value</span>
+    </div>
+
+    <div class="summary-box">
+      <div class="summary-title">Asset Summary by Category</div>
+      <table>
+        <tr>
+          <td><strong>Category</strong></td>
+          <td style="text-align: right;"><strong>Estimated Value</strong></td>
+        </tr>
+        <tr>
+          <td>Bank Accounts</td>
+          <td style="text-align: right;">$_________</td>
+        </tr>
+        <tr>
+          <td>Investment Accounts</td>
+          <td style="text-align: right;">$_________</td>
+        </tr>
+        <tr>
+          <td>Retirement Accounts</td>
+          <td style="text-align: right;">$_________</td>
+        </tr>
+        <tr>
+          <td>Real Estate</td>
+          <td style="text-align: right;">$_________</td>
+        </tr>
+        <tr>
+          <td>Vehicles</td>
+          <td style="text-align: right;">$_________</td>
+        </tr>
+        <tr>
+          <td>Life Insurance (if applicable)</td>
+          <td style="text-align: right;">$_________</td>
+        </tr>
+        <tr>
+          <td>Other Assets</td>
+          <td style="text-align: right;">$_________</td>
+        </tr>
+        <tr class="total-row">
+          <td><strong>Total Gross Estate</strong></td>
+          <td style="text-align: right;"><strong>$_________</strong></td>
+        </tr>
+      </table>
+    </div>
+
+    <div class="info-box">
+      <strong>Net Estate Calculation</strong>
+      <p>Gross Estate minus Total Debts equals Net Estate. This is the amount available for distribution after paying all obligations.</p>
+    </div>
+
+    <div class="summary-box">
+      <div class="summary-title">Important Document Locations</div>
+      <table class="table-fill">
+        <tr>
+          <td class="label">Will Location</td>
+          <td class="value"></td>
+        </tr>
+        <tr>
+          <td class="label">Life Insurance Policies</td>
+          <td class="value"></td>
+        </tr>
+        <tr>
+          <td class="label">Deeds and Titles</td>
+          <td class="value"></td>
+        </tr>
+        <tr>
+          <td class="label">Tax Returns (Last 3 years)</td>
+          <td class="value"></td>
+        </tr>
+        <tr>
+          <td class="label">Safe Deposit Box Location</td>
+          <td class="value"></td>
+        </tr>
+        <tr>
+          <td class="label">Password / PIN Book</td>
+          <td class="value"></td>
+        </tr>
+      </table>
+    </div>
+
+    <div class="note" style="margin-top: 10mm;">Update this inventory at least annually and after any major purchase, sale, or life event. Keep a copy with your will and provide location to your executor.</div>
+  </div>
+  <div class="footer">
+    <span>Assets Inventory Template</span>
+    <span class="page-number">11</span>
+  </div>
+</section>
+
+</body>
+</html>

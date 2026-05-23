@@ -1,0 +1,462 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Financial Powers of Attorney Guide - Wills & Estate Planning</title>
+  <style>
+    @page { size: A4 portrait; margin: 14mm 12mm; }
+    @media screen {
+      html { background: #d0d0d0; }
+      body { margin: 0; padding: 20px 0; }
+      body > section { width: 210mm; min-height: 297mm; margin: 0 auto 20px; background: #fff; box-shadow: 0 4px 24px rgba(0,0,0,0.18); box-sizing: border-box; overflow: hidden; }
+    }
+    * { box-sizing: border-box; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+    :root { --accent: #1a6b4a; --ink: #1a1a1e; --muted: #5a5a5a; --paper: #faf9f7; }
+    body { font-family: -apple-system, sans-serif; font-size: 10.5pt; line-height: 1.55; color: var(--ink); background: var(--paper); margin: 0; padding: 0; }
+    .cover { min-height: 268mm; background: linear-gradient(135deg, #2a1a3e 0%, #1a0f2e 100%); color: #f0ede6; padding: 40mm 20mm; display: flex; flex-direction: column; justify-content: space-between; }
+    .cover h1 { font-size: 28pt; font-weight: 300; margin: 0 0 10mm 0; color: #fff; }
+    .cover .subtitle { font-size: 11pt; color: #b8c4ce; margin: 0; }
+    .cover-meta { border-top: 0.5pt solid rgba(255,255,255,0.2); padding-top: 10mm; font-size: 8.5pt; color: #8a9aa5; }
+    .page { page-break-after: always; min-height: 268mm; padding: 20mm 0; position: relative; }
+    .page:last-child { page-break-after: auto; }
+    .content { padding: 0 20mm; }
+    .section-header { padding: 0 20mm; margin-bottom: 8mm; }
+    .section-title { font-size: 15pt; font-weight: 400; color: var(--ink); margin: 0; border-bottom: 2pt solid var(--accent); padding-bottom: 3mm; }
+    .chapter { margin-bottom: 10mm; }
+    .chapter h3 { font-size: 11pt; font-weight: 600; color: var(--accent); margin: 0 0 4mm 0; }
+    .chapter p { margin: 0 0 4mm 0; }
+    .chapter ul { margin: 0 0 5mm 0; padding-left: 7mm; }
+    .chapter li { margin-bottom: 2mm; }
+    .callout { background: linear-gradient(135deg, #f0f7f3 0%, #e8f3ed 100%); border-left: 3pt solid var(--accent); padding: 6mm 8mm; margin: 6mm 0; }
+    .callout strong { font-size: 9pt; color: var(--accent); display: block; margin-bottom: 2mm; }
+    .callout p { margin: 0; font-size: 9.5pt; }
+    .warning { background: #fef9e6; border: 0.5pt solid #e6d9b8; padding: 5mm 7mm; margin: 6mm 0; }
+    .warning strong { color: #8a6d3b; font-size: 9pt; }
+    table { width: 100%; border-collapse: collapse; font-size: 9pt; margin: 6mm 0; }
+    th { background: var(--accent); color: #fff; padding: 4mm 5mm; text-align: left; font-weight: 500; }
+    td { padding: 3mm 5mm; border-bottom: 0.5pt solid #e8e4dc; vertical-align: top; }
+    tr:nth-child(even) td { background: #faf9f7; }
+    .form-box { background: #f5f5f3; border: 1pt solid #e0ddd5; padding: 8mm; margin: 6mm 0; }
+    .form-box h4 { font-size: 10pt; font-weight: 600; margin: 0 0 4mm 0; color: var(--ink); }
+    .form-field { margin-bottom: 4mm; }
+    .form-field label { display: block; font-size: 8.5pt; color: var(--muted); margin-bottom: 1mm; }
+    .form-field .line { border-bottom: 0.5pt solid #aaa; height: 8mm; }
+    .two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 8mm; margin: 6mm 0; }
+    .col h4 { font-size: 10pt; font-weight: 600; color: var(--ink); margin: 0 0 4mm 0; }
+    .col ul { margin: 0; padding-left: 6mm; }
+    .col li { margin-bottom: 2mm; font-size: 9pt; }
+    .footer { position: absolute; bottom: 10mm; left: 20mm; right: 20mm; font-size: 7.5pt; color: var(--muted); border-top: 0.5pt solid #e8e4dc; padding-top: 3mm; display: flex; justify-content: space-between; }
+    .page-number { color: var(--ink); font-weight: 500; }
+  </style>
+</head>
+<body>
+
+<section class="cover page">
+  <div>
+    <span style="font-size: 8pt; text-transform: uppercase; letter-spacing: 2px; color: #8a9aa5;">Premium Bonus Document</span>
+    <h1>Financial Powers<br>of Attorney</h1>
+    <p class="subtitle">Complete guide to Durable Power of Attorney for finances. Understand when and how to grant financial authority, agent responsibilities, and common pitfalls to avoid.</p>
+  </div>
+  <div class="cover-meta"><strong>Wills & Estate Planning Guide - Premium Package</strong><br>Bonus Document 4 of 6</div>
+</section>
+
+<section class="page">
+  <div class="content">
+    <div class="section-header"><h2 class="section-title">What Is a Power of Attorney?</h2></div>
+    <div class="chapter">
+      <h3>Basic Definition</h3>
+      <p>A Power of Attorney (POA) is a legal document that authorizes one person (the agent or attorney-in-fact) to act on behalf of another person (the principal) in financial or legal matters. The scope can be broad or very specific.</p>
+    </div>
+    <div class="chapter">
+      <h3>Key POA Terminology</h3>
+      <ul>
+        <li><strong>Principal:</strong> The person granting the authority (you)</li>
+        <li><strong>Agent (Attorney-in-Fact):</strong> The person receiving authority to act</li>
+        <li><strong>Durable:</strong> Continues even if principal becomes incapacitated</li>
+        <li><strong>Springing:</strong> Takes effect only upon incapacity</li>
+        <li><strong>General:</strong> Broad authority over all financial matters</li>
+        <li><strong>Limited (Special):</strong> Authority for specific transactions only</li>
+      </ul>
+    </div>
+    <div class="callout">
+      <strong>Why a Durable POA Matters</strong>
+      <p>A regular (non-durable) power of attorney becomes invalid when the principal becomes incapacitated. A Durable Power of Attorney remains in effect, allowing your agent to manage finances during a period when you cannot. Without this document, your family may need to go to court to obtain a conservatorship, which is expensive, time-consuming, and public.</p>
+    </div>
+    <div class="chapter">
+      <h3>When POA Becomes Necessary</h3>
+      <p>A Power of Attorney is essential when:</p>
+      <ul>
+        <li>You become incapacitated due to illness or accident</li>
+        <li>You need someone to manage finances while traveling abroad</li>
+        <li>You want to plan ahead for potential incapacity</li>
+        <li>You have real estate or business interests requiring management</li>
+        <li>You need help with complex financial transactions</li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer"><span>Financial Powers of Attorney - Premium</span><span class="page-number">2</span></div>
+</section>
+
+<section class="page">
+  <div class="content">
+    <div class="section-header"><h2 class="section-title">Types of Financial Powers of Attorney</h2></div>
+    <table>
+      <thead><tr><th>Type</th><th>Duration</th><th>Scope</th><th>Best For</th></tr></thead>
+      <tbody>
+        <tr><td><strong>General Durable POA</strong></td><td>Remains in effect until revoked or principal dies</td><td>Broad financial authority</td><td>Complete incapacity planning</td></tr>
+        <tr><td><strong>Springing Durable POA</strong></td><td>Begins on incapacity, continues until revoked</td><td>Broad financial authority</td><td>Those uncomfortable with immediate authority</td></tr>
+        <tr><td><strong>Limited/Special POA</strong></td><td>Ends when task completed or date reached</td><td>Specific transactions</td><td>One-time or temporary needs</td></tr>
+        <tr><td><strong>Medical POA</strong></td><td>Healthcare only</td><td>Medical decisions</td><td>Separate from financial POA</td></tr>
+        <tr><td><strong>NMDPOA</strong></td><td>Financial but excludes medical</td><td>All financial matters</td><td>Comprehensive financial planning</td></tr>
+      </tbody>
+    </table>
+    <div class="callout">
+      <strong>Which Type to Choose</strong>
+      <p>Most estate planning experts recommend a General Durable POA that takes effect immediately. Springing POAs can cause delays during medical emergencies when family must first prove incapacity. The delay can cause serious financial harm during critical periods.</p>
+    </div>
+    <div class="chapter">
+      <h3>General vs. Limited Authority</h3>
+      <p><strong>General Durable POA</strong> grants authority to:</p>
+      <ul>
+        <li>Access and manage bank accounts and investments</li>
+        <li>Buy and sell real estate</li>
+        <li>Pay bills, taxes, and manage debt</li>
+        <li>Handle insurance claims and benefits</li>
+        <li>Manage business interests</li>
+        <li>Make gifts and charitable donations</li>
+        <li>Handle legal matters</li>
+      </ul>
+    </div>
+    <div class="chapter">
+      <h3>Limited POA Examples</h3>
+      <ul>
+        <li>Selling a specific piece of property</li>
+        <li>Managing a particular investment account</li>
+        <li>Handling real estate transaction while traveling</li>
+        <li>Managing business affairs during temporary absence</li>
+        <li>Signing documents at a real estate closing</li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer"><span>Financial Powers of Attorney - Premium</span><span class="page-number">3</span></div>
+</section>
+
+<section class="page">
+  <div class="content">
+    <div class="section-header"><h2 class="section-title">Selecting Your Agent</h2></div>
+    <div class="chapter">
+      <h3>Qualities to Look For</h3>
+      <p>The person you choose as your financial agent should:</p>
+      <ul>
+        <li>Be trustworthy and have your best interests at heart</li>
+        <li>Be organized and detail-oriented</li>
+        <li>Understand financial matters and be comfortable with money management</li>
+        <li>Be available and responsive</li>
+        <li>Live nearby or be easily reachable</li>
+        <li>Be able to handle stressful situations</li>
+        <li>Understand your values and priorities</li>
+        <li>Be willing to serve in this demanding role</li>
+      </ul>
+    </div>
+    <div class="two-col">
+      <div class="col">
+        <h4>Good Agent Candidates</h4>
+        <ul>
+          <li>Spouse or partner</li>
+          <li>Adult children</li>
+          <li>Siblings</li>
+          <li>Close friends of long standing</li>
+          <li>Professional trustee services</li>
+        </ul>
+      </div>
+      <div class="col">
+        <h4>Consider Carefully</h4>
+        <ul>
+          <li>Anyone with financial disputes with you</li>
+          <li>Those who live far away</li>
+          <li>Those who might have conflicts of interest</li>
+          <li>Those uncomfortable with responsibility</li>
+        </ul>
+      </div>
+    </div>
+    <div class="callout">
+      <strong>Consider a Professional Agent</strong>
+      <p>For complex estates, business owners, or when family dynamics make personal agents problematic, consider hiring a professional (bank trust department, trust company, or attorney) as your agent or co-agent. Professional agents charge fees but provide expertise and neutrality.</p>
+    </div>
+    <div class="chapter">
+      <h3>Designating Alternate Agents</h3>
+      <p>Always name at least one alternate agent. If your first choice is unable or unwilling to serve, the alternate steps in. Consider naming two alternates in case the first alternate also becomes unavailable.</p>
+    </div>
+  </div>
+  <div class="footer"><span>Financial Powers of Attorney - Premium</span><span class="page-number">4</span></div>
+</section>
+
+<section class="page">
+  <div class="content">
+    <div class="section-header"><h2 class="section-title">Agent Responsibilities and Duties</h2></div>
+    <div class="chapter">
+      <h3>Fiduciary Duties</h3>
+      <p>As your agent, the person has fiduciary duties, meaning they must:</p>
+      <ul>
+        <li><strong>Act in your best interest:</strong> Always prioritize your needs over their own</li>
+        <li><strong>Follow your wishes:</strong> Make decisions consistent with your known preferences</li>
+        <li><strong>Keep accurate records:</strong> Document all transactions and decisions</li>
+        <li><strong>Not mix assets:</strong> Keep your property separate from their own</li>
+        <li><strong>Disclose conflicts:</strong> Reveal any potential conflicts of interest</li>
+        <li><strong>Provide accounting:</strong> Report to beneficiaries if required</li>
+      </ul>
+    </div>
+    <div class="chapter">
+      <h3>Typical Financial Agent Tasks</h3>
+      <ul>
+        <li>Pay your bills and manage your checking account</li>
+        <li>Manage your investments and retirement accounts</li>
+        <li>File your tax returns</li>
+        <li>Collect your Social Security or pension benefits</li>
+        <li>Buy and sell securities</li>
+        <li>Manage real estate rentals</li>
+        <li>Maintain insurance policies</li>
+        <li>Handle government benefits applications</li>
+        <li>Make gifts to family or charities if authorized</li>
+      </ul>
+    </div>
+    <div class="warning">
+      <strong>Agent Limitations</strong>
+      <p>Agents generally cannot:</p>
+      <ul style="margin: 2mm 0 0 6mm;">
+        <li>Change your will or beneficiary designations</li>
+        <li>Make gifts to themselves (unless specifically authorized)</li>
+        <li>Perform illegal or improper transactions</li>
+        <li>Delegate authority without permission (in most states)</li>
+        <li>Create or modify trusts for you (in most states)</li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer"><span>Financial Powers of Attorney - Premium</span><span class="page-number">5</span></div>
+</section>
+
+<section class="page">
+  <div class="content">
+    <div class="section-header"><h2 class="section-title">Financial POA Template</h2></div>
+    <div class="form-box">
+      <h4>DURABLE POWER OF ATTORNEY FOR FINANCIAL MATTERS</h4>
+      <p style="font-size: 9pt; margin: 0 0 4mm 0;"><strong>Notice:</strong> This is a legal document with significant consequences. Laws vary by state. Consult an attorney to ensure this meets your state's requirements.</p>
+    </div>
+    <div class="form-box">
+      <h4>PART I: IDENTIFICATION</h4>
+      <div class="form-field">
+        <label>Full Legal Name of Principal</label>
+        <div class="line"></div>
+      </div>
+      <div class="form-field">
+        <label>Date of Birth</label>
+        <div class="line"></div>
+      </div>
+      <div class="form-field">
+        <label>Street Address</label>
+        <div class="line"></div>
+      </div>
+      <div class="form-field">
+        <label>City, State, ZIP</label>
+        <div class="line"></div>
+      </div>
+    </div>
+    <div class="form-box">
+      <h4>PART II: DESIGNATION OF AGENT</h4>
+      <p style="font-size: 9pt; margin: 0 0 4mm 0;">I hereby designate the following person as my agent to act on my behalf:</p>
+      <div class="form-field">
+        <label>Full Legal Name of Agent</label>
+        <div class="line"></div>
+      </div>
+      <div class="form-field">
+        <label>Relationship to Principal</label>
+        <div class="line"></div>
+      </div>
+      <div class="form-field">
+        <label>Street Address</label>
+        <div class="line"></div>
+      </div>
+      <div class="form-field">
+        <label>City, State, ZIP</label>
+        <div class="line"></div>
+      </div>
+      <div class="form-field">
+        <label>Telephone Number</label>
+        <div class="line"></div>
+      </div>
+    </div>
+    <div class="form-box">
+      <h4>ALTERNATE AGENT</h4>
+      <p style="font-size: 9pt; margin: 0 0 4mm 0;">If my primary agent is unable or unwilling to serve, I designate:</p>
+      <div class="form-field">
+        <label>Full Legal Name of Alternate Agent</label>
+        <div class="line"></div>
+      </div>
+      <div class="form-field">
+        <label>Telephone Number</label>
+        <div class="line"></div>
+      </div>
+    </div>
+  </div>
+  <div class="footer"><span>Financial Powers of Attorney - Premium</span><span class="page-number">6</span></div>
+</section>
+
+<section class="page">
+  <div class="content">
+    <div class="section-header"><h2 class="section-title">Grant of Authority</h2></div>
+    <div class="form-box">
+      <h4>PART III: GRANT OF GENERAL AUTHORITY</h4>
+      <p style="font-size: 9pt; margin: 0 0 4mm 0;">I hereby grant my agent the following general authority to act on my behalf in all matters:</p>
+      <p style="font-size: 9pt; margin: 0 0 4mm 0;"><strong>Initial each category to authorize:</strong></p>
+      <ul style="font-size: 9pt;">
+        <li>[ ] Banking and Financial Institutions - access accounts, deposit, withdraw, manage funds</li>
+        <li>[ ] Investments - buy, sell, manage stocks, bonds, mutual funds, and other securities</li>
+        <li>[ ] Real Estate - sell, purchase, mortgage, lease, manage real property</li>
+        <li>[ ] Personal Property - sell, purchase, manage vehicles and personal items</li>
+        <li>[ ] Insurance - maintain, change, file claims for all insurance policies</li>
+        <li>[ ] Taxes - file returns, pay taxes, represent before tax authorities</li>
+        <li>[ ] Government Benefits - apply for, manage, and receive benefits</li>
+        <li>[ ] Retirement Accounts - manage and distribute from IRAs, 401(k)s</li>
+        <li>[ ] Business Interests - manage, operate, sell business interests</li>
+        <li>[ ] Gifts - make gifts up to $_____________ annually (or unlimited)</li>
+        <li>[ ] Charitable Giving - make charitable contributions</li>
+        <li>[ ] Legal Matters - hire attorneys, sign documents, settle claims</li>
+      </ul>
+    </div>
+    <div class="form-box">
+      <h4>PART IV: LIMITATIONS</h4>
+      <p style="font-size: 9pt; margin: 0 0 4mm 0;">I specifically LIMIT the agent's authority as follows (or write "NONE" for no limitations):</p>
+      <div class="form-field">
+        <label>Specific limitations</label>
+        <div class="line" style="height: 20mm;"></div>
+      </div>
+    </div>
+    <div class="form-box">
+      <h4>PART V: EFFECTIVE DATE</h4>
+      <p style="font-size: 9pt; margin: 0 0 4mm 0;"><strong>Initial one:</strong></p>
+      <ul style="font-size: 9pt;">
+        <li>[ ] This power of attorney is EFFECTIVE IMMEDIATELY upon execution</li>
+        <li>[ ] This power of attorney SPRINGS into effect when I become incapacitated</li>
+      </ul>
+      <p style="font-size: 9pt; margin: 4mm 0 0 0;"><strong>DURATION:</strong> This power of attorney shall remain in effect until revoked by me in writing.</p>
+    </div>
+  </div>
+  <div class="footer"><span>Financial Powers of Attorney - Premium</span><span class="page-number">7</span></div>
+</section>
+
+<section class="page">
+  <div class="content">
+    <div class="section-header"><h2 class="section-title">Signature Block and Notices</h2></div>
+    <div class="form-box">
+      <h4>SIGNATURE OF PRINCIPAL</h4>
+      <div class="form-field" style="margin-top: 8mm;">
+        <label>Signature of Principal</label>
+        <div class="line"></div>
+      </div>
+      <div class="form-field">
+        <label>Printed Name</label>
+        <div class="line"></div>
+      </div>
+      <div class="form-field">
+        <label>Date</label>
+        <div class="line"></div>
+      </div>
+    </div>
+    <div class="callout">
+      <strong>Important Legal Notice</strong>
+      <p>This document creates a Durable Power of Attorney. Your agent will have significant authority over your financial affairs. Choose your agent carefully. You may revoke this document at any time while you are competent by executing a written revocation and notifying your agent and relevant institutions.</p>
+    </div>
+    <div class="form-box">
+      <h4>AGENT'S ACCEPTANCE</h4>
+      <p style="font-size: 9pt; margin: 0 0 4mm 0;">I hereby accept the appointment as agent under this Power of Attorney and agree to act in accordance with the principal's best interests.</p>
+      <div class="form-field">
+        <label>Agent Signature</label>
+        <div class="line"></div>
+      </div>
+      <div class="form-field">
+        <label>Date</label>
+        <div class="line"></div>
+      </div>
+    </div>
+    <div class="form-box">
+      <h4>WITNESS ATTESTATION</h4>
+      <p style="font-size: 9pt; margin: 0 0 4mm 0;">We witnessed the principal sign this document and believe them to be of sound mind.</p>
+      <div class="two-col" style="gap: 5mm;">
+        <div>
+          <p style="font-size: 9pt; font-weight: 600; margin: 0 0 3mm 0;">Witness 1:</p>
+          <div class="form-field">
+            <label>Signature</label>
+            <div class="line"></div>
+          </div>
+          <div class="form-field">
+            <label>Printed Name</label>
+            <div class="line"></div>
+          </div>
+        </div>
+        <div>
+          <p style="font-size: 9pt; font-weight: 600; margin: 0 0 3mm 0;">Witness 2:</p>
+          <div class="form-field">
+            <label>Signature</label>
+            <div class="line"></div>
+          </div>
+          <div class="form-field">
+            <label>Printed Name</label>
+            <div class="line"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="warning">
+      <strong>State Requirements</strong>
+      <p>Many states require notarization in addition to witnesses. Some states have specific statutory forms that must be used. Consult an attorney in your state to ensure proper execution.</p>
+    </div>
+  </div>
+  <div class="footer"><span>Financial Powers of Attorney - Premium</span><span class="page-number">8</span></div>
+</section>
+
+<section class="page">
+  <div class="content">
+    <div class="section-header"><h2 class="section-title">Implementation and Revocation</h2></div>
+    <div class="chapter">
+      <h3>After Creating Your POA</h3>
+      <ol style="font-size: 9pt; padding-left: 7mm;">
+        <li style="margin-bottom: 3mm;"><strong>Store securely:</strong> Keep the original in a secure but accessible location</li>
+        <li style="margin-bottom: 3mm;"><strong>Give copies:</strong> Provide your agent with a certified copy</li>
+        <li style="margin-bottom: 3mm;"><strong>Notify key institutions:</strong> Give copies to your bank, investment firms, and financial advisors</li>
+        <li style="margin-bottom: 3mm;"><strong>Update periodically:</strong> Review every 3-5 years or after major life changes</li>
+        <li style="margin-bottom: 3mm;"><strong>Discuss with family:</strong> Make sure family members know you have a POA and where it is located</li>
+      </ol>
+    </div>
+    <div class="chapter">
+      <h3>How to Revoke a Power of Attorney</h3>
+      <p>You may revoke your POA at any time while you are competent:</p>
+      <ul>
+        <li>Execute a written revocation document</li>
+        <li>Sign and date the revocation</li>
+        <li>Notify your agent in writing</li>
+        <li>Notify all institutions where the POA has been used</li>
+        <li>Retrieve any copies given to your agent</li>
+        <li>Create new POA if desired</li>
+      </ul>
+    </div>
+    <div class="warning">
+      <strong>Important Warning</strong>
+      <p>If you become incapacitated without a durable POA in place, your family may need to petition a court for a conservatorship or guardianship. This process is expensive, can take months, requires ongoing court supervision, and creates a public record. It is far better to create a durable POA while you are healthy and competent.</p>
+    </div>
+    <div class="chapter">
+      <h3>When POA Ends</h3>
+      <ul>
+        <li>When you revoke it in writing</li>
+        <li>When you die</li>
+        <li>When the agent resigns or is unable to serve (unless alternate named)</li>
+        <li>When a specific end date is reached (for limited POAs)</li>
+        <li>When a court invalidates it</li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer"><span>Financial Powers of Attorney - Premium</span><span class="page-number">9</span></div>
+</section>
+
+</body>
+</html>
